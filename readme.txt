@@ -35,10 +35,12 @@ Options Page that allows you to:
 * Once Activated, you can add access the options page from the SETTINGS menu under ADMIN BAR OPTIONS
 
 == Frequently Asked Questions ==
-= With 3.0s new menu structure, isn't your plugin now obsolete? =
-Yes, and No. Mostly No.
-Here is why - with WordPress 3.0, comes the new menu stucture, but only a handful of themes actually have the menu structure already integrated into theme. This means that there are tons of themes out there that still need to use the the old way until they can update their theme template pages and functions to turn on the menu capability.
-Additionally, the Quick Redirects option still allows you to create redirects for any url on your site, so that is very much not obsolete (until WP makes somthing to do that as well). And as a final note, the plugin is still compatible with WP's new menu functionality using the standard page/post creations - only custom menu items will be out of the plugin's realm of redirects - and you could set the URL in the new WP menu anyway, so that would be covered.
+= How does it work? =
+It just simply adds an option page for you to turn the admin bar on or off. You can also remove the notice in the profile page to show admin bar.
+
+= I see othe plugins like this - how is yours different? =
+It is not that much different. But, most of the other ones just turn it off when you activate them. Wouldn't you want to have an option page to do that yourself if you like?
+Aside from that, this plugin also uses a global variable that WordPress uses to see if the admin bar should be on or off, and then also adds another method to ensure that if WordPress changes the admin bar functionality in the near future, the plugin should still work.
 
 
 == Changelog ==
