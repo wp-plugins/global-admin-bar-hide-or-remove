@@ -27,11 +27,11 @@ See change log in readme.txt file.
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-	global $show_admin_bar;
-	add_action( 'admin_init', 'global_adminbar_settings' );
-	add_action( 'admin_menu', 'global_adminbar_menu' );
-	add_filter( 'show_admin_bar', 'global_show_hide_admin_bar' );
-	add_action( 'admin_print_styles-profile.php', 'global_profile_hide_admin_bar' );
+global $show_admin_bar;
+add_action( 'admin_init', 'global_adminbar_settings' );
+add_action( 'admin_menu', 'global_adminbar_menu' );
+add_filter( 'show_admin_bar', 'global_show_hide_admin_bar' );
+add_action( 'admin_print_styles-profile.php', 'global_profile_hide_admin_bar' );
 
 function global_show_hide_admin_bar($showvar) {
 	global $show_admin_bar;
