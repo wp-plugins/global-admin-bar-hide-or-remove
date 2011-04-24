@@ -6,7 +6,7 @@ Description: Easily add a global option to hide/remove the new Admin bar in WP 3
 Author: Don Fischer
 Author URI: http://www.fischercreativemedia.com/
 Donate link: http://www.fischercreativemedia.com/wordpress-plugins/donate/
-Version: 1.0
+Version: 1.1
 
 Version info:
 See change log in readme.txt file.
@@ -32,6 +32,30 @@ add_action( 'admin_init', 'global_adminbar_settings' );
 add_action( 'admin_menu', 'global_adminbar_menu' );
 add_filter( 'show_admin_bar', 'global_show_hide_admin_bar' );
 add_action( 'admin_print_styles-profile.php', 'global_profile_hide_admin_bar' );
+add_action( 'admin_print_styles-user-edit.php', 'global_profile_hide_admin_bar' );
+add_filter('plugin_row_meta', 'global_adminbar_filter_plugin_links', 10, 2);
+add_action('plugin_action_links_' . plugin_basename(__FILE__), 'global_adminbar_filter_plugin_actions');
+
+function global_adminbar_filter_plugin_actions($links){
+	$new_links = array();
+	$adminlink = get_bloginfo('url').'/wp-admin/';
+	$fcmlink = 'http://www.fischercreativemedia.com/wordpress-plugins';
+	$new_links[] = '<a href="'.$adminlink.'options-general.php?page=admin-bar-plugin">Settings</a>';
+	$new_links[] = '<a href="'.$fcmlink.'/donate/">Donate</a>';
+	return array_merge($links,$new_links );
+}
+
+function global_adminbar_filter_plugin_links($links, $file){
+	if ( $file == plugin_basename(__FILE__) ){
+		$adminlink = get_bloginfo('url').'/wp-admin/';
+		$fcmlink = 'http://www.fischercreativemedia.com/wordpress-plugins';
+		$links[] = '<a href="'.$adminlink.'options-general.php?page=admin-bar-plugin">Admin Bar Settings</a>';
+		$links[] = '<a target="_blank" href="'.$fcmlink.'/global-hide-admin-bar-plugin/">FAQs</a>';
+		$links[] = '<a target="_blank" href="'.$fcmlink.'/donate/">Donate</a>';
+	}
+	return $links;
+}
+
 
 function global_show_hide_admin_bar($showvar) {
 	global $show_admin_bar;
@@ -45,7 +69,7 @@ function global_show_hide_admin_bar($showvar) {
 
 function global_profile_hide_admin_bar() {
 	if(get_option('global-admin-bar-plugin-user-setting')=='1'){
-		echo '<style type="text/css">.show-admin-bar { display: none; }</style>';
+		echo '<style type="text/css">.show-admin-bar { display: none !important; }</style>';
 	}
 	return;
 }
@@ -53,6 +77,7 @@ function global_profile_hide_admin_bar() {
 function global_adminbar_menu(){
 	add_options_page( 'Global Hide/Remove Admin Bar Plugin Options', 'Admin Bar Options',10, 'admin-bar-plugin', 'gabrhp_admin_bar_page' );
 }
+
 function global_adminbar_settings() {
 	register_setting( 'global-admin-bar-group', 'global-admin-bar-plugin-setting' );
 	register_setting( 'global-admin-bar-group', 'global-admin-bar-plugin-user-setting' );

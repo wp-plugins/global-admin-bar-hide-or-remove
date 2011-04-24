@@ -3,8 +3,8 @@ Contributors: Don Fischer
 Donate link: http://www.fischercreativemedia.com/wordpress-plugins/donate/
 Tags: admin, admin bar, settings, options, hacks, plugin, quick
 Requires at least: 3.1
-Tested up to: 3.1
-Stable tag: 1.0
+Tested up to: 3.1.1
+Stable tag: 1.1
 
 Easily add a global option to hide/remove the new Admin bar in WP 3.1+.
 
@@ -46,3 +46,5 @@ Aside from that, this plugin also uses a global variable that WordPress uses to 
 == Changelog ==
 = 1.0 =
 * Plugin Release. (02/23/11)
+= 1.1 =
+* Fix Action to remove option in user profile page. Worked in profile, but not user-edit.
