@@ -6,12 +6,12 @@ Description: Easily add a global option to hide/remove the new Admin bar in WP 3
 Author: Don Fischer
 Author URI: http://www.fischercreativemedia.com/
 Donate link: http://www.fischercreativemedia.com/wordpress-plugins/donate/
-Version: 1.1
+Version: 1.2
 
 Version info:
 See change log in readme.txt file.
 
-    Copyright (C) 2011 Donald J. Fischer
+    Copyright (C) 2011-2012 Donald J. Fischer
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,7 +49,7 @@ function global_adminbar_filter_plugin_links($links, $file){
 	if ( $file == plugin_basename(__FILE__) ){
 		$adminlink = get_bloginfo('url').'/wp-admin/';
 		$fcmlink = 'http://www.fischercreativemedia.com/wordpress-plugins';
-		$links[] = '<a href="'.$adminlink.'options-general.php?page=admin-bar-plugin">Admin Bar Settings</a>';
+		$links[] = '<a href="'.$adminlink.'options-general.php?page=admin-bar-plugin">Toolbar Settings</a>';
 		$links[] = '<a target="_blank" href="'.$fcmlink.'/global-hide-admin-bar-plugin/">FAQs</a>';
 		$links[] = '<a target="_blank" href="'.$fcmlink.'/donate/">Donate</a>';
 	}
@@ -75,7 +75,7 @@ function global_profile_hide_admin_bar() {
 }
 
 function global_adminbar_menu(){
-	add_options_page( 'Global Hide/Remove Admin Bar Plugin Options', 'Admin Bar Options',10, 'admin-bar-plugin', 'gabrhp_admin_bar_page' );
+	add_options_page( 'Global Hide/Remove Toolbar Plugin Options', 'Toolbar Options',10, 'admin-bar-plugin', 'gabrhp_admin_bar_page' );
 }
 
 function global_adminbar_settings() {
@@ -86,19 +86,20 @@ function global_adminbar_settings() {
 function gabrhp_admin_bar_page(){
 ?>
 <div class="wrap">
-<div class="icon32" style="<?php echo 'background: url('.WP_PLUGIN_URL.'/global-admin-bar-hide-or-remove/settings-32-icon.png) no-repeat transparent;';?>"><br /></div>
-<h2>Global Hide/Remove Admin Bar Plugin Options</h2>
+<div class="icon32" style="<?php echo 'background: url('.plugins_url().'/global-admin-bar-hide-or-remove/settings-32-icon.png) no-repeat transparent;';?>"><br /></div>
+<h2>Global Hide/Remove Toolbar Plugin Options</h2>
 <form method="post" action="options.php">
     <?php settings_fields( 'global-admin-bar-group' ); ?>
     <table class="form-table">
 		<tr valign="top">
-			<td style="text-align: left; vertical-align: top;" colspan="2">This plugin is designed to turn off the Admin Menu Bar that is displayed for logged in users in WordPress 3.1+. It may become obsolete if WordPress ever decides to add their own global option - but for now it is very helpful to have a way to turn it off or on.<br/><br/></td>
+			<td style="text-align: left; vertical-align: top;" colspan="2">This plugin is designed to turn off the Toolbar that is displayed for logged in users in WordPress 3.1+. It may become obsolete if WordPress ever decides to add their own global option - but for now it is very helpful to have a way to turn it off or on.<br/><br/></td>
 		</tr>
 		<tr valign="top">
-			<td style="text-align: right; vertical-align: top;width:25px;"><input type="checkbox" name="global-admin-bar-plugin-setting" value="1" <?php if(get_option('global-admin-bar-plugin-setting')=='1'){echo 'checked="checked"' ;} ?> /></td><td style="text-align:left; vertical-align: top;line-height:14px;"><strong>Hide/Remove Admin Bar?</strong></td>
+			<td style="text-align: right; vertical-align: top;width:25px;"><input type="checkbox" name="global-admin-bar-plugin-setting" value="1" <?php if(get_option('global-admin-bar-plugin-setting')=='1'){echo 'checked="checked"' ;} ?> /></td><td style="text-align:left; vertical-align: top;line-height:14px;"><strong>
+			Hide/Remove Toolbar on front end for logged in users?</strong></td>
 		</tr>
 		<tr valign="top">
-			<td style="text-align: right; vertical-align: top;width:25px;"><input type="checkbox" name="global-admin-bar-plugin-user-setting" value="1" <?php if(get_option('global-admin-bar-plugin-user-setting')=='1'){echo 'checked="checked"' ;} ?> /></td><td style="text-align:left; vertical-align: top;line-height:14px;"><strong>Hide/Remove "show admin bar" option on Profile Page?</strong></td>
+			<td style="text-align: right; vertical-align: top;width:25px;"><input type="checkbox" name="global-admin-bar-plugin-user-setting" value="1" <?php if(get_option('global-admin-bar-plugin-user-setting')=='1'){echo 'checked="checked"' ;} ?> /></td><td style="text-align:left; vertical-align: top;line-height:14px;"><strong>Hide/Remove "Show Toolbar when viewing site" option on Profile Page?</strong></td>
 		</tr>
     </table>
     <p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>
