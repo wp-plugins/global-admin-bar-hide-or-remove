@@ -6,7 +6,7 @@ Requires at least: 3.1
 Tested up to: 3.3.1
 Stable tag: 1.4
 
-Easily add a global option to hide/remove the front end Toolbar for logged in users for WP 3.1+.
+Easily add a global option to hide/remove the front end Toolbar for logged in users for WP 3.1+ .
 
 == Description ==
 
