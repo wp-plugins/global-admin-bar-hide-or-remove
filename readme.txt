@@ -15,9 +15,10 @@ Easily add a global option to hide/remove the front end Toolbar in WP 3.1+ for l
 Adds an option to the Settings Menu to globally turn off the front end Toolbar and/or turn off the user option in the profile to show toolbar.
 
 = Features: = 
-Options Page that allows you to:
-* Remove FRONT END WordPress Admin Menu Bar/Toolbar for logged in users
+* Options Page with setting options
+* Remove FRONT END WordPress Toolbar for logged in users
 * Remove Profile "Show Toolbar when viewing site" message/settings
+* Select User level for toolbar removal
 
 = TROUBLESHOOTING: =
 * Please let me know if you run into any issues with this plugin by sending an email to adminbarplugin@fischercreativemedia.com
