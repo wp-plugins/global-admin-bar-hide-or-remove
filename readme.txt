@@ -1,14 +1,15 @@
 === Global Hide/Remove Toolbar Plugin ===
 Contributors: Don Fischer
 Donate link: http://www.fischercreativemedia.com/wordpress-plugins/donate/
-Tags: admin, admin bar, settings, options, hacks, plugin, quick
+Tags: admin, admin bar, toolbar, settings, options, hacks, plugin, quick
 Requires at least: 3.1
 Tested up to: 3.3.1
-Stable tag: 1.2
+Stable tag: 1.4
 
 Easily add a global option to hide/remove the front end Toolbar for logged in users for WP 3.1+.
 
 == Description ==
+
 Easily add a global option to hide/remove the front end Toolbar in WP 3.1+ for logged in users. In WordPress 3.3+, you cannot hide the back end toolbar as it is now part of the standard WordPress back end.
 
 Adds an option to the Settings Menu to globally turn off the front end Toolbar and/or turn off the user option in the profile to show toolbar.
@@ -26,11 +27,10 @@ Options Page that allows you to:
 = If you downloaded this plugin: =
 * Upload `global-admin-bar-hide-or-remove` folder to the `/wp-content/plugins/` directory
 * Activate the plugin through the 'Plugins' menu in WordPress
-* Once Activated, you can add a redirect by entering the correct information in the `Quick Page/Post Redirect` box in the edit section of a page or post
-* You can create a redirect with the 'Quick Redirects' option located in the Admin Settings menu.
+* Once Activated, you can add access the options page from the SETTINGS menu under TOOLBAR OPTIONS
 
 = If you install this plugin through WordPress 2.8+ plugin search interface: =
-* Click Install `Global Hide/Remove Admin Bar Plugin`
+* Click Install `Global Hide/Remove Toolbar Plugin`
 * Activate the plugin through the 'Plugins' menu in WordPress
 * Once Activated, you can add access the options page from the SETTINGS menu under TOOLBAR OPTIONS
 
@@ -47,9 +47,16 @@ Aside from that, this plugin also uses a global variable that WordPress uses to 
 
 
 == Changelog ==
-= 1.0 =
-* Plugin Release. (02/23/11)
-= 1.1 =
-* Fix Action to remove option in user profile page. Worked in profile, but not user-edit.
+= 1.4 =
+* Add Multi-site functionalities that allow Super Admin to turn off toolbars for certain levels. (02/11/2012)
+* Added option to turn off only for certain user levels. (02/11/2012)
+
+= 1.3 =
+* Fix Screenshots for new version. (02/11/2012)
+* Fix deprecated user level in page call for backend page. (02/11/2012)
 = 1.2 =
 * Fix wording for new Admin Bar options introduced in WP 3.3.(02/06/2012)
+= 1.1 =
+* Fix Action to remove option in user profile page. Worked in profile, but not user-edit.
+= 1.0 =
+* Plugin Release. (02/23/11)
