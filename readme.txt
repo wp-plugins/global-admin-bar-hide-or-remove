@@ -1,5 +1,5 @@
 === Global Hide/Remove WordPress ToolBar ===
-Contributors: Don Fischer
+Contributors: Don Fischer, slangjis
 Donate link: http://www.fischercreativemedia.com/wordpress-plugins/donate/
 Tags: admin, admin bar, toolbar, settings, options, hacks, plugin, quick, remove toolbar, remove admin bar
 Requires at least: 3.1
@@ -65,7 +65,7 @@ There are not that many plugins to turn off the Admin bar, though. This plugin (
 
 == Changelog ==
 = 1.6 = 
-* Changed readme.txt and plugin header text to give credit, where credit it due. (04/14/2014)
+* Changed readme.txt and plugin header text to give [sLa NGjI's](http://slangji.wordpress.com/) credit, where credit it due. (04/14/2014)
 
 = 1.5 = 
 * Fix profile view to work as expected. Was either on or off - not based on user role. (12/2013)
@@ -93,5 +93,5 @@ Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](http
 
 == Upgrade Notice ==
 =  1.6 =
-* Changed readme.txt and plugin header text to give credit, where credit it due for BRUTE FORCE Plugin - [sLa NGjI's](http://slangji.wordpress.com/).
+* Changed readme.txt and plugin header text to give sLa NGjI's credit, where credit it due, for BRUTE FORCE Plugin.
 * No New features Added.
