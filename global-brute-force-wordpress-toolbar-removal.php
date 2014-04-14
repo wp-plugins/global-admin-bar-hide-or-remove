@@ -4,14 +4,14 @@ Plugin Name: Global Hide/Remove ToolBar: 2. BRUTE FORCE Remover
 Plugin URI: http://fischercreativemedia.com/wordpress-plugins/global-hide-admin-bar-plugin/
 Description: Use this plugin to remove <strong>ALL</strong> toolbars, including Admin. Recommended you use the <strong>Global Hide/Remove ToolBar: 1. Front End Toolbar Remover</strong> unless you REALLY need the Admin toolbar removed - DO NOT USE BOTH.
 Version: 1.6
-Author: Don Fischer, sLa NGjI's
-Author URI: http://www.fischercreativemedia.com/
+Author: <a title="Visit author homepage" href="http://www.fischercreativemedia.com/">Don Fischer</a> & <a title="Visit co-author homepage" href="http://slangji.wordpress.com/">sLa NGjI's</a>
 Donate link: http://www.fischercreativemedia.com/wordpress-plugins/donate/
 Requires at least: 3.1
 Tested up to: 3.8.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
+ * Copyright (C) 2011-2014 Donald J. Fischer <dfischer [at] fischercreativemedia [dot] com>
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the [GNU General Public License](http://wordpress.org/about/gpl/)
  * as published by the Free Software Foundation; either version 2
