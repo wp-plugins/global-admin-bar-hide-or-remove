@@ -79,6 +79,10 @@ On the Backend, Admin Area, you need to use the Brute Force Plugin.
 2. Admin Menu Settings
 3. Your Profile Users Page
 
+== About Global Hide Admin Tool Bar Plugin ==
+
+Thanks to Donald J. Fischer @ fischercreativemedia.com for this plugin!
+
 == Changelog ==
 
 the latest version of this plugin work on all wordpress version from 3.1+ to 3.9+
@@ -90,10 +94,6 @@ suggested upgrade to the latest build, always!`
 = Development Status =
 
 Developmental Code in Becoming!
-
-== Thanks ==
-
-Thanks to Donald J. Fischer @ fischercreativemedia.com for this plugin!
 
 = 1.6 = 
 * Changed readme.txt and plugin header text to give [sLa NGjI's](//slangji.wordpress.com/) credit, where credit it due. (04/14/2014)
