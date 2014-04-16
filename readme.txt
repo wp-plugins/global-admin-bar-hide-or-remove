@@ -1,69 +1,57 @@
-=== Global Hide/Remove WordPress ToolBar ===
-Contributors: Don Fischer, slangjis
-Donate link: http://www.fischercreativemedia.com/wordpress-plugins/donate/
-Tags: admin, admin bar, toolbar, settings, options, hacks, plugin, quick, remove toolbar, remove admin bar
+=== Global Hide Admin Tool Bar ===
+Contributors: slangjis, prophecy2040
+Donate link: http://slangji.wordpress.com/donate/
+Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, remove-admin-bar, remove-toolbar, remove-wordpress-admin-bar, remove-wordpress-toolbar, slangjis, toolbar
+Stable tag: trunk
 Requires at least: 3.1
-Tested up to: 3.8.2
-Stable tag: 1.6
-
-Easily hide/remove Toolbars for logged in users for WP 3.1+.
-
+Tested up to: 3.9
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+global options to hide frontend admin bar and toolbar according to users role
 == Description ==
+Global Options to Hide Frontend Admin Bar and Toolbar According to Users Role
 
-Easily hide/remove the front end Toolbar for logged in users. 
-To remove the back end toolbar (admin bar), use the included BRUTE FORCE plugin.
-Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](http://slangji.wordpress.com/) [WP Admin Bar Removal](http://wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](http://wordpress.org/plugins/wp-toolbar-removal/) / [Disable Admin Bar and ToolBar](http://wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](http://wordpress.org/support/topic/brute-force-plugin-license-infringement/)
+To remove the back end Toolbar (admin bar), use the included BRUTE FORCE plugin. Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](http://slangji.wordpress.com/) [WP Admin Bar Removal](http://wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](http://wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](http://wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](http://wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 
-Adds an option to the Settings Menu to globally turn off the front end Toolbar and/or turn off the user option in the profile to show toolbar.
+Adds an option to the Settings Menu to globally turn off the front end Toolbar and/or turn off the user option in the profile to show Toolbar.
 
-Brute Force plugin (included), removes ALL toolbars (admin and front end) as well as the profile user option. No settings are available for this plugin.
-WordPress does not provive an easy method to remove the Admin Bar in the back end, so this plugin takes a different approach to override the admin bar.
+Brute Force plugin (included), removes ALL Toolbars (admin and front end) as well as the profile user option. No settings are available for this plugin. WordPress does not provide an easy method to remove the Admin Tool Bar in the back end, so this plugin takes a different approach to override it!
 
-= Standard Plugin Features (Front End Remover): = 
-* Options Page with setting options
-* Remove FRONT END WordPress Toolbar for logged in users
-* Remove Profile "Show Toolbar when viewing site" message/settings
-* Select User level for toolbar removal
+= Standard Plugin Features (Front End Hider): =
 
-= Optional Plugin Features (BRUTE FORCE Remover): =
-* Removes Admin Bar Completely
-* Removes Front End Toolbar for logged in users
-* Removes Profile "Show Toolbar when viewing site" message/settings
-* Works with WordPress 3.8 new user interface
-* NO Settings for this plugin
+* Hide FRONT END Toolbar for logged in users according to your own roles
+* Hide Your Profile "Show Toolbar when viewing site" on User Page (Beta)
+* Options Page with Setting Options
+
+= Optional Plugin Features (BRUTE FORCE): =
+
+* Disable Admin Tool Bar
+* Disable Front End and Back End Admin Tool Bar for all users
+* Hide Your Profile "Show Toolbar when viewing site" on User Page (Beta)
+* Works with WordPress 3.8+ Mobile Responsive Interface
+* Settings Free Plugin
 
 = TROUBLESHOOTING: =
-* Do Not Use both plugins at the same time.
-* Please let me know if you run into any issues with this plugin by sending an email to adminbarplugin@fischercreativemedia.com
 
+* Do Not Use both plugins at the same time.
 
 == Installation ==
 
-= If you downloaded this plugin: =
-* Upload `global-admin-bar-hide-or-remove` folder to the `/wp-content/plugins/` directory
-* Activate the plugin through the 'Plugins' menu in WordPress
-* Once Activated, you can add access the options page from the SETTINGS menu under TOOLBAR OPTIONS
-
-= If you install this plugin through WordPress 2.8+ plugin search interface: =
-* Click Install `Global Hide/Remove Toolbar Plugin`
-* Activate the plugin through the 'Plugins' menu in WordPress
-* Once Activated, you can add access the options page from the SETTINGS menu under TOOLBAR OPTIONS
+* Upload and Activate the plugin through the WordPress Admin Panel
+* Once activated access to the options page from the settings menu
 
 == Frequently Asked Questions ==
+
 = How does it work? =
-It just simply adds an option page for you to turn the front end Toolbar on or off. You can also remove the notice in the profile page to show front end Toolbar.
+It just simply adds an option page for you to turn the front end Toolbar on or off.
+You can also remove the notice in the profile page to show front end Toolbar.
 
-= Can I remove the front end Toolbar in WordPress 3.3.1+? =
+= Can I remove the front end Toolbar in WordPress 3.1+ ? =
 On the front end, yes. 
-On the backend (admin area), you need to use the Brute Force Plugin..
-
-= I see othe plugins like this - how is yours different? =
-It is not that much different. But, most of the other ones just turn it off when you activate them. Wouldn't you want to have an option page to do that yourself if you like?
-Aside from that, this plugin also uses a global variable that WordPress uses to see if the Toolbar should be on or off, and then also adds another method to ensure that if WordPress changes the Toolbar functionality in the near future, the plugin should still work.
-
-There are not that many plugins to turn off the Admin bar, though. This plugin (Brute Force version) can do that. It also works with the new WordPress 3.8 interface, were many others do not.
+On the backend (admin area), you need to use the Brute Force Plugin.
 
 == Changelog ==
+
 = 1.6 = 
 * Changed readme.txt and plugin header text to give [sLa NGjI's](http://slangji.wordpress.com/) credit, where credit it due. (04/14/2014)
 
@@ -71,11 +59,11 @@ There are not that many plugins to turn off the Admin bar, though. This plugin (
 * Fix profile view to work as expected. Was either on or off - not based on user role. (12/2013)
 * Updated some verbiage. (12/2013)
 * Added new Brute Force Plugin to forcefully turn off admin menu and front end, if desired. We get a lot of requess for this. (12/2013)
-Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](http://slangji.wordpress.com/) [WP Admin Bar Removal](http://wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](http://wordpress.org/plugins/wp-toolbar-removal/) / [Disable Admin Bar and ToolBar](http://wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](http://wordpress.org/support/topic/brute-force-plugin-license-infringement/)
+* Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](http://slangji.wordpress.com/) [WP Admin Bar Removal](http://wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](http://wordpress.org/plugins/wp-toolbar-removal/) / [Disable Admin Bar and ToolBar](http://wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](http://wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 * Added Language files for translations. (12/2013)
 
 = 1.4 =
-* Add Multi-site functionalities that allow Super Admin to turn off toolbars for certain levels. (02/11/2012)
+* Add Multi-site functionalities that allow Super Admin to turn off Toolbars for certain levels. (02/11/2012)
 * Added option to turn off only for certain user levels. (02/11/2012)
 
 = 1.3 =
@@ -92,6 +80,7 @@ Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](http
 * Plugin Release. (02/23/11)
 
 == Upgrade Notice ==
-=  1.6 =
+= 1.6.1 =
 * Changed readme.txt and plugin header text to give sLa NGjI's credit, where credit it due, for BRUTE FORCE Plugin.
-* No New features Added.
+= 1.6 =
+* Changed readme.txt and plugin header text to give sLa NGjI's credit, where credit it due, for BRUTE FORCE Plugin.
