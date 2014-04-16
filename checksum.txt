@@ -3,7 +3,7 @@ Global Hide Admin Tool Bar - Build 2014.04.16 - (Version 1.6) MD5 Checksum:
 /
 
 license.txt                                39BBA7D2CF0BA1036F2A6E2BE52FE3F0
-readme.txt                                 43A21772731910B578033C4A66DC6CEF
+readme.txt                                 361E7E6A2DD792A549D800DF9846B60B
 global-hide-admin-tool-bar.php             9790D986D5632DAAB6B943F6BF057D75
 global-brute-force-admin-tool-bar.php      8E60FFD37294B5423BFDFEE2C6D7F07C
 uninstall.php                              3D2DB3FC1826A1A05FF085E1BB7D9FDE
