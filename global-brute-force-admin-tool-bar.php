@@ -2,7 +2,7 @@
 /*
 Plugin Name: Global Brute Force Admin Tool Bar
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Remove Frontend and Backend Admin Bar and ToolBar for all users - NOT USE BOTH
+Description: Remove Frontend and Backend Admin Tool Bar for all users - NOT USE BOTH
 Version: 1.6
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Donald J. Fischer</a>
 License: GPLv2 or later
