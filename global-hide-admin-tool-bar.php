@@ -2,9 +2,9 @@
 /*
 Plugin Name: Global Hide Admin Tool Bar
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Global Options to Hide Frontend Admin Bar and Toolbar According to Users Role
+Description: Global Options to Hide Frontend Admin Tool Bar According to User Roles
 Version: 1.6
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Donald J. Fischer</a>
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Don Fischer</a>
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
