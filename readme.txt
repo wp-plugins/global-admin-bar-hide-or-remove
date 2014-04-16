@@ -7,11 +7,11 @@ Requires at least: 3.1
 Tested up to: 3.9
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
-global options to hide frontend admin bar and toolbar according to your own user roles
+add global options to hide frontend admin bar and toolbar according to your own user roles
 == Description ==
-Global Options to Hide Frontend Admin Bar and Toolbar According to Your Own User Roles. To remove the back end Toolbar (Admin Bar) use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
+Add Global Options to Hide Frontend Admin Bar and Toolbar According to Your Own User Roles. To remove the back end Toolbar (Admin Bar) use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 
-Adds an option to the Settings Menu to globally turn off the front end Toolbar and/or turn off the user option in the profile to show Toolbar.
+Add an option to the Settings Menu to globally turn off the front end Toolbar and/or turn off the user option in the profile to show Toolbar.
 
 Brute Force plugin (included), removes ALL Toolbars (admin and front end) as well as the profile user option. No settings are available for this plugin. WordPress does not provide an easy method to remove the Admin Tool Bar in the back end, so this plugin takes a different approach to override it!
 
