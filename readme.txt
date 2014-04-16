@@ -81,7 +81,7 @@ On the Backend, Admin Area, you need to use the Brute Force Plugin.
 
 == About Global Hide Admin Tool Bar Plugin ==
 
-Thanks to Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
+Thanks to Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com
 
 * [Others Donald J. Fischer Plugins](//www.fischercreativemedia.com/plugins/)
  * [Amazon Product In a Post Plugin](//wordpress.org/extend/plugins/amazon-product-in-a-post-plugin/) Limited Support
