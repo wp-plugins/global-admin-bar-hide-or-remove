@@ -50,14 +50,43 @@ Text Domain: global-hide-remove-toolbar-plugin
  *
  * THERMS
  *
+ * This global-hide-admin-tool-bar.php uses (or it parts) code derived from:
+ *
+ * global-admin-bar-hide-or-remove.php by Donald J. Fischer (email: <dfischer [at] fischercreativemedia [dot] com>)
+ * Copyright (C) 2011-2013 [prophecy2040](//www.fischercreativemedia.com/) (email: <dfischer [at] fischercreativemedia [dot] com>)
+ *
+ * according to the terms of the GNU General Public License version 2 (or later) this uses or it parts code was derived.
+ *
  * According to the Terms of the GNU General Public License version 2 (or later) part of Copyright belongs to your own author and part belongs to their respective others authors:
  *
+ * Copyright (C) 2008-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlemail [dot] com>)
  * Copyright (C) 2011-2013 Donald J. Fischer (email: <dfischer [at] fischercreativemedia [dot] com>)
  *
  * VIOLATIONS
  *
  * [Violations of the GNU Licenses](//www.gnu.org/licenses/gpl-violation.en.html)
  * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
+ *
+ * GUIDELINES
+ *
+ * This software meet [Detailed Plugin Guidelines](//wordpress.org/plugins/about/guidelines/)
+ * paragraphs 1,4,10,12,13,16,17 quality requirements.
+ * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
+ *
+ * CODING
+ *
+ * This software implement [GNU style](//www.gnu.org/prep/standards/standards.html) coding standard indentation.
+ * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
+ *
+ * VALIDATION
+ *
+ * This readme.txt rocks. Seriously. Flying colors. It meet the specifications according to
+ * WordPress [Readme Validator](//wordpress.org/plugins/about/validator/) directives.
+ * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
+ *
+ * THANKS
+ *
+ * To Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
  */
 
 	/**
