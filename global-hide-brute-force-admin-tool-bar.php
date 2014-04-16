@@ -2,9 +2,9 @@
 /*
 Plugin Name: Global Hide Brute Force Admin Tool Bar
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Remove Frontend and Backend Admin Tool Bar for All Users - NOT USE BOTH
+Description: Remove Frontend and Backend Admin Tool Bar for All User Roles
 Version: 1.6
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Donald J. Fischer</a>
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Don Fischer</a>
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
@@ -171,7 +171,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 	if ( $wp_version < 3.1 )
 		{
-				wp_die( __( 'This Plugin Requires WordPress 3.1 or higher: Could Not Install!' ) );
+				wp_die( __( 'This Plugin Requires WordPress 3.1+ or higher: Could Not Install!' ) );
 		}
 
 	if ( $wp_version >= 3.2 )
@@ -179,17 +179,15 @@ Text Domain: global-hide-remove-toolbar-plugin
 				add_action( 'admin_head', 'bftoolbar_admin_back_menu_remove' );
 		}
 
-	add_action( 'network_admin_notices', 'appip_warning_notice' );
-	add_action( 'admin_notices', 'bftoolbar_warning_notice' );
-	add_action( 'admin_print_styles', 'bftoolbar_admin_styles', 21 );
-
 	function bftoolbar_warning_notice()
 		{
-				if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-admin-bar-hide-or-remove.php' ) )
+				if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
 					{
-							echo '<div class="error"><h2><strong>' . __( 'Important Global Hide/Remove WordPress ToolBar WARNING!' ) . '</strong></h2><p>' . __( 'Please note: You cannot use <strong style="color:#880000;">Global Hide/Remove WordPress ToolBar: Front End Remover</strong> AND <strong style="color:#880000;">Global Hide/Remove WordPress ToolBar: BRUTE FORCE Remover</strong> plugins at the same time. Please deactivate one of them.' ) . '</p></div>';
+							echo '<div class="error"><h3><strong>' . __( 'Activation Warning!' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Admin Tool Bar</strong> and <strong style="color:#880000;">Global Hide Brute Force Admin Tool Bar</strong> at the Same Time.' ) . '</p></div>';
 					}
 		}
+	add_action( 'network_admin_notices', 'appip_warning_notice' );
+	add_action( 'admin_notices', 'bftoolbar_warning_notice' );
 
 	function bftoolbar_admin_back_menu_remove()
 		{
@@ -200,6 +198,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 		{
 				echo '<style type="text/css">#wp-bftoolbar-bar-menu-toggle {color: #fff;font-size: 26px;text-align: center;line-height: 29px;display:none;cursor: pointer;width: 30px;height: 27px;float: left;margin-right: 8px;background: #222;margin-top: 3px;}html.wp-toolbar,html.wp-toolbar #wpcontent,html.wp-toolbar #adminmenu,html.wp-toolbar #wpadminbar,body.admin-bar,body.admin-bar #wpcontent,body.admin-bar #adminmenu,body.admin-bar #wpadminbar{padding-top:0px !important}</style>';
 		}
+	add_action( 'admin_print_styles', 'bftoolbar_admin_styles', 21 );
 
 	function bftoolbar_new_toolbar()
 		{
@@ -408,5 +407,63 @@ Text Domain: global-hide-remove-toolbar-plugin
 							remove_filter( $hook[ 0 ], $hook[ 1 ] );
 					}
 		}
+
+	function ghatb_prml_bfp( $links, $file )
+
+		{
+
+			if ( $file == plugin_basename( __FILE__ ) )
+
+				{
+
+					global $wp_version;
+
+					if ( $wp_version < 3.8 )
+
+						{
+
+							$links[] = '<a title="Bugfix and Suggestions" href="//slangji.wordpress.com/contact/">Contact</a>';
+
+						}
+
+					$links[] = '<a title="Offer a Beer to sLa" href="//slangji.wordpress.com/donate/">Donate</a>';
+
+					global $wp_version;
+
+					if ( $wp_version < 3.8 )
+
+						{
+
+							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other Author Plugins</a>';
+
+						}
+
+					if ( $wp_version >= 3.8 )
+
+						{
+
+							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other</a>';
+
+						}
+
+				}
+
+			return $links;
+
+		}
+
+	add_filter( 'plugin_row_meta', 'ghatb_prml_bfp', 10, 2 );
+
+	function ghatb_shfl_bfp()
+
+		{
+
+			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!-- This website is patched against a big problem not solved from WordPress 3.3+ to date -->\n\n";
+
+		}
+
+	add_action( 'wp_head', 'ghatb_shfl_bfp', 0 );
+	add_action( 'wp_footer', 'ghatb_shfl_bfp', 0 );
 
 ?>
