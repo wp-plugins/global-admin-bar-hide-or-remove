@@ -50,7 +50,7 @@ Text Domain: global-hide-remove-toolbar-plugin
  *
  * THERMS
  *
- * This global-brute-force-admin-tool-bar.php uses (or it parts) code derived from:
+ * This global-hide-brute-force-admin-tool-bar.php uses (or it parts) code derived from:
  *
  * global-brute-force-wordpress-toolbar-removal.php by Donald J. Fischer (email: <dfischer [at] fischercreativemedia [dot] com>)
  * Copyright (C) 2011-2013 [prophecy2040](//www.fischercreativemedia.com/) (email: <dfischer [at] fischercreativemedia [dot] com>)

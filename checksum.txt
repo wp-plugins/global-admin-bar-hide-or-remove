@@ -1,19 +1,19 @@
-Global Hide Admin Tool Bar - Build 2014.04.16 - (Version 1.6.1) MD5 Checksum:
+Global Hide Admin Tool Bar - Build 2014.04.16 - (Version 1.6) MD5 Checksum:
 
 /
 
-.htaccess                                    5C15A9E1B4B468CBF73D400455334B0B
-index.html                                   D00E9BD8266C1E1413DB0F8763A73D3B
-index.php                                    B5C80DDEACFBE2ADCB7500E71E2D50E7
-license.txt                                  39BBA7D2CF0BA1036F2A6E2BE52FE3F0
-readme.txt                                   B9930099870D273DDA2B9F94269BE7A7
-global-hide-admin-tool-bar.php               9790D986D5632DAAB6B943F6BF057D75
-global-brute-force-admin-tool-bar.php        8E60FFD37294B5423BFDFEE2C6D7F07C
-uninstall.php                                3D2DB3FC1826A1A05FF085E1BB7D9FDE
+.htaccess                                  5C15A9E1B4B468CBF73D400455334B0B
+index.html                                 D00E9BD8266C1E1413DB0F8763A73D3B
+index.php                                  B5C80DDEACFBE2ADCB7500E71E2D50E7
+license.txt                                39BBA7D2CF0BA1036F2A6E2BE52FE3F0
+readme.txt                                 B738F414A5F563B2B72CF3D17B84EE03
+global-hide-admin-tool-bar.php             8AA230FEF03EE196B89BB681B82F4D48
+global-hide-brute-force-admin-tool-bar.php 826A839183C402F01F003706DE8E77FC
+uninstall.php                              3D2DB3FC1826A1A05FF085E1BB7D9FDE
 
 /lang/
 
-global-hide-remove-toolbar-plugin_de.mo      C260980F40788A73C15C0FE53B3DE1C7
-global-hide-remove-toolbar-plugin_en.mo      67BC9155E5217B8BC3AD0D54A084DC91
-global-hide-remove-toolbar-plugin_de.po      AD7E46BA2B27E3F577CA60E130B9AB68
-global-hide-remove-toolbar-plugin_en.po      DFE71B1D86340051519E072A45496AA9
+global-hide-remove-toolbar-plugin_de.mo    C260980F40788A73C15C0FE53B3DE1C7
+global-hide-remove-toolbar-plugin_en.mo    67BC9155E5217B8BC3AD0D54A084DC91
+global-hide-remove-toolbar-plugin_de.po    AD7E46BA2B27E3F577CA60E130B9AB68
+global-hide-remove-toolbar-plugin_en.po    DFE71B1D86340051519E072A45496AA9
