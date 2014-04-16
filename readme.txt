@@ -132,8 +132,9 @@ suggested upgrade to the latest build, always!`
 Developmental Code in Becoming!
 
 = 1.6.1 =
-* The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's - Build 2014.04.16
+* The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's
  * Please update as soon as possible!
+ * Released Build 2014.04.16
  * Full Support and Compatibility for WordPress 3.1+ ~ 3.9+
  * Compatible with WordPress, bbPress, Buddypress
  * Work under [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later License.
