@@ -15,5 +15,5 @@ global-hide-admin-tool-bar.php               74C8C45CD525F53527E8A6E0A3E7A491
 global-hide-brute-force-admin-tool-bar.php   B76A9B1E09F24F1D86DC50BCC880FB14
 index.php                                    1565911569FFD99A8725C0412638D8D3
 license.txt                                  39BBA7D2CF0BA1036F2A6E2BE52FE3F0
-readme.txt                                   180D013D2B0BB3B4F15C1A33EA7D7BE5
+readme.txt                                   B1E02FA8332B8579F7C4A1C1A6059434
 uninstall.php                                3D2DB3FC1826A1A05FF085E1BB7D9FDE
