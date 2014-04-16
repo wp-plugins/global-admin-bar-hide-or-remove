@@ -80,7 +80,7 @@ On the Backend, Admin Area, you need to use the Brute Force Plugin.
 3. Your Profile Users Page
 
 == Changelog ==
-the latest version of this plugin work on all wordpress version from 3.1+ to 3.7+ with new unified coding
+the latest version of this plugin work on all wordpress version from 3.1+ to 3.9+
 `All releases, prior latest stable, are deprecated, 
 and no longer supported on this project: is very 
 suggested upgrade to the latest build, always!`
