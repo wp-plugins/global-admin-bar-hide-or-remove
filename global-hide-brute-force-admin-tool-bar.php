@@ -458,7 +458,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!--Plugin Global Hide Brute Force Admin Tool Bar 1.6 Active - Tag ".md5(md5("".""))."-->\n";
 			echo "\n<!-- This website is patched against a big problem not solved from WordPress 3.3+ to date -->\n\n";
 
 		}
