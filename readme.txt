@@ -35,18 +35,18 @@ Brute Force plugin (included), removes ALL Toolbars (admin and front end) as wel
 
 * Do Not Use both plugins at the same time.
 
-* [My Others WordPress Plugins](http://slangji.wordpress.com/plugins/)
- * [WP Overview (lite)](http://wordpress.org/plugins/wp-overview-lite/)
- * [WP Missed Schedule](http://wordpress.org/plugins/wp-missed-schedule/)
- * [WP Admin Bar Removal](http://wordpress.org/plugins/wp-admin-bar-removal/) Linked and reviewed at [softpedia.com](http://webscripts.softpedia.com/script/Modules/WordPress-Plugins/Admin-Bar-Removal-completely-disable-73547.html)
- * [WP Admin Bar Removal Node](http://wordpress.org/plugins/wp-admin-bar-node-removal/)
- * [WP ToolBar Removal](http://wordpress.org/plugins/wp-toolbar-removal/) Linked and reviewed at [softpedia.com](http://webscripts.softpedia.com/script/Modules/WordPress-Plugins/ToolBar-Removal-completely-disable-73548.html)
- * [WP ToolBar Removal Node](http://wordpress.org/plugins/wp-toolbar-node-removal/)
- * [Noindex (login) WordPress Deindexing](http://wordpress.org/plugins/wp-login-deindexing/) (refreshed)
- * [Noindex (total) WordPress Deindexing](http://wordpress.org/plugins/wp-total-deindexing/) (refreshed)
- * [IE Enhancer and Modernizer](http://wordpress.org/plugins/wp-ie-enhancer-and-modernizer/) Linked and reviewed at [softpedia.com](http://webscripts.softpedia.com/script/Modules/WordPress-Plugins/IE-Enhancer-and-Modernizer-73546.html)
- * [Memory Load Consumption db size Usage Indicator](http://wordpress.org/plugins/wp-memory-db-indicator/) (new)
- * [Header and Footer Log](http://wordpress.org/plugins/wp-header-footer-log/) Only For Developers (and advanced users)
+* [My Others WordPress Plugins](//slangji.wordpress.com/plugins/)
+ * [WP Overview (lite)](//wordpress.org/plugins/wp-overview-lite/)
+ * [WP Missed Schedule](//wordpress.org/plugins/wp-missed-schedule/)
+ * [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) Linked and reviewed at [softpedia.com](//webscripts.softpedia.com/script/Modules/WordPress-Plugins/Admin-Bar-Removal-completely-disable-73547.html)
+ * [WP Admin Bar Removal Node](//wordpress.org/plugins/wp-admin-bar-node-removal/)
+ * [WP ToolBar Removal](//wordpress.org/plugins/wp-toolbar-removal/) Linked and reviewed at [softpedia.com](//webscripts.softpedia.com/script/Modules/WordPress-Plugins/ToolBar-Removal-completely-disable-73548.html)
+ * [WP ToolBar Removal Node](//wordpress.org/plugins/wp-toolbar-node-removal/)
+ * [Noindex (login) WordPress Deindexing](//wordpress.org/plugins/wp-login-deindexing/) (refreshed)
+ * [Noindex (total) WordPress Deindexing](//wordpress.org/plugins/wp-total-deindexing/) (refreshed)
+ * [IE Enhancer and Modernizer](//wordpress.org/plugins/wp-ie-enhancer-and-modernizer/) Linked and reviewed at [softpedia.com](//webscripts.softpedia.com/script/Modules/WordPress-Plugins/IE-Enhancer-and-Modernizer-73546.html)
+ * [Memory Load Consumption db size Usage Indicator](//wordpress.org/plugins/wp-memory-db-indicator/) (new)
+ * [Header and Footer Log](//wordpress.org/plugins/wp-header-footer-log/) Only For Developers (and advanced users)
 
 == Installation ==
 
@@ -81,11 +81,16 @@ On the Backend, Admin Area, you need to use the Brute Force Plugin.
 
 == About Global Hide Admin Tool Bar Plugin ==
 
-Thanks to Donald J. Fischer @ fischercreativemedia.com for this plugin!
+Thanks to Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
+
+* [Others Donald J. Fischer Plugins](//www.fischercreativemedia.com/plugins/)
+ * [Amazon Product In a Post Plugin](//wordpress.org/extend/plugins/amazon-product-in-a-post-plugin/) Limited Support
+ * [PayPal Promo Code Plugin](//www.fischercreativemedia.com/wp-content/uploads/2013/06/paypal-promo-code-plugin-1.5.6.zip) LUnupported
+ * [Quick Page/Post Redirect Plugin)](//wordpress.org/extend/plugins/quick-pagepost-redirect-plugin/) Limited Support
 
 == Changelog ==
 
-the latest version of this plugin work on all wordpress version from 3.1+ to 3.9+
+latest version of this plugin work on all wordpress version from 3.1+ to 3.9+
 
 `All releases, prior latest stable, are deprecated, 
 and no longer supported on this project: is very 
