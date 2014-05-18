@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Global Hide Admin Toolbar
+Plugin Name: Global Hide Admin Toolbar - DEV
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-05-18)
 Version: 1.6.2
