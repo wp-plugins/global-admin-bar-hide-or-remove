@@ -1,20 +1,25 @@
 <?php
 /*
-Plugin Name: Global Hide Brute Force Admin Tool Bar
+Plugin Name: Global Hide Admin Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Remove Frontend and Backend Admin Tool Bar for All User Roles - BETA
-Version: 1.6
+Description: Bruteforce Disable Front Back End Toolbar for all Admin and User Roles - BETA - This special plugin version is discontinued: install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a> A.S.A.P.
+Version: 1.6.2
+Build: 2014-05-18
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Don Fischer</a>
-License: GPLv2 or later
+License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
 Indentation URI: //www.gnu.org/prep/standards/standards.html
  *
+Domain Path: /languages/
 Text Domain: global-hide-remove-toolbar-plugin
+Network: true
  *
  * LICENSING
  *
- * [Global Hide Brute Force Admin Tool Bar](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
+ * [Global Hide Brute Force Toolbar](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
+ *
+ * Disable Front and Back End Toolbar for all User Roles
  *
  * Copyright (C) 2013-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlegmail [dot] com>)
  *
@@ -50,7 +55,7 @@ Text Domain: global-hide-remove-toolbar-plugin
  *
  * THERMS
  *
- * This global-hide-brute-force-admin-tool-bar.php uses (or it parts) code derived from:
+ * This global-hide-brute-force-admin-bar.php uses (or it parts) code derived from:
  *
  * global-brute-force-wordpress-toolbar-removal.php by Donald J. Fischer (email: <dfischer [at] fischercreativemedia [dot] com>)
  * Copyright (C) 2011-2013 [prophecy2040](//www.fischercreativemedia.com/) (email: <dfischer [at] fischercreativemedia [dot] com>)
@@ -103,18 +108,21 @@ Text Domain: global-hide-remove-toolbar-plugin
  * WordPress [Readme Validator](//wordpress.org/plugins/about/validator/) directives.
  * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
  *
- * THANKS
+ * HUMANS (humans.txt)
  *
- * To Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
+ * Thanks to Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
  */
 
 	/**
 	 * @package		WordPress Plugin
-	 * @subpackage	Global Hide Brute Force Admin Tool Bar
-	 * @author		slangjis
-	 * @build		2014.04.16
+	 * @subpackage	Global Hide Brute Force Toolbar
+	 * @description	Disable Front and Back End Toolbar for all User Roles
+	 * @author		slangjis &CO prophecy2040
+	 * @since		3.1+
+	 * @status		Code in Becoming!
+	 * @version		1.6.2
+	 * @build		2014-05-18 1ST 2014-04-16
 	 * @keytag		74be16979710d4c4e7c6647856088456
-	 * @since		3.1.0
 	 */
 
 	if ( !function_exists( 'add_action' ) )
@@ -126,10 +134,20 @@ Text Domain: global-hide-remove-toolbar-plugin
 			header( 'HTTP/1.1 403 Forbidden' );
 			header( 'Status: 403 Forbidden' );
 			header( 'Connection: Close' );
-	
-			exit();
+
+				exit();
 
 		}
+
+	if ( !defined( 'WPINC' ) )
+
+		{
+
+			die();
+
+		}
+
+	if ( !defined( 'ABSPATH' ) ) exit();
 
 	global $wp_version;
 
@@ -186,7 +204,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 							echo '<div class="error"><h3><strong>' . __( 'Activation Warning!' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Admin Tool Bar</strong> and <strong style="color:#880000;">Global Hide Brute Force Admin Tool Bar</strong> at the Same Time.' ) . '</p></div>';
 					}
 		}
-	add_action( 'network_admin_notices', 'appip_warning_notice' );
 	add_action( 'admin_notices', 'bftoolbar_warning_notice' );
 
 	function bftoolbar_admin_back_menu_remove()
@@ -458,8 +475,8 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			echo "\n<!--Plugin Global Hide Brute Force Admin Tool Bar 1.6 Active - Tag ".md5(md5("".""))."-->\n";
-			echo "\n<!-- This website is patched against a big problem not solved from WordPress 3.3+ to date -->\n\n";
+			echo "\n<!--Plugin Global Brute Force Toolbar 1.6.2 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!-- This website is patched against a big core annoyance since WordPress 3.3+ to date -->\n\n";
 
 		}
 
