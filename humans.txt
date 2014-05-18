@@ -1,0 +1,26 @@
+
+We are the humans behind WordPress "Global Hide Admin Tool Bar" Plugin.
+
+/* TEAM */
+
+Name:		sLa NGjI's
+Title:		Plugin Owner Author
+Site:		slangji.wordpress.com
+Profile:	profiles.wordpress.org/slangjis
+Twitter:	@slangji #slangji
+
+Name:		Donald J. Fischer
+Title:		Plugin Master Author
+Site:		www.fischercreativemedia.com
+Profile:	profiles.wordpress.org/
+Twitter:	@prophecy2040 #prophecy2040
+
+/* THANKS */
+To all contributors and suggestors!
+
+/* META */
+
+Version:	1.6.2
+Updated:	2014-05-18
+See:		humanstxt.org
+
