@@ -5,24 +5,68 @@
 	 * @subpackage	Global Hide Admin Tool Bar
 	 * @indentation	//www.gnu.org/prep/standards/standards.html
 	 * @license		//www.gnu.org/licenses/gpl-2.0.html
-	 * @link		//wordpress.org/plugins/global-admin-bar-hide-or-remove/
+	 * @link		//wordpress.org/plugins/global-hide-admin-tool-bar-hide-or-remove/
 	 */
 
 	/**
-	 * Uninstall Module
+	 * Uninstall Module ( obsolete? deletable on next version or keep for multisite support? )
 	 *
-	 * @version	2014-04-16
+	 * @version 2014-05-18 1ST 2014-04-16
 	 * @author	sLa NGjI's @ slangji.wordpress.com
 	 */
 
-	if ( !defined( 'WP_UNINSTALL_PLUGIN' ) )
-		exit();
+	if ( !function_exists( 'add_action' ) )
+
+		{
+
+			header( 'HTTP/0.9 403 Forbidden' );
+			header( 'HTTP/1.0 403 Forbidden' );
+			header( 'HTTP/1.1 403 Forbidden' );
+			header( 'Status: 403 Forbidden' );
+			header( 'Connection: Close' );
+
+				exit();
+
+		}
+
+	if ( !defined( 'WPINC' ) )
+
+		{
+
+			die();
+
+		}
+
+	if ( !defined( 'ABSPATH' ) ) exit();
+
+	if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) exit();
 
 	$option_names = array( 
+
+			/**
+			 * remove all new options from database to keep it clean
+			 *
+			 * sLa NGjI's 2014-05-18
+			 */
+
+			'global-admin-bar-admins',
+			'global-admin-bar-cleanup',
+			'global-admin-bar-roles',
+			'global-admin-bar-settings',
+			'global-admin-bar-users',
+
+			/**
+			 * remove all old options from database to keep it clean
+			 *
+			 * sLa NGjI's 2014-05-18
+			 */
+
 			'global-admin-bar-plugin-setting',
 			'global-admin-bar-plugin-user-setting',
-			'global-admin-bar-roles',
-			'global-admin-bar-profiles' 
+			'global-admin-bar-profiles',
+			'global-admin-bar-setting'
+			//'global-admin-bar-user'
+
 	);
 
 	if ( !is_multisite() )
@@ -36,6 +80,7 @@
 					delete_option( $option_name );
 
 				}
+
 		}
 
 	else
