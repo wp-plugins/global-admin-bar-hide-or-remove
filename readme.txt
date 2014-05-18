@@ -102,14 +102,13 @@ According to the Terms of the GNU General Public License version 2 (or later) pa
 * Dynamic Row Meta and Action Links Activation Support.
 * Class and Functions Constructor Coding Isolation.
 * Plugin Memory Consumption (less of 1KB or no more)
-* Support php 4 and 5.
+* Support PHP 4 and 5.
 * Support MySQL 4 and 5.
-* Work with Shared and VPS Hosting.
+* Work with Shared, VPS, Dedicated and Cloud Hosting.
 * Work under [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later License.
 * Implement [GNU style](http://www.gnu.org/prep/standards/standards.html) coding standard indentation.
 * Meet detailed [Plugin Guidelines](http://wordpress.org/plugins/about/guidelines/) quality requirements.
 `
-Nothing is written into hosting space disk
 wp_option table auto cleaned when deactivate or deleted
 No need any other actions except activate or deactivate
 No need delete anything from hosting when deactivate
@@ -134,7 +133,7 @@ Developmental Code in Becoming!
 = 1.6.1 =
 * The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's
  * Please update as soon as possible!
- * Released Build 2014.04.16
+ * Released Build 2014-04-16
  * Full Support and Compatibility for WordPress 3.1+ ~ 3.9+
  * Compatible with WordPress, bbPress, Buddypress
  * Work under [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later License.
@@ -142,26 +141,23 @@ Developmental Code in Becoming!
  * Meet detailed [Plugin Guidelines](http://wordpress.org/plugins/about/guidelines/) quality requirements.
  * NEW key tag plugin authenticity
  * NEW header and footer log
- * NEW functions isolation constructor
+ * NEW class and functions constructor coding isolation
  * NEW support and compatibility for wordpress 3.9+
  * SECURITY a new idea of sla: key tag plugin authenticity
  * SECURITY checksum.txt md5 checksum declaration
  * SECURITY prevent direct access to php files on this plugin
- * SECURITY keybit.txt plugin authenticity protection
  * SECURITY index.html directory listing protection
  * SECURITY index.php directory listing protection
  * SECURITY .htaccess strict security rules
- * SECURITY nothing is written into hosting space disk
- * INTRODUCED concept of pro version for future development and survivor
- * ENHANCEMENT check minimun wordpress version required for plugin activation
+ * ENHANCEMENT check minimun wp version required for activation
  * ENHANCEMENT code cleanup for faster loading
  * ENHANCEMENT reduce code bloat
- * ENHANCEMENT delete registered database options hooks on plugin deactivation
+ * ENHANCEMENT delete registered db options hooks on deactivation
  * ENHANCEMENT ready to single and network multisite environment
  * ENHANCEMENT plugin memory consumption (less of 1kb or no more)
  * ENHANCEMENT full strict security rules applied
- * ENHANCEMENT work with shared and vps hosting
- * BUMP Version 1.6.1 Build 2014.04.16
+ * ENHANCEMENT work with shared, vps, dedicated and cloud hosting
+ * BUMP Version 1.6.1 Build 2014-04-16
 
 = 1.6 = 
 * Changed readme.txt and plugin header text to give [sLa NGjI's](//slangji.wordpress.com/) credit, where credit it due. (04/14/2014)
@@ -192,4 +188,4 @@ Developmental Code in Becoming!
 
 == Upgrade Notice ==
 = 1.6.1 =
-The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's - Build 2014.04.16 - Changed readme.txt and plugin header text to give sLa NGjI's credit, where credit it due, for BRUTE FORCE Plugin - Build 2014.04.14
+The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's - Build 2014-04-16 - Changed readme.txt and plugin header text to give sLa NGjI's credit, where credit it due, for BRUTE FORCE Plugin - Build 2014-04-14
