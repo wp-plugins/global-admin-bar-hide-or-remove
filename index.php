@@ -11,7 +11,7 @@ header( 'Connection: Close' );
 <title>404 Not Found</title>
 <script type="text/javascript">if(parent.frames.length>0){window.top.location.href=location.href}</script>
 <meta name="robots" content="noindex,nofollow,noarchive,nocache,nopreview,nosnippet,notranslate,noimageindex,nomediaindex,novideoindex,noodp,noydir">
-<link rel="canonical" href="<?php $url="//".$_SERVER["HTTP_HOST"]; echo $url; ?>/">
+<link rel="canonical" href="<?php $url="//".$_SERVER["HTTP_HOST"];echo $url?>/">
 </head>
 <body>
 <h1>Not Found</h1>
