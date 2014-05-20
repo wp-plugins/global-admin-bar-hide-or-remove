@@ -5,13 +5,11 @@
 	 * @subpackage	Global Hide Admin Tool Bar
 	 * @indentation	//www.gnu.org/prep/standards/standards.html
 	 * @license		//www.gnu.org/licenses/gpl-2.0.html
-	 * @link		//wordpress.org/plugins/global-hide-admin-tool-bar-hide-or-remove/
-	 */
-
-	/**
-	 * Uninstall Module ( obsolete? deletable on next version or keep for multisite support? )
+	 * @link		//wordpress.org/plugins/global-admin-bar-hide-or-remove/
 	 *
-	 * @version 2014-05-18 1ST 2014-04-16
+	 * Uninstall Module ( obsolete? deletable on next version? keep for multisite support? )
+	 *
+	 * @version 2014-05-20 1ST 2014-04-16
 	 * @author	sLa NGjI's @ slangji.wordpress.com
 	 */
 
@@ -46,13 +44,18 @@
 			/**
 			 * remove all new options from database to keep it clean
 			 *
-			 * sLa NGjI's 2014-05-18
+			 * sLa NGjI's 2014-05-19
 			 */
 
 			'global-admin-bar-admins',
 			'global-admin-bar-cleanup',
+			'global-admin-bar-disable',
+			'global-admin-bar-optimize',
+			'global-admin-bar-remove',
 			'global-admin-bar-roles',
 			'global-admin-bar-settings',
+			'global-admin-bar-show',
+			'global-admin-bar-speedup',
 			'global-admin-bar-users',
 
 			/**
@@ -63,9 +66,7 @@
 
 			'global-admin-bar-plugin-setting',
 			'global-admin-bar-plugin-user-setting',
-			'global-admin-bar-profiles',
-			'global-admin-bar-setting'
-			//'global-admin-bar-user'
+			'global-admin-bar-profiles'
 
 	);
 
