@@ -1,11 +1,33 @@
 <?php
+
+	global $wp_version;
+
+	if ( $wp_version < 3.3 )
+
+		{
+
+			/*
+			Plugin Name: Global Hide Admin Bar Bruteforce
+			Description: Bruteforce Disable Front and Back Admin Bar for all Admin and User Roles - BETA - This special plugin version is discontinued: install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-admin-bar-removal/">WP Admin Bar Removal</a> A.S.A.P. (2014-05-20)
+			*/
+
+		}
+
+	if ( $wp_version > 3.3 )
+
+		{
+
+			/*
+			Plugin Name: Global Hide Admin Toolbar Bruteforce
+			Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA - This special plugin version is discontinued: install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a> A.S.A.P. (2014-05-20)
+			*/
+
+		}
+
 /*
-Plugin Name: Global Hide Admin Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Bruteforce Disable Front Back End Toolbar for all Admin and User Roles - BETA - This special plugin version is discontinued: install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a> A.S.A.P.
 Version: 1.6.2
-Build: 2014-05-18
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Don Fischer</a>
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
@@ -17,9 +39,9 @@ Network: true
  *
  * LICENSING
  *
- * [Global Hide Brute Force Toolbar](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
+ * [Global Hide Admin Tool Bar Bruteforce](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
  *
- * Disable Front and Back End Toolbar for all User Roles
+ * Bruteforce Disable Front and Back End Admin Tool Bar for all Admin and User Roles
  *
  * Copyright (C) 2013-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlegmail [dot] com>)
  *
@@ -111,17 +133,21 @@ Network: true
  * HUMANS (humans.txt)
  *
  * Thanks to Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
+ *
+ * TODO
+ *
+ * Code Merge Migration to: WP Admin Bar Removal and WP Toolbar Removal
  */
 
 	/**
 	 * @package		WordPress Plugin
-	 * @subpackage	Global Hide Brute Force Toolbar
-	 * @description	Disable Front and Back End Toolbar for all User Roles
+	 * @subpackage	Global Hide Admin Tool Bar Bruteforce
+	 * @description	Bruteforce Disable Front and Back End Admin Tool Bar for all Admin and User Roles
 	 * @author		slangjis &CO prophecy2040
 	 * @since		3.1+
 	 * @status		Code in Becoming!
 	 * @version		1.6.2
-	 * @build		2014-05-18 1ST 2014-04-16
+	 * @build		2014-05-20 1ST 2014-04-16
 	 * @keytag		74be16979710d4c4e7c6647856088456
 	 */
 
@@ -149,7 +175,7 @@ Network: true
 
 	if ( !defined( 'ABSPATH' ) ) exit();
 
-	global $wp_version;
+	//global $wp_version;
 
 	if ( $wp_version < 3.1 )
 
@@ -180,7 +206,7 @@ Network: true
 
 	add_action( 'activated_plugin', 'ghatb_1st_bfp', 0 );
 
-	global $wp_version;
+	//global $wp_version;
 
 	if ( !defined( 'ABSPATH' ) )
 		{
@@ -451,7 +477,7 @@ Network: true
 
 						{
 
-							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other Author Plugins</a>';
+							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other Plugins</a>';
 
 						}
 
