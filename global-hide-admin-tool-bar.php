@@ -1,20 +1,24 @@
 <?php
 /*
-Plugin Name: Global Hide Admin Tool Bar
+Plugin Name: Global Hide Toolbar
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Add Global Options to Hide Frontend Admin Tool Bar According to User Roles
+Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-04-16)
 Version: 1.6.1
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Don Fischer</a>
-License: GPLv2 or later
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
+License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
 Indentation URI: //www.gnu.org/prep/standards/standards.html
  *
+Domain Path: /lang/
 Text Domain: global-hide-remove-toolbar-plugin
+Network: true
  *
  * LICENSING
  *
  * [Global Hide Admin Tool Bar](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
+ *
+ * Hide Front End Toolbar Manager According to Admin and User Roles
  *
  * Copyright (C) 2013-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlegmail [dot] com>)
  *
@@ -84,18 +88,28 @@ Text Domain: global-hide-remove-toolbar-plugin
  * WordPress [Readme Validator](//wordpress.org/plugins/about/validator/) directives.
  * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
  *
+ * HUMANS (humans.txt)
+ *
  * THANKS
  *
  * To Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
+ *
+ * TODO
+ *
+ * Planned for Version 1.6.2 - Ticket [#4937543](//wordpress.org/support/topic/only-partially-works/)
+ * Planned for Version 1.6.3 - [Multisite Support](//wordpress.org/support/topic/not-working-with-wp-39-and-bp-2/)
  */
 
 	/**
 	 * @package		WordPress Plugin
 	 * @subpackage	Global Hide Admin Tool Bar
-	 * @author		slangjis
-	 * @build		2014.04.16
+	 * @description	Hide Front End Toolbar Manager According to Admin and User Roles
+	 * @author		slangjis &CO prophecy2040
+	 * @since		3.1+
+	 * @status		Code in Becoming!
+	 * @version		1.6.1
+	 * @build		2014-04-16 1ST 2014-04-14
 	 * @keytag		74be16979710d4c4e7c6647856088456
-	 * @since		3.1.0
 	 */
 
 	if ( !function_exists( 'add_action' ) )
@@ -107,10 +121,14 @@ Text Domain: global-hide-remove-toolbar-plugin
 			header( 'HTTP/1.1 403 Forbidden' );
 			header( 'Status: 403 Forbidden' );
 			header( 'Connection: Close' );
-	
-			exit();
+
+				exit();
 
 		}
+
+	if ( !defined( 'ABSPATH' ) ) exit();
+
+	if ( !defined( 'WPINC' ) ) exit();
 
 	global $wp_version;
 
@@ -143,9 +161,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 	add_action( 'activated_plugin', 'ghatb_1st', 0 );
 	
-	if ( !defined( 'GHATB_VERSION' ) ) define( 'GHATB_VERSION', '1.6.1' );
-
-	$path    = plugin_dir_path( __FILE__ ) . 'lang/';
+	$path    = plugin_dir_path( __FILE__ ) . '/lang/';
 	$loaded  = $path;
 	$loaded2 = load_plugin_textdomain( 'global-hide-remove-toolbar-plugin', false, $loaded );
 
@@ -278,7 +294,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6.1 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6.1 Build 2014-04-16 Active - Tag ".md5(md5("".""))."-->\n";
 			echo "\n<!-- This website is patched against a big problem not solved from WordPress 3.3+ to date -->\n\n";
 
 		}

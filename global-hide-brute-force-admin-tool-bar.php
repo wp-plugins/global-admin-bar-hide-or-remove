@@ -2,8 +2,8 @@
 /*
 Plugin Name: Global Hide Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Bruteforce Disable Front and Back End Admin Tool Bar for all Admin and User Roles - BETA (2014-05-22) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
-Version: 1.6.2
+Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA (2014-04-16) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
+Version: 1.6.1
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
@@ -18,7 +18,7 @@ Network: true
  *
  * [Global Hide Admin Tool Bar Bruteforce](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
  *
- * Bruteforce Disable Front and Back End Admin Tool Bar for all Admin and User Roles
+ * Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles
  *
  * Copyright (C) 2013-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlegmail [dot] com>)
  *
@@ -113,7 +113,7 @@ Network: true
  *
  * TODO
  *
- * Code Merge Migration to: WP Admin Bar Removal and WP Toolbar Removal
+ * Planned for Version 1.7.0 - [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
  */
 
 	/**
@@ -123,8 +123,8 @@ Network: true
 	 * @author		slangjis &CO prophecy2040
 	 * @since		3.1+
 	 * @status		Code in Becoming!
-	 * @version		1.6.2
-	 * @build		2014-05-22 1ST 2014-04-16
+	 * @version		1.6.1
+	 * @build		2014-04-16 1ST 2014-04-14
 	 * @keytag		74be16979710d4c4e7c6647856088456
 	 */
 
@@ -517,7 +517,7 @@ Network: true
 
 		{
 
-			echo "\n<!--Plugin Global Brute Force Toolbar 1.6.2 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!--Plugin Global Brute Force Toolbar 1.6.1 Build 2014-04-16 Active - Tag ".md5(md5("".""))."-->\n";
 			echo "\n<!-- This website is patched against a big core annoyance since WordPress 3.3+ to date -->\n\n";
 
 		}
