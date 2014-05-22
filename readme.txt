@@ -1,8 +1,8 @@
 === Global Hide Admin Toolbar ===
 Contributors: slangjis, prophecy2040
 Donate link: //slangji.wordpress.com/donate/
-Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, remove-admin-bar, remove-toolbar, remove-wordpress-admin-bar, remove-wordpress-toolbar, slangjis, toolbar, global-hide-admin-toolbar
-Stable tag: trunk
+Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, global-hide-admin-bar, global-hide-admin-toolbar, remove-admin-bar, remove-toolbar, slangjis, toolbar, 
+Stable tag: 1.6.1
 Requires at least: 3.1
 Tested up to: 4.0
 License: GPLv2 or later
@@ -19,7 +19,7 @@ Brute Force plugin (included), removes ALL Toolbars (admin and front end) as wel
 
 * Hide Frontend Toolbar for logged in users according to your own roles
 * Hide Your Profile "Show Toolbar when viewing site" on User Page (Beta)
-* Options Page with Setting Options
+* Settings Page with Plugin Options Control Panel
 
 = Optional Plugin Features (BRUTE FORCE PLUGIN): =
 
@@ -31,7 +31,7 @@ Brute Force plugin (included), removes ALL Toolbars (admin and front end) as wel
 
 = TROUBLESHOOTING: =
 
-* Do Not Use both plugins at the same time.
+* Do not use both plugins at the same time.
 
 * [My Others WordPress Plugins](//slangji.wordpress.com/plugins/)
  * [WP Overview (lite)](//wordpress.org/plugins/wp-overview-lite/)
@@ -130,6 +130,10 @@ suggested upgrade to the latest build, always!`
 
 Developmental Code in Becoming!
 
+Version 1.7.0 is planned for end of June or July 2014
+
+Version 1.6.2 is planned for end of May 2014
+
 = 1.6.1 =
 * The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's
  * Please update as soon as possible!
@@ -189,3 +193,4 @@ Developmental Code in Becoming!
 == Upgrade Notice ==
 = 1.6.1 =
 The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's - Build 2014-04-16 - Changed readme.txt and plugin header text to give sLa NGjI's credit, where credit it due, for BRUTE FORCE Plugin - Build 2014-04-14
+
