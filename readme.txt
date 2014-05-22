@@ -1,10 +1,10 @@
-=== Global Hide Admin Tool Bar ===
+=== Global Hide Admin Toolbar ===
 Contributors: slangjis, prophecy2040
 Donate link: //slangji.wordpress.com/donate/
-Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, remove-admin-bar, remove-toolbar, remove-wordpress-admin-bar, remove-wordpress-toolbar, slangjis, toolbar
+Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, global-hide-admin-bar, global-hide-admin-toolbar, remove-admin-bar, remove-toolbar, slangjis, toolbar, 
 Stable tag: trunk
 Requires at least: 3.1
-Tested up to: 3.9
+Tested up to: 4.0
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 add global options to hide frontend admin bar and toolbar according to your own user roles
@@ -19,7 +19,7 @@ Brute Force plugin (included), removes ALL Toolbars (admin and front end) as wel
 
 * Hide Frontend Toolbar for logged in users according to your own roles
 * Hide Your Profile "Show Toolbar when viewing site" on User Page (Beta)
-* Options Page with Setting Options
+* Settings Page with Plugin Options Control Panel
 
 = Optional Plugin Features (BRUTE FORCE PLUGIN): =
 
@@ -31,7 +31,7 @@ Brute Force plugin (included), removes ALL Toolbars (admin and front end) as wel
 
 = TROUBLESHOOTING: =
 
-* Do Not Use both plugins at the same time.
+* Do not use both plugins at the same time.
 
 * [My Others WordPress Plugins](//slangji.wordpress.com/plugins/)
  * [WP Overview (lite)](//wordpress.org/plugins/wp-overview-lite/)
@@ -102,14 +102,13 @@ According to the Terms of the GNU General Public License version 2 (or later) pa
 * Dynamic Row Meta and Action Links Activation Support.
 * Class and Functions Constructor Coding Isolation.
 * Plugin Memory Consumption (less of 1KB or no more)
-* Support php 4 and 5.
+* Support PHP 4 and 5.
 * Support MySQL 4 and 5.
-* Work with Shared and VPS Hosting.
+* Work with Shared, VPS, Dedicated and Cloud Hosting.
 * Work under [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later License.
 * Implement [GNU style](http://www.gnu.org/prep/standards/standards.html) coding standard indentation.
 * Meet detailed [Plugin Guidelines](http://wordpress.org/plugins/about/guidelines/) quality requirements.
 `
-Nothing is written into hosting space disk
 wp_option table auto cleaned when deactivate or deleted
 No need any other actions except activate or deactivate
 No need delete anything from hosting when deactivate
@@ -131,10 +130,14 @@ suggested upgrade to the latest build, always!`
 
 Developmental Code in Becoming!
 
+Version 1.7.0 is planned for end of June or July 2014
+
+Version 1.6.2 is planned for end of May 2014
+
 = 1.6.1 =
 * The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's
  * Please update as soon as possible!
- * Released Build 2014.04.16
+ * Released Build 2014-04-16
  * Full Support and Compatibility for WordPress 3.1+ ~ 3.9+
  * Compatible with WordPress, bbPress, Buddypress
  * Work under [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later License.
@@ -142,26 +145,23 @@ Developmental Code in Becoming!
  * Meet detailed [Plugin Guidelines](http://wordpress.org/plugins/about/guidelines/) quality requirements.
  * NEW key tag plugin authenticity
  * NEW header and footer log
- * NEW functions isolation constructor
+ * NEW class and functions constructor coding isolation
  * NEW support and compatibility for wordpress 3.9+
  * SECURITY a new idea of sla: key tag plugin authenticity
  * SECURITY checksum.txt md5 checksum declaration
  * SECURITY prevent direct access to php files on this plugin
- * SECURITY keybit.txt plugin authenticity protection
  * SECURITY index.html directory listing protection
  * SECURITY index.php directory listing protection
  * SECURITY .htaccess strict security rules
- * SECURITY nothing is written into hosting space disk
- * INTRODUCED concept of pro version for future development and survivor
- * ENHANCEMENT check minimun wordpress version required for plugin activation
+ * ENHANCEMENT check minimun wp version required for activation
  * ENHANCEMENT code cleanup for faster loading
  * ENHANCEMENT reduce code bloat
- * ENHANCEMENT delete registered database options hooks on plugin deactivation
+ * ENHANCEMENT delete registered db options hooks on deactivation
  * ENHANCEMENT ready to single and network multisite environment
  * ENHANCEMENT plugin memory consumption (less of 1kb or no more)
  * ENHANCEMENT full strict security rules applied
- * ENHANCEMENT work with shared and vps hosting
- * BUMP Version 1.6.1 Build 2014.04.16
+ * ENHANCEMENT work with shared, vps, dedicated and cloud hosting
+ * BUMP Version 1.6.1 Build 2014-04-16
 
 = 1.6 = 
 * Changed readme.txt and plugin header text to give [sLa NGjI's](//slangji.wordpress.com/) credit, where credit it due. (04/14/2014)
@@ -192,4 +192,5 @@ Developmental Code in Becoming!
 
 == Upgrade Notice ==
 = 1.6.1 =
-The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's - Build 2014.04.16 - Changed readme.txt and plugin header text to give sLa NGjI's credit, where credit it due, for BRUTE FORCE Plugin - Build 2014.04.14
+The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's - Build 2014-04-16 - Changed readme.txt and plugin header text to give sLa NGjI's credit, where credit it due, for BRUTE FORCE Plugin - Build 2014-04-14
+
