@@ -11,10 +11,10 @@ global-hide-remove-toolbar-plugin_en.po        DFE71B1D86340051519E072A45496AA9
 
 index.html                                     4D4F5751967030B846DAA84384AC1F59
 .htaccess                                      5C15A9E1B4B468CBF73D400455334B0B
-global-hide-admin-tool-bar.php                 B53F9EE99BF463D044E080AA404E12D9
-global-hide-brute-force-admin-tool-bar.php     84CA4683F34A80E6F6529AB9A3B77BEC
+global-hide-admin-tool-bar.php                 A09AC13DF0ACF93968DCE96BE62BC279
+global-hide-brute-force-admin-tool-bar.php     7588E868E8BA5CB4073C7BD398C656CF
 humans.txt                                     A999ED7DA5208E1414C7D4CC85F80881
 index.php                                      1565911569FFD99A8725C0412638D8D3
 license.txt                                    39BBA7D2CF0BA1036F2A6E2BE52FE3F0
-readme.txt                                     E342A8E259C64082D3CAB54720300B7F
+readme.txt                                     0334BBEA63FF498E6D64ECFDCA380168
 uninstall.php                                  646D08F8124CB0C32C0E519AF6F9FC35
