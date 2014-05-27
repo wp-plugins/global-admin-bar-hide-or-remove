@@ -7,9 +7,7 @@
 	 * @license		//www.gnu.org/licenses/gpl-2.0.html
 	 * @link		//wordpress.org/plugins/global-admin-bar-hide-or-remove/
 	 *
-	 * Uninstall Module ( obsolete? deletable on next version? keep for multisite support? )
-	 *
-	 * @version 2014-05-20 1ST 2014-04-16
+	 * @version 2014-05-28 1ST 2014-04-16
 	 * @author	sLa NGjI's @ slangji.wordpress.com
 	 */
 
@@ -23,21 +21,15 @@
 			header( 'Status: 403 Forbidden' );
 			header( 'Connection: Close' );
 
-				exit();
+				exit;
 
 		}
 
-	if ( !defined( 'WPINC' ) )
+	if ( !defined( 'ABSPATH' ) ) exit;
 
-		{
+	if ( !defined( 'WPINC' ) ) exit;
 
-			die();
-
-		}
-
-	if ( !defined( 'ABSPATH' ) ) exit();
-
-	if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) exit();
+	if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) exit;
 
 	$option_names = array( 
 
