@@ -6,7 +6,7 @@ header( 'Status: 403 Forbidden' );
 header( 'Connection: Close' );
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "//www.w3.org/TR/html4/strict.dtd">
-<html lang="en-US">
+<html lang="en">
 <head>
 <title>404 Not Found</title>
 <script type="text/javascript">if(parent.frames.length>0){window.top.location.href=location.href}</script>
