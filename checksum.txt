@@ -1,22 +1,22 @@
-Global Hide Admin Tool Bar - Build 2014-05-20 - ( Version 1.6.2 ) MD5 Checksum:
+Global Hide Admin Tool Bar - Build 2014-05-28 - ( Version 1.6.2 DEV ) MD5 Checksum:
 
 /languages/
 
-global-hide-remove-toolbar-plugin_de.mo        C260980F40788A73C15C0FE53B3DE1C7
-global-hide-remove-toolbar-plugin_en.mo        67BC9155E5217B8BC3AD0D54A084DC91
-global-hide-remove-toolbar-plugin_de.po        AD7E46BA2B27E3F577CA60E130B9AB68
-global-hide-remove-toolbar-plugin_en.po        DFE71B1D86340051519E072A45496AA9
+global-hide-remove-toolbar-plugin_de.mo            C260980F40788A73C15C0FE53B3DE1C7
+global-hide-remove-toolbar-plugin_en.mo            67BC9155E5217B8BC3AD0D54A084DC91
+global-hide-remove-toolbar-plugin_de.po            AD7E46BA2B27E3F577CA60E130B9AB68
+global-hide-remove-toolbar-plugin_en.po            DFE71B1D86340051519E072A45496AA9
 
 /
 
-index.html                                     99C228D8EEAA4717F2EDB8DAA0630931
-.htaccess                                      EE59BCD83C8AE26EFBE03953B7A959A5
-global-hide-admin-tool-bar.php                 B53F9EE99BF463D044E080AA404E12D9
-global-hide-admin-tool-bar-dev.php             
-global-hide-brute-force-admin-tool-bar.php     2F0B248D5DF5CAA7E34D27FF1D1D5D6B
-global-hide-brute-force-admin-tool-bar-dev.php 2F0B248D5DF5CAA7E34D27FF1D1D5D6B
-humans.txt                                     A999ED7DA5208E1414C7D4CC85F80881
-index.php                                      C5A7A41F3F1E16ACDFD1A510C3A91C90
-license.txt                                    DB85EFB4F2572FD1727A97D806602630
-readme.txt                                     BCD0F4CE640CE559F94CDB91F28549D2
-uninstall.php                                  646D08F8124CB0C32C0E519AF6F9FC35
+.htaccess                                          9D475FB4114D121B6EC2C5B046DFD1D3
+global-hide-admin-tool-bar.php                     3D0F7284C6D36EFA2BA5413BEB0032B8
+global-hide-admin-toolbar-dev.php                  ED98DFB45113CA8124C6A16EBD36DFFE
+global-hide-brute-force-admin-tool-bar.php         44DC3FB87FB57B2B5F0E4FAB146F4DB8
+global-hide-brute-force-admin-toolbar-beta-dev.php 5CF7E42F8C0001A9CF60779AF55B429C
+humans.txt                                         7DF7AE2B35E15FBEF4524BC4C49A8475
+index.html                                         B06FA95A0271B37E75027C908245BF51
+index.php                                          0938FFCB27D77DF194B73DC2E8BAACCC
+license.txt                                        DB85EFB4F2572FD1727A97D806602630
+readme.txt                                         FCDC58C8867687974542E68FD873EA0D
+uninstall.php                                      80DC5E55DAF43BBE3D17DF82C3F6A994
