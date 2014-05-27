@@ -10,8 +10,6 @@ License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
 Indentation URI: //www.gnu.org/prep/standards/standards.html
  *
-Domain Path: /languages/
-Text Domain: global-hide-remove-toolbar-plugin
 Network: true
  *
  * LICENSING
@@ -107,7 +105,9 @@ Network: true
  * WordPress [Readme Validator](//wordpress.org/plugins/about/validator/) directives.
  * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
  *
- * HUMANS (humans.txt)
+ * HUMANS
+ *
+ * See included humans.txt
  *
  * Thanks to Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
  *
@@ -119,7 +119,7 @@ Network: true
 	/**
 	 * @package		WordPress Plugin
 	 * @subpackage	Global Hide Admin Tool Bar Bruteforce
-	 * @description	Bruteforce Disable Front and Back End Admin Tool Bar for all Admin and User Roles
+	 * @description	Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles
 	 * @author		slangjis &CO prophecy2040
 	 * @since		3.1+
 	 * @status		Code in Becoming!
@@ -138,15 +138,15 @@ Network: true
 			header( 'Status: 403 Forbidden' );
 			header( 'Connection: Close' );
 
-				exit();
+				exit;
 
 		}
 
-	if ( !defined( 'ABSPATH' ) ) exit();
+	if ( !defined( 'ABSPATH' ) ) exit;
 
-	if ( !defined( 'WPINC' ) ) exit();
+	if ( !defined( 'WPINC' ) ) exit;
 
-	function ghatb_1st_bfp()
+	function ghatb_bfp_1st()
 
 		{
 
@@ -167,7 +167,7 @@ Network: true
 
 		}
 
-	add_action( 'activated_plugin', 'ghatb_1st_bfp', 0 );
+	add_action( 'activated_plugin', 'ghatb_bfp_1st', 0 );
 
 	global $wp_version;
 
@@ -183,7 +183,7 @@ Network: true
 
 		{
 
-				wp_die( __( 'This Plugin Requires WordPress 3.1+ or higher: Could Not Install!' ) );
+			wp_die( __( 'This Plugin Requires WordPress 3.1+ or higher: Could Not Install!' ) );
 
 		}
 
@@ -191,11 +191,11 @@ Network: true
 
 		{
 
-				add_action( 'admin_head', 'bftoolbar_admin_back_menu_remove' );
+			add_action( 'admin_head', 'ghatb_bfp_admin_back_menu_remove' );
 
 		}
 
-	function bftoolbar_warning_notice()
+	function ghatb_bfp_warning_notice()
 
 		{
 
@@ -203,33 +203,37 @@ Network: true
 
 				{
 
-					echo '<div class="error"><h3><strong>' . __( 'Activation Warning!' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Admin Tool Bar</strong> and <strong style="color:#880000;">Global Hide Brute Force Admin Tool Bar</strong> at the Same Time.' ) . '</p></div>';
+					echo '<div class="error"><h3><strong>' . __( 'Activation Warning!' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Admin Tool Bar</strong> and <strong style="color:#880000;">Global Hide Admin Tool Bar Brute Force</strong> at the Same Time.' ) . '</p></div>';
 
 				}
 
 		}
 
-	add_action( 'admin_notices', 'bftoolbar_warning_notice' );
+	add_action( 'admin_notices', 'ghatb_bfp_warning_notice' );
 
-	function bftoolbar_admin_back_menu_remove()
+	function ghatb_bfp_admin_back_menu_remove()
 
 		{
 
+			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 			echo '<style type="text/css">#adminmenushadow,#adminmenuback{background-image:none}</style>';
+			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 
 		}
 
-	function bftoolbar_admin_styles()
+	function ghatb_bfp_admin_styles()
 
 		{
 
-			echo '<style type="text/css">#wp-bftoolbar-bar-menu-toggle {color: #fff;font-size: 26px;text-align: center;line-height: 29px;display:none;cursor: pointer;width: 30px;height: 27px;float: left;margin-right: 8px;background: #222;margin-top: 3px;}html.wp-toolbar,html.wp-toolbar #wpcontent,html.wp-toolbar #adminmenu,html.wp-toolbar #wpadminbar,body.admin-bar,body.admin-bar #wpcontent,body.admin-bar #adminmenu,body.admin-bar #wpadminbar{padding-top:0px !important}</style>';
+			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
+			echo '<style type="text/css">#wp-bftoolbar-bar-menu-toggle{color:#fff;font-size:26px;text-align:center;line-height:29px;display:none;cursor:pointer;width:30px;height:27px;float:left;margin-right:8px;background:#222;margin-top:3px}html.wp-toolbar,html.wp-toolbar #wpcontent,html.wp-toolbar #adminmenu,html.wp-toolbar #wpadminbar,body.admin-bar,body.admin-bar #wpcontent,body.admin-bar #adminmenu,body.admin-bar #wpadminbar{padding-top:0px !important}</style>';
+			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 
 		}
 
-	add_action( 'admin_print_styles', 'bftoolbar_admin_styles', 21 );
+	add_action( 'admin_print_styles', 'ghatb_bfp_admin_styles', 21 );
 
-	function bftoolbar_new_toolbar()
+	function ghatb_bfp_login_header()
 
 		{
 
@@ -257,7 +261,7 @@ Network: true
 			$homelink      = '<a href="' . home_url() . '">' . __( get_bloginfo() ) . '</a>';
 
 			echo '
-			<!--Start Plugin Global Brute Force Toolbar 1.6.2 Code-->
+			<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->
 			<style type="text/css">
 				@media screen and (max-width:782px){
 					#wp-bftoolbar-bar-menu-toggle {display:block}
@@ -278,14 +282,16 @@ Network: true
 				<div id="bftoobar_ttl">' . $toggle . $homelink . '</div>
 				<div id="bftoobar_lgt">' . $formatteddate . ' | ' . $displayname . $admin_link . ' | ' . $logout_link . '</div>
 			</div>
-			<!--/ End Plugin Global Brute Force Toolbar 1.6.2 Code-->
+			<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->
 			';
 
 			if ( $wp_version >= 3.8 )
 
 				{
 
-					echo '<script>jQuery(document).ready( function(){var $wpwrap = jQuery( "#wpwrap" );jQuery( "#wp-bftoolbar-bar-menu-toggle" ).on( "click", function( event ) {console.log("clicked");event.preventDefault();$wpwrap.toggleClass( "wp-responsive-open" );} );});</script>';
+					echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
+					echo '<script>jQuery(document).ready(function(){var $wpwrap=jQuery("#wpwrap");jQuery("#wp-bftoolbar-bar-menu-toggle").on("click",function(event) {console.log("clicked");event.preventDefault();$wpwrap.toggleClass("wp-responsive-open");});});</script>';
+					echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 
 				}
 
@@ -295,13 +301,13 @@ Network: true
 
 		{
 
-			add_action( 'in_admin_header', 'bftoolbar_new_toolbar' );
+			add_action( 'in_admin_header', 'ghatb_bfp_login_header' );
 
 			add_filter( 'show_wp_pointer_admin_bar', '__return_false' );
 
 		}
 
-	function wp_toolbar_init()
+	function ghatb_bfp_wp_toolbar_init()
 
 		{
 
@@ -310,17 +316,19 @@ Network: true
 
 		}
 
-	add_filter( 'init', 'wp_toolbar_init', 9 );
+	add_filter( 'init', 'ghatb_bfp_wp_toolbar_init', 9 );
 
-	function bftoolbar_remove_profile_option()
+	function ghatb_bfp_remove_profile_option()
 
 		{
 
+			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 			echo '<style type="text/css">.show-admin-bar{display:none}</style>';
+			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 
 		}
 
-	add_action( 'admin_print_styles-profile.php', 'bftoolbar_remove_profile_option' );
+	add_action( 'admin_print_styles-profile.php', 'ghatb_bfp_remove_profile_option' );
 
 	$wp_scripts = new WP_Scripts();
 	wp_deregister_script( 'admin-bar' );
@@ -469,7 +477,7 @@ Network: true
 
 		}
 
-	function ghatb_prml_bfp( $links, $file )
+	function ghatb_bfp_prml( $links, $file )
 
 		{
 
@@ -511,18 +519,18 @@ Network: true
 
 		}
 
-	add_filter( 'plugin_row_meta', 'ghatb_prml_bfp', 10, 2 );
+	add_filter( 'plugin_row_meta', 'ghatb_bfp_prml', 10, 2 );
 
-	function ghatb_shfl_bfp()
+	function ghatb_bfp_shfl()
 
 		{
 
-			echo "\n<!--Plugin Global Brute Force Toolbar 1.6.1 Build 2014-04-16 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!--Plugin Global Hide Admin Tool Bar Bruteforce 1.6.1 Build 2014-04-16 Active - Tag ".md5(md5("".""))."-->\n";
 			echo "\n<!-- This website is patched against a big core annoyance since WordPress 3.3+ to date -->\n\n";
 
 		}
 
-	add_action( 'wp_head', 'ghatb_shfl_bfp', 0 );
-	add_action( 'wp_footer', 'ghatb_shfl_bfp', 0 );
+	add_action( 'wp_head', 'ghatb_bfp_shfl', 0 );
+	add_action( 'wp_footer', 'ghatb_bfp_shfl', 0 );
 
 ?>
