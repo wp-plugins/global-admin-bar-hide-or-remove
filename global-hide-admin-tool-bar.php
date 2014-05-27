@@ -1,20 +1,23 @@
 <?php
 /*
-Plugin Name: Global Hide Admin Tool Bar
+Plugin Name: Global Hide Toolbar
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Add Global Options to Hide Frontend Admin Tool Bar According to User Roles
+Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-04-16)
 Version: 1.6.1
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">Don Fischer</a>
-License: GPLv2 or later
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
+License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
 Indentation URI: //www.gnu.org/prep/standards/standards.html
  *
+Domain Path: /lang/
 Text Domain: global-hide-remove-toolbar-plugin
  *
  * LICENSING
  *
  * [Global Hide Admin Tool Bar](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
+ *
+ * Global Hide Front End Toolbar Manager According to Admin and User Roles
  *
  * Copyright (C) 2013-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlegmail [dot] com>)
  *
@@ -84,18 +87,47 @@ Text Domain: global-hide-remove-toolbar-plugin
  * WordPress [Readme Validator](//wordpress.org/plugins/about/validator/) directives.
  * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
  *
+ * HUMANS
+ *
+ * See included humans.txt
+ *
  * THANKS
  *
  * To Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
+ *
+ * TODO
+ *
+ * Planned for Version 1.6.2 - Ticket [#4937543](//wordpress.org/support/topic/only-partially-works/)
+ * Planned for Version 1.6.2 - New Simple but Innovative Plugin Options
+ * Planned for Version 1.6.2 - Code Cleanup and Optimization
+ * Planned for Version 1.6.2 - New Security Rules
+ * Planned for Version 1.6.2 - Making New Interface and Features Screenshots
+ *
+ * Planned for Version 1.6.3 - [Multisite Support](//wordpress.org/support/topic/not-working-with-wp-39-and-bp-2/) if is possible
+ * Planned for Version 1.6.3 - Full WordPress 4.0+ Compatibility and Support
+ * Planned for Version 1.6.3 - Making New Multisite Screenshots
+ *
+ * Planned for Version 1.7.0 - Planned for Version 1.7.0 - [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
+ * Planned for Version 1.7.0 - Integration of Main Plugin with WP Toolbar Node Removal and WP Admin Bar Node Removal
+ * Planned for Version 1.7.0 - New Advanced and Integrated Innovative Plugin Options
+ * Planned for Version 1.7.0 - Full WordPress 4.1+ Compatibility and Support
+ * Planned for Version 1.7.0 - Making New Options Screenshots
+ * Planned for Version 1.7.0 - All changes for Pro Only Version ?
+ *
+ * Planned for Version 1.8.0 - Full sLa NGjI's Keytag Support ?
+ * Planned for Version 1.8.0 - Themes Framework Shortcodes Integration Support ?
  */
 
 	/**
 	 * @package		WordPress Plugin
 	 * @subpackage	Global Hide Admin Tool Bar
-	 * @author		slangjis
-	 * @build		2014.04.16
+	 * @description	Global Hide Front End Toolbar Manager According to Admin and User Roles
+	 * @author		slangjis &CO prophecy2040
+	 * @since		3.1+
+	 * @status		Code in Becoming!
+	 * @version		1.6.1
+	 * @build		2014-04-16 1ST 2014-04-14
 	 * @keytag		74be16979710d4c4e7c6647856088456
-	 * @since		3.1.0
 	 */
 
 	if ( !function_exists( 'add_action' ) )
@@ -107,17 +139,23 @@ Text Domain: global-hide-remove-toolbar-plugin
 			header( 'HTTP/1.1 403 Forbidden' );
 			header( 'Status: 403 Forbidden' );
 			header( 'Connection: Close' );
-	
-			exit();
+
+				exit;
 
 		}
+
+	if ( !defined( 'ABSPATH' ) ) exit;
+
+	if ( !defined( 'WPINC' ) ) exit;
 
 	global $wp_version;
 
 	if ( $wp_version < 3.1 )
 
 		{
+
 			wp_die( __( 'This Plugin Requires WordPress 3.1+ or Greater: Activation Stopped!' ) );
+
 		}
 
 	function ghatb_1st()
@@ -143,9 +181,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 	add_action( 'activated_plugin', 'ghatb_1st', 0 );
 	
-	if ( !defined( 'GHATB_VERSION' ) ) define( 'GHATB_VERSION', '1.6.1' );
-
-	$path    = plugin_dir_path( __FILE__ ) . 'lang/';
+	$path    = plugin_dir_path( __FILE__ ) . '/lang/';
 	$loaded  = $path;
 	$loaded2 = load_plugin_textdomain( 'global-hide-remove-toolbar-plugin', false, $loaded );
 
@@ -165,6 +201,22 @@ Text Domain: global-hide-remove-toolbar-plugin
 			$okRoles       = get_usable_clean_roles();
 			$pluginset     = get_option( 'global-admin-bar-plugin-setting', 0 );
 			$usersset      = get_option( 'global-admin-bar-plugin-user-setting', 0 );
+
+			/**
+			 * Don Fischer 2014-04-18
+			 */
+			$adminkey = array_search( "administrator", $okRoles );
+
+			/**
+			 * Don Fischer 2014-04-18
+			 */
+			if( $adminkey !== false )
+
+				{
+
+					unset( $okRoles [ $adminkey ] );
+
+				}
 
 			if ( $pluginset == 0 )
 
@@ -206,11 +258,8 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			delete_option( 'GHATB_VERSION' );
-			delete_option( 'global-admin-bar-plugin-setting' );
-			delete_option( 'global-admin-bar-plugin-user-setting' );
-			delete_option( 'global-admin-bar-profiles' );
-			delete_option( 'global-admin-bar-roles' );
+			delete_option( 'global-admin-bar-plugin-profiles' );
+			delete_option( 'global-admin-bar-plugin-roles' );
 
 		}
 
@@ -220,7 +269,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			$links[] = '<a title="" href="' . admin_url( 'options-general.php?page=global-hide-admin-tool-bar-plugin' ) . '">' . __( 'Settings', 'global-hide-remove-toolbar-plugin' ) . '</a>';
+			$links[] = '<a title="" href="' . admin_url( 'options-general.php?page=global-hide-toolbar' ) . '">' . __( 'Settings', 'global-hide-remove-toolbar-plugin' ) . '</a>';
 
 			return $links;
 
@@ -254,7 +303,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 						{
 
-							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other Author Plugins</a>';
+							$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other Plugins</a>';
 
 						}
 
@@ -262,7 +311,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 						{
 
-							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other</a>';
+							$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other</a>';
 
 						}
 
@@ -278,7 +327,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6.1 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6.1 Build 2014-04-16 Active - Tag ".md5(md5("".""))."-->\n";
 			echo "\n<!-- This website is patched against a big problem not solved from WordPress 3.3+ to date -->\n\n";
 
 		}
@@ -386,45 +435,59 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 			$current_user = wp_get_current_user();
 
-			if ( is_multisite() && is_super_admin() )
+			if ( !is_multisite() && is_admin() && current_user_can( 'manage_options' ) )
 
 				{
 
-					add_options_page( __( 'Global Hide Admin Tool Bar Plugin Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), 'manage_network', 'global-hide-admin-tool-bar-plugin', 'ghatb_admin_bar_page' );
+					global $wp_version;
 
-				}
-
-			elseif ( is_multisite() && !is_super_admin() )
-
-				{
-
-					$theRoles = get_option( 'global-admin-bar-roles' );
-
-					if ( !is_array( $theRoles ) )
+					if ( $wp_version < 3.3 )
 
 						{
 
-							$theRoles = array();
+							add_options_page( __( 'Hide Admin Bar Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Admin Bar', 'global-hide-remove-toolbar-plugin' ), 'manage_options', 'global-hide-toolbar', 'ghatb_admin_bar_page' );
 
 						}
 
-					if ( !in_array( get_current_user_role(), $theRoles ) )
+					global $wp_version;
+
+					if ( $wp_version >= 3.3 )
 
 						{
 
-							add_options_page( __( 'Global Hide Admin Tool Bar Plugin Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), 'manage_options', 'global-hide-admin-tool-bar-plugin', 'ghatb_admin_bar_page' );
+							add_options_page( __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), 'manage_options', 'global-hide-toolbar', 'ghatb_admin_bar_page' );
 
 						}
 
 				}
 
-			elseif ( !is_multisite() && current_user_can( 'manage_options' ) )
+			elseif ( is_multisite() && is_super_admin() && current_user_can( 'manage_network_options' ) )
 
 				{
 
-					add_options_page( __( 'Global Hide Admin Tool Bar Plugin Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), 'manage_options', 'global-hide-admin-tool-bar-plugin', 'ghatb_admin_bar_page' );
-	
+					global $wp_version;
+
+					if ( $wp_version < 3.3 )
+
+						{
+
+							add_options_page( __( 'Hide Admin Bar Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Admin Bar', 'global-hide-remove-toolbar-plugin' ), 'manage_network_options', 'global-hide-toolbar', 'ghatb_admin_bar_page' );
+
+						}
+
+					global $wp_version;
+
+					if ( $wp_version >= 3.3 )
+
+						{
+
+							add_submenu_page( 'settings.php', __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), 'manage_network_options', 'global-hide-toolbar', 'ghatb_admin_bar_page' );
+
+						}
+
 				}
+
+			return;
 
 		}
 
@@ -556,16 +619,28 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 <div class="wrap">
 <h2 class="nav-tab-wrapper">
-<a href="?page=global-hide-admin-tool-bar-plugin" class="nav-tab <?php echo $active_tab == 'wp_optimize_settings' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Settings', 'global-hide-remove-toolbar-plugin' ) ?></a>
-<?php _e( 'Global Hide Admin Tool Bar', 'global-hide-remove-toolbar-plugin' );
+<a href="?page=global-hide-toolbar" class="nav-tab"><?php _e( 'Settings', 'global-hide-remove-toolbar-plugin' ) ?></a>
+<?php
 
-        if ( defined( 'GHATB_VERSION' ) )
+	global $wp_version;
 
-			{
+	if ( $wp_version < 3.3 )
 
-				echo ' - ' . GHATB_VERSION ;
+		{
 
-			}
+			_e( 'Global Hide Admin Bar - 1.6.1', 'global-hide-remove-toolbar-plugin' );
+
+		}
+
+	global $wp_version;
+
+	if ( $wp_version >= 3.3 )
+
+		{
+
+			_e( 'Global Hide Toolbar - 1.6.1', 'global-hide-remove-toolbar-plugin' );
+
+		}
 
 ?>
 </h2>
@@ -574,7 +649,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 <table class="form-table">
 <tr valign="top">
 <td style="text-align:left;vertical-align:top" colspan="2">
-<?php _e( 'This plugin is designed to turn off the <strong>FRONT END</strong> Toolbar that is displayed for logged in users in WordPress 3.1+ or later.', 'global-hide-remove-toolbar-plugin' );?>
+<?php _e( 'This plugin turn off the <strong>FRONT END</strong> Toolbar that is displayed for logged in users in WordPress 3.1+ or later.', 'global-hide-remove-toolbar-plugin' );?>
 </td>
 </tr>
 <tr valign="top">
@@ -631,7 +706,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 </td>
 <td style="text-align:left;vertical-align:top;line-height:14px">
 <strong>
-<?php _e( 'Hide "Show Toolbar when viewing site" on <a href="' . admin_url( 'profile.php' ) . '">Your Profile</a> user page - <strong>(Beta Testing Option Not for Production Sites)</strong>', 'global-hide-remove-toolbar-plugin' ); ?>
+<?php _e( 'Hide "Show Toolbar when viewing site" on <a href="' . admin_url( 'profile.php' ) . '">Your Profile</a> users page - <strong>(Beta Option Not for Production Sites)</strong>', 'global-hide-remove-toolbar-plugin' ); ?>
 </strong>
 </td>
 </tr>
@@ -653,7 +728,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 </tr>
 <tr valign="top">
 <td style="text-align:left;vertical-align:top" colspan="2">
-<?php _e( '<strong>REMEMBER THAT</strong>: it may become obsolete if Core Team ever decides to add their own global option, <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>, but for now it is very helpful to have a way to turn it off or on since WordPress 3.3+ or later.', 'global-hide-remove-toolbar-plugin' ); ?>
+<?php _e( 'It may become obsolete when <strong>Core Team</strong> add their own global option <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>.', 'global-hide-remove-toolbar-plugin' ); ?>
 </td>
 </tr>
 </table>
