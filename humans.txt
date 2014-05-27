@@ -1,26 +1,31 @@
-
-We are the humans behind WordPress "Global Hide Admin Tool Bar" Plugin.
+humans.txt - We are the Humans sLa NGjI's @slangji and Donald J. Fischer @prophecy2040 behind WordPress "Global Hide Admin Tool Bar" Plugin Code Project. 
 
 /* TEAM */
 
-Name:		sLa NGjI's
-Title:		Plugin Owner Author
-Site:		slangji.wordpress.com
-Profile:	profiles.wordpress.org/slangjis
-Twitter:	@slangji #slangji
+	Name:		sLa NGjI's
+	Title:		Plugin Owner Author
+	Site:		slangji.wordpress.com
+	Profile:	profiles.wordpress.org/slangjis
+	Twitter:	@slangji #slangji
 
-Name:		Donald J. Fischer
-Title:		Plugin Master Author
-Site:		www.fischercreativemedia.com
-Profile:	profiles.wordpress.org/
-Twitter:	@prophecy2040 #prophecy2040
+	Name:		Donald J. Fischer
+	Title:		Plugin Master Author
+	Site:		www.fischercreativemedia.com
+	Profile:	profiles.wordpress.org/prophecy2040
+	Twitter:	@prophecy2040 #prophecy2040
+
+/* SITE */
+
+	Site name:	slangji.wordpress.com/wp-global-hide-admin-tool-bar/
+	Github:		github.com/sLaNGjI/wp-global-hide-admin-tool-bar/
+	WordPress:	wordpress.org/plugins/global-admin-bar-hide-or-remove/
+	Built with:	WORDPRESS, PHP, HTML5, CSS3, jQuery, Ajax, JavaScript
 
 /* THANKS */
-To all contributors and suggestors!
+
+	To all Contributors!
 
 /* META */
 
-Version:	1.6.2
-Updated:	2014-05-18
-See:		humanstxt.org
+	See humanstxt.org
 
