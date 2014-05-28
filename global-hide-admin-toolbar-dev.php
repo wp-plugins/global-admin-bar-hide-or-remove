@@ -2,7 +2,7 @@
 /*
 Plugin Name: Global Hide Toolbar - DEV
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-05-27)
+Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-05-28)
 Version: 1.6.2
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
 License: GPLv2 or later (license.txt)
@@ -97,23 +97,31 @@ Text Domain: global-hide-remove-toolbar-plugin
  *
  * TODO
  *
+ * End of May 2014
+ *
  * Planned for Version 1.6.2 - Ticket [#4937543](//wordpress.org/support/topic/only-partially-works/)
  * Planned for Version 1.6.2 - New Simple but Innovative Plugin Options
  * Planned for Version 1.6.2 - Code Cleanup and Optimization
  * Planned for Version 1.6.2 - New Security Rules
  * Planned for Version 1.6.2 - Making New Interface and Features Screenshots
  *
+ * End of June or July 2014
+ *
  * Planned for Version 1.6.3 - [Multisite Support](//wordpress.org/support/topic/not-working-with-wp-39-and-bp-2/) if is possible
- * Planned for Version 1.6.3 - Full WordPress 4.0+ Compatibility and Support
  * Planned for Version 1.6.3 - Making New Multisite Screenshots
+ *
+ * August 27, 2014
  *
  * Planned for Version 1.7.0 - Planned for Version 1.7.0 - [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
  * Planned for Version 1.7.0 - Integration of Main Plugin with WP Toolbar Node Removal and WP Admin Bar Node Removal
  * Planned for Version 1.7.0 - New Advanced and Integrated Innovative Plugin Options
- * Planned for Version 1.7.0 - Full WordPress 4.1+ Compatibility and Support
+ * Planned for Version 1.7.0 - Full WordPress 4.0+ Compatibility and Support
  * Planned for Version 1.7.0 - Making New Options Screenshots
  * Planned for Version 1.7.0 - All changes for Pro Only Version ?
  *
+ * December 10, 2014
+ *
+ * Planned for Version 1.8.0 - Full WordPress 4.1+ Compatibility and Support
  * Planned for Version 1.8.0 - Full sLa NGjI's Keytag Support ?
  * Planned for Version 1.8.0 - Themes Framework Shortcodes Integration Support ?
  */
@@ -126,7 +134,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 	 * @since		3.1+
 	 * @status		Code in Becoming!
 	 * @version		1.6.2
-	 * @build		2014-05-27 1ST 2014-04-14
+	 * @build		2014-05-28 1ST 2014-04-14
 	 * @keytag		74be16979710d4c4e7c6647856088456
 	 */
 
@@ -996,6 +1004,12 @@ Text Domain: global-hide-remove-toolbar-plugin
 </tr>
 
 <tr valign="top">
+<td style="text-align:left;vertical-align:top" colspan="2">
+<?php _e( 'This could become obsolete if <strong>Core Team</strong> adds its own global options <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>.', 'global-hide-remove-toolbar-plugin' ); ?>
+</td>
+</tr>
+
+<tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 </td>
 <td style="text-align:left;vertical-align:top;line-height:14px">
@@ -1017,10 +1031,9 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 </div>
 
-<div class="wrap" id="future">
+<br>
 
-<form method="post" action="">
-<?php settings_fields( 'global-admin-bar-group' ); ?>
+<div class="wrap" id="future">
 
 <table class="form-table">
 
@@ -1184,13 +1197,39 @@ Text Domain: global-hide-remove-toolbar-plugin
 </td>
 </tr>
 
+<tr valign="top">
+<td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
+<input type="checkbox" name="global-admin-bar-default" value="1"
+<?php
+
+	if ( get_option( 'global-admin-bar-default' ) == '1' )
+
+		{
+
+			echo 'checked="checked"';
+
+		}
+
+	else
+
+		{
+
+			delete_option( 'global-admin-bar-default' );
+
+		}
+
+?>/>
+</td>
+<td style="text-align:left;vertical-align:top;line-height:14px">
+<?php
+
+	_e( 'Reset to Default Value all Options of this Plugin.', 'global-hide-remove-toolbar-plugin' );
+
+?>
+</td>
+</tr>
+
 </table>
-
-<p>
-<input title="Reset Plugin Configuration Default" type="submit" class="button-secondary" value="<?php _e( 'Reset Default', 'global-hide-remove-toolbar-plugin' ); ?>"/>
-</p>
-
-</form>
 
 </div>
 <?php
@@ -1348,7 +1387,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6.2 Build 2014-05-27 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6.2 Build 2014-05-28 Active - Tag ".md5(md5("".""))."-->\n";
 			echo "\n<!-- This website is patched against a big core annoyance since WordPress 3.3+ to date -->\n\n";
 
 		}
