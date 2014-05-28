@@ -199,7 +199,7 @@ Network: true
 
 		{
 
-			if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
+			if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) || is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-toolbar-dev.php' ) )
 
 				{
 
@@ -215,9 +215,9 @@ Network: true
 
 		{
 
-			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code DEV-->';
+			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 			echo '<style type="text/css">#adminmenushadow,#adminmenuback{background-image:none}</style>';
-			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code DEV-->';
+			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 
 		}
 
@@ -225,9 +225,9 @@ Network: true
 
 		{
 
-			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code DEV-->';
+			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 			echo '<style type="text/css">#wp-bftoolbar-bar-menu-toggle{color:#fff;font-size:26px;text-align:center;line-height:29px;display:none;cursor:pointer;width:30px;height:27px;float:left;margin-right:8px;background:#222;margin-top:3px}html.wp-toolbar,html.wp-toolbar #wpcontent,html.wp-toolbar #adminmenu,html.wp-toolbar #wpadminbar,body.admin-bar,body.admin-bar #wpcontent,body.admin-bar #adminmenu,body.admin-bar #wpadminbar{padding-top:0px !important}</style>';
-			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code DEV-->';
+			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 
 		}
 
@@ -289,9 +289,9 @@ Network: true
 
 				{
 
-					echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code DEV-->';
+					echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 					echo '<script>jQuery(document).ready(function(){var $wpwrap=jQuery("#wpwrap");jQuery("#wp-bftoolbar-bar-menu-toggle").on("click",function(event) {console.log("clicked");event.preventDefault();$wpwrap.toggleClass("wp-responsive-open");});});</script>';
-					echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code DEV-->';
+					echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 
 				}
 
@@ -322,9 +322,9 @@ Network: true
 
 		{
 
-			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code DEV-->';
+			echo '<!--Start Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 			echo '<style type="text/css">.show-admin-bar{display:none}</style>';
-			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code DEV-->';
+			echo '<!--/ End Plugin Global Hide Admin Tool Bar Bruteforce Code-->';
 
 		}
 

@@ -200,6 +200,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 			$hideadmintoolbarremove        = get_option( 'global-admin-bar-remove' );
 			$hideadmintoolbarspeedup       = get_option( 'global-admin-bar-speedup' );
 			$pluginsettings                = get_option( 'global-admin-bar-settings' );
+			$pluginsettingsresetdefault    = get_option( 'global-admin-bar-default' );
 			$pluginsettingsroles           = get_option( 'global-admin-bar-roles' );
 			$pluginsettingsrolesadmins     = get_option( 'global-admin-bar-admins' );
 			$pluginsettingsrolesanonymous  = get_option( 'global-admin-bar-show' );
@@ -223,27 +224,27 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 				}
 
-			if ( $pluginsettingsroles == 0 )
-
-				{
-
-					add_option( 'global-admin-bar-roles', $getusablecleanroles );
-
-				}
-
-			if ( $hideadmintoolbarcleanup == 0 )
-
-				{
-
-					add_option( 'global-admin-bar-optimize', '0' );
-
-				}
-
 			if ( $pluginsettings == 0 )
 
 				{
 
 					add_option( 'global-admin-bar-settings', '1' );
+
+				}
+
+			if ( $pluginsettingsresetdefault == 0 )
+
+				{
+
+					add_option( 'global-admin-bar-default', '0' );
+
+				}
+
+			if ( $pluginsettingsroles == 0 )
+
+				{
+
+					add_option( 'global-admin-bar-roles', $getusablecleanroles );
 
 				}
 
@@ -255,11 +256,59 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 				}
 
+			if ( $pluginsettingsrolesanonymous == 0 )
+
+				{
+
+					add_option( 'global-admin-bar-show', '0' );
+
+				}
+
 			if ( $pluginsettingsrolesusers == 0 )
 
 				{
 
 					add_option( 'global-admin-bar-users', '1' );
+
+				}
+
+			if ( $hideadmintoolbarcleanup == 0 )
+
+				{
+
+					add_option( 'global-admin-bar-cleanup', '0' );
+
+				}
+
+			if ( $hideadmintoolbardisable == 0 )
+
+				{
+
+					add_option( 'global-admin-bar-disable', '0' );
+
+				}
+
+			if ( $hideadmintoolbaroptimize == 0 )
+
+				{
+
+					add_option( 'global-admin-bar-optimize', '0' );
+
+				}
+
+			if ( $hideadmintoolbarremove == 0 )
+
+				{
+
+					add_option( 'global-admin-bar-remove', '0' );
+
+				}
+
+			if ( $hideadmintoolbarspeedup == 0 )
+
+				{
+
+					add_option( 'global-admin-bar-speedup', '0' );
 
 				}
 
@@ -583,6 +632,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 			register_setting( 'global-admin-bar-group', 'global-admin-bar-admins' );
 			register_setting( 'global-admin-bar-group', 'global-admin-bar-cleanup' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-default' );
 			register_setting( 'global-admin-bar-group', 'global-admin-bar-disable' );
 			register_setting( 'global-admin-bar-group', 'global-admin-bar-optimize' );
 			register_setting( 'global-admin-bar-group', 'global-admin-bar-remove' );
@@ -609,29 +659,35 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
+			global $wp_version;
+
+			if ( $wp_version < 3.8 )
+
+				{
+
+					echo "\n<!--Start Plugin Global Hide Admin Tool Bar Code-->\n\n";
+					echo '<style type="text/css">.nav-tab-active-hover{background:#ffffff}</style>';
+					echo "\n\n<!--/ End Plugin Global Hide Admin Tool Bar-->\n\n";
+
+				}
+
+			global $wp_version;
+
+			if ( $wp_version >= 3.8 )
+
+				{
+
+					echo "\n<!--Start Plugin Global Hide Admin Tool Bar Code-->\n\n";
+					echo '<style type="text/css">.nav-tab-active-hover{border-bottom:1px solid #f1f1f1;background:#f1f1f1;color:#000}</style>';
+					echo "\n\n<!--/ End Plugin Global Hide Admin Tool Bar-->\n\n";
+
+				}
+
 ?>
-<style>
-.nav-tab-hover {
-	background-color: #fff;
-	color: #464646;
-}
-
-.nav-tab-active-hover {
-	border-bottom: 1px solid #f1f1f1;
-	background: #f1f1f1;
-	color: #000;
-}
-</style>
-
 <div class="wrap">
-
 <h2 class="nav-tab-wrapper">
-
-    <a href="?page=global-hide-toolbar"                                 title="Visit plugin settings local page"                                                          class="nav-tab nav-tab-active-hover"               ><?php   _e( 'Settings',         'global-hide-remove-toolbar-plugin' ); ?></a>
-<!--<a href="?page=global-hide-toolbar&tab=default"                     title="Visit plugin settings default local page"                                                  class="nav-tab"                                    ><?php //_e( 'Default',          'global-hide-remove-toolbar-plugin' ); ?></a>-->
-<!--<a href="?page=wp_toolbar_node_removal"                                      title="Visit plugin WP Toolbar Node Removal page (require plugin WP Toolbar Node Removal loaded)" class="nav-tab"                                    ><?php //_e( 'Node Removal',     'global-hide-remove-toolbar-plugin' ); ?></a>-->
-    <a href="//wordpress.org/plugins/global-admin-bar-hide-or-remove/changelog/" title="Visit plugin whatsnew external page on wordpress.org (opened on new tab or page)"          class="nav-tab"                     target="_blank"><?php   _e( 'What&#8217;s New', 'global-hide-remove-toolbar-plugin' ); ?></a>
-
+<a href="?page=global-hide-toolbar" title="Visit plugin settings local page" class="nav-tab nav-tab-active-hover"><?php _e( 'Settings', 'global-hide-remove-toolbar-plugin' ); ?></a>
+<a href="//wordpress.org/plugins/global-admin-bar-hide-or-remove/changelog/" title="Visit plugin whatsnew external page on wordpress.org (opened on new tab or page)" class="nav-tab" target="_blank"><?php _e( 'What&#8217;s New', 'global-hide-remove-toolbar-plugin' ); ?></a>
 <?php
 
 	global $wp_version;
@@ -656,12 +712,13 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 ?>
 </h2>
-
 <form method="post" action="options.php">
-<?php settings_fields( 'global-admin-bar-group' ); ?>
+<?php
 
+	settings_fields( 'global-admin-bar-group' );
+
+?>
 <table class="form-table">
-
 <tr valign="top">
 <td style="text-align:left;vertical-align:top" colspan="2">
 <?php
@@ -705,7 +762,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 <input type="checkbox" name="global-admin-bar-settings" value="1"
@@ -865,19 +921,15 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:left;vertical-align:top" colspan="2">
 <?php
-
-	//echo '' . __( '<strong>Beta Test Options</strong> (stable but unsupported)', 'global-hide-remove-toolbar-plugin' ) . '' . __( ' <a title="your plugin test" href="//slangji.wordpress.com/contact/">report here</a>', 'global-hide-remove-toolbar-plugin' );
 
 	echo __( '<strong>Beta Test Options</strong> (stable but unsupported)', 'global-hide-remove-toolbar-plugin' );
 
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 <input type="checkbox" name="global-admin-bar-cleanup" value="1"
@@ -927,7 +979,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 <input type="checkbox" name="global-admin-bar-optimize" value="1"
@@ -977,7 +1028,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 <input type="checkbox" name="global-admin-bar-speedup" value="1"
@@ -1009,15 +1059,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
-<!--
-<tr valign="top">
-<td style="text-align:left;vertical-align:top" colspan="2">
-<?php //_e( 'This could become obsolete if <strong>Core Team</strong> adds its own global options <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>.', 'global-hide-remove-toolbar-plugin' ); ?>
-</td>
-</tr>
--->
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 </td>
@@ -1029,23 +1070,14 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 </table>
-
 <p>
 <input title="Save Plugin Configuration Changes" type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'global-hide-remove-toolbar-plugin' ); ?>"/>
 </p>
-
 </form>
-
 </div>
-
-<!--<br>-->
-
 <div class="wrap" id="future">
-
 <table class="form-table">
-
 <tr valign="top">
 <td style="text-align:left;vertical-align:top" colspan="2">
 <?php
@@ -1055,7 +1087,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 <input type="checkbox" name="global-admin-bar-disable" value="1"
@@ -1105,7 +1136,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 <input type="checkbox" name="global-admin-bar-remove" value="1"
@@ -1155,7 +1185,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 <input type="checkbox" name="global-admin-bar-show" value="1"
@@ -1205,7 +1234,6 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
 <input type="checkbox" name="global-admin-bar-default" value="1"
@@ -1237,9 +1265,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 ?>
 </td>
 </tr>
-
 </table>
-
 </div>
 <?php
 
@@ -1303,13 +1329,12 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 				}
 
-			//return;
-
 		}
 
 	add_action( 'admin_menu', 'ghatb_control_panel_admin_menu_dev' );
 
 	function ghatb_languages()
+
 		{
 
 			load_plugin_textdomain( 'global-hide-remove-toolbar-plugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
