@@ -2,7 +2,7 @@
 /*
 Plugin Name: Global Hide Toolbar - DEV
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-05-28)
+Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-05-28) This could become obsolete if <strong>Core Team</strong> adds its own global options <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>.
 Version: 1.6.2
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
 License: GPLv2 or later (license.txt)
@@ -112,7 +112,7 @@ Text Domain: global-hide-remove-toolbar-plugin
  *
  * August 27, 2014
  *
- * Planned for Version 1.7.0 - Planned for Version 1.7.0 - [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
+ * Planned for Version 1.7.0 - [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
  * Planned for Version 1.7.0 - Integration of Main Plugin with WP Toolbar Node Removal and WP Admin Bar Node Removal
  * Planned for Version 1.7.0 - New Advanced and Integrated Innovative Plugin Options
  * Planned for Version 1.7.0 - Full WordPress 4.0+ Compatibility and Support
@@ -480,9 +480,9 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			echo "\n\n<!--Start Plugin Global Hide Admin Tool Bar 1.6.2 Code-->\n\n";
+			echo "\n\n<!--Start Plugin Global Hide Admin Tool Bar Code-->\n\n";
 			echo '<style type="text/css">.show-admin-bar{display:none !important}</style>';
-			echo "\n\n<!--/ End Plugin Global Hide Admin Tool Bar 1.6.2 Code-->\n\n";
+			echo "\n\n<!--/ End Plugin Global Hide Admin Tool Bar Code-->\n\n";
 
 		}
 
@@ -493,12 +493,19 @@ Text Domain: global-hide-remove-toolbar-plugin
 		{
 
 	function wptbr_ngr_rbcb()
+
 		{
+
 			if ( has_filter( 'wp_head', '_admin_bar_bump_cb' ) )
+
 				{
+
 					remove_filter( 'wp_head', '_admin_bar_bump_cb' );
+
 				}
+
 		}
+
 	add_filter( 'wp_head', 'wptbr_ngr_rbcb', 1 );
 
 	function wptbr_ngr_rams()
@@ -1003,11 +1010,13 @@ Text Domain: global-hide-remove-toolbar-plugin
 </td>
 </tr>
 
+<!--
 <tr valign="top">
 <td style="text-align:left;vertical-align:top" colspan="2">
-<?php _e( 'This could become obsolete if <strong>Core Team</strong> adds its own global options <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>.', 'global-hide-remove-toolbar-plugin' ); ?>
+<?php //_e( 'This could become obsolete if <strong>Core Team</strong> adds its own global options <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>.', 'global-hide-remove-toolbar-plugin' ); ?>
 </td>
 </tr>
+-->
 
 <tr valign="top">
 <td style="text-align:right;vertical-align:top;line-height:14px;width:25px">
@@ -1031,7 +1040,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 </div>
 
-<br>
+<!--<br>-->
 
 <div class="wrap" id="future">
 
