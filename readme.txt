@@ -2,14 +2,14 @@
 Contributors: slangjis, prophecy2040
 Donate link: //slangji.wordpress.com/donate/
 Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, global-hide-admin-bar, global-hide-adminbar, global-hide-admin-toolbar, global-hide-toolbar, slangjis, toolbar
-Stable tag: 1.6.1
+Stable tag: trunk
 Requires at least: 3.1
 Tested up to: 3.9
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
-add global options to hide frontend admin bar and toolbar according to your own user roles
+add global options to hide front end admin bar or toolbar according to your own user roles
 == Description ==
-Add Global Options to Hide Frontend Admin Bar and Toolbar According to Your Own User Roles. To remove the back end Toolbar (Admin Bar) use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
+Add Global Options to Hide Front End Admin Bar or Toolbar According to Your Own User Roles. To remove the back end Toolbar (Admin Bar) use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 
 Add an option to the Settings Menu to globally turn off the front end Toolbar and/or turn off the user option in the profile to show Toolbar.
 
@@ -90,9 +90,9 @@ Thanks to Donald J. Fischer a.k.a prophecy2040 @ fischercreativemedia
 
 According to the Terms of the GNU General Public License version 2 (or later) part of Copyright belongs to your own author and part belongs to their respective others authors:
 
-* Copyright (C) 2008-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlemail [dot] com>)
-* Copyright (C) 2011-2013 [prophecy2040](//www.fischercreativemedia.com/) (email: <dfischer [at] fischercreativemedia [dot] com>)
-* Copyright (C) 2011-2012 [olyma](//rackofpower.com/) (email: <olyma [at] rack of power [dot] com>)
+* Copyright (C) 2008-2014 [slangjis](//slangji.wordpress.com/)
+* Copyright (C) 2011-2013 [prophecy2040](//www.fischercreativemedia.com/)
+* Copyright (C) 2011-2012 [olyma](//rackofpower.com/)
 
 = Common Rules =
 * Compatible with: WordPress, bbPress, Buddypress.
@@ -130,9 +130,11 @@ suggested upgrade to the latest build, always!`
 
 Developmental Code in Becoming!
 
-Version 1.7.0 is planned for end of July or August 2014
+Version 1.8.0 is planned for December 10, 2014
 
-Version 1.6.3 is planned for end of June 2014
+Version 1.7.0 is planned for August 27, 2014
+
+Version 1.6.3 is planned for end of June or July 2014
 
 Version 1.6.2 is planned for end of May 2014
 
