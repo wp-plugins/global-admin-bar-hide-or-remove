@@ -7,7 +7,7 @@ Requires at least: 3.1
 Tested up to: 4.0
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
-wordpress plugin wp global hide admin tool bar add global options to hide or show front and back end admin bar or toolbar according to your own user roles
+wordpress plugin wp global hide admin tool bar add global options to hide front and back end admin bar or toolbar according to your own user roles
 == Description ==
 This Plugin add Global Options to Hide Front End Admin Bar or Toolbar According to Your Own User Roles. To remove the back end Toolbar (Admin Bar) use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 

@@ -16,5 +16,5 @@ humans.txt                                     7DF7AE2B35E15FBEF4524BC4C49A8475
 index.html                                     B06FA95A0271B37E75027C908245BF51
 index.php                                      0938FFCB27D77DF194B73DC2E8BAACCC
 license.txt                                    DB85EFB4F2572FD1727A97D806602630
-readme.txt                                     16A0FC36A1596F8CEFD3B740074D9EE4
+readme.txt                                     D68460124E2A0C6EEE804F38EC7D8320
 uninstall.php                                  80DC5E55DAF43BBE3D17DF82C3F6A994
