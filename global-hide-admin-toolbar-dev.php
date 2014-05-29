@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Global Hide Toolbar - DEV
+Plugin Name: Global Hide Toolbar
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-05-28) This could become obsolete if <strong>Core Team</strong> adds its own global options <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>.
-Version: 1.6.2
+Version: 1.6.2 DEV
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
@@ -133,7 +133,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 	 * @author		slangjis &CO prophecy2040
 	 * @since		3.1+
 	 * @status		Code in Becoming!
-	 * @version		1.6.2
+	 * @version		1.6.2 DEV
 	 * @build		2014-05-28 1ST 2014-04-14
 	 * @keytag		74be16979710d4c4e7c6647856088456
 	 */
@@ -350,6 +350,37 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 	register_activation_hook( __FILE__, 'ghatb_activate_dev' );
 
+	function ghatb_settings_dev()
+
+		{
+
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-admins' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-cleanup' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-default' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-disable' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-optimize' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-remove' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-roles' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-settings' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-show' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-speedup' );
+			register_setting( 'global-admin-bar-group', 'global-admin-bar-users' );
+
+			$getusablecleanroles = get_usable_clean_roles_dev();
+			$pluginsettingsroles = get_option( 'global-admin-bar-roles' );
+
+			if ( $pluginsettingsroles == '' )
+
+				{
+
+					update_option( 'global-admin-bar-roles', $getusablecleanroles );
+
+				}
+
+		}
+
+	add_action( 'admin_init', 'ghatb_settings_dev' );
+
 	function get_usable_clean_roles_dev()
 
 		{
@@ -492,9 +523,9 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 	global $show_admin_bar;
 
-	add_action( 'admin_init', 'ghatb_settings_dev' );
+	//add_action( 'admin_init', 'ghatb_settings_dev' );
 
-	add_filter( 'show_admin_bar', 'global_show_hide_admin_bar_dev' );
+	//add_filter( 'show_admin_bar', 'global_show_hide_admin_bar_dev' );
 
 	function global_show_hide_admin_bar_dev( $showvar )
 
@@ -525,84 +556,13 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		}
 
-	function ghatb_hide_admin_bar_setting()
+	add_filter( 'show_admin_bar', 'global_show_hide_admin_bar_dev' );
 
-		{
+	/**
+	 * Start Checked Options Functions Settings
+	 */
 
-			echo "\n\n<!--Start Plugin Global Hide Admin Tool Bar Code-->\n\n";
-			echo '<style type="text/css">.show-admin-bar{display:none !important}</style>';
-			echo "\n\n<!--/ End Plugin Global Hide Admin Tool Bar Code-->\n\n";
-
-		}
-
-//-----------------------------------------------------------------------------------------------------
-
-	function global_hide_admin_tool_bar_cleanup()
-
-		{
-
-	function wptbr_ngr_rbcb()
-
-		{
-
-			if ( has_filter( 'wp_head', '_admin_bar_bump_cb' ) )
-
-				{
-
-					remove_filter( 'wp_head', '_admin_bar_bump_cb' );
-
-				}
-
-		}
-
-	add_filter( 'wp_head', 'wptbr_ngr_rbcb', 1 );
-
-	function wptbr_ngr_rams()
-		{
-			// WordPress Admin Menu Shadow Removal
-			echo "\n<!--Start Plugin ToolBar Removal Node Code-->\n\n";
-			echo '<style type="text/css">#adminmenushadow,#adminmenuback{background-image:none}</style>';
-			echo "\n\n<!--/ End Plugin ToolBar Removal Node Code-->\n\n";
-		}
-
-	if ( ( $wp_version >= 3.2 ) or ( $wp_version <= 3.8 ) )
-
-		{
-			add_action( 'admin_head', 'wptbr_ngr_rams' );
-		}
-
-	function wptbr_ngr_rbp()
-		{
-			add_filter( 'show_wp_pointer_admin_bar', '__return_false' );
-		}
-
-	if ( $wp_version >= 3.2 )
-
-		{
-			add_filter( 'init', 'wptbr_ngr_rbp', 9 );
-		}
-
-		}
-
-//--------------------------------------------------------------------
-
-	function global_hide_admin_tool_bar_cleanup_init()
-
-		{
-
-			if ( get_option( 'global-admin-bar-optimize' ) == '1' )
-
-				{
-
-					add_action( 'init', 'global_hide_admin_tool_bar_cleanup', 9 );
-
-				}
-
-		}
-
-	add_action( 'init', 'global_hide_admin_tool_bar_cleanup_init', 9 );
-
-	function ghatb_hide_admin_bar_setting_user_roles_all()
+	function ghatb_your_profile_personal_options()
 
 		{
 	
@@ -614,7 +574,21 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 						{
 
-							add_action( 'admin_print_scripts-profile.php', 'ghatb_hide_admin_bar_setting', 9 );
+							add_action( 'admin_print_styles-profile.php', 'ghatb_turn_off_your_profile_personal_options', 9 );
+
+						}
+
+				}
+
+			if ( get_option( 'global-admin-bar-users' ) == '1' )
+
+				{
+
+					if ( !current_user_can( 'administrator' ) )
+
+						{
+
+							add_action( 'admin_print_styles-profile.php', 'ghatb_turn_off_your_profile_personal_options', 9 );
 
 						}
 
@@ -622,38 +596,269 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		}
 
-	add_action( 'admin_print_styles-profile.php', 'ghatb_hide_admin_bar_setting_user_roles_all' );
-	add_action( 'admin_print_styles-user-edit.php', 'ghatb_hide_admin_bar_setting_user_roles_all' );
-	add_action( 'init', 'ghatb_hide_admin_bar_setting_user_roles_all', 9 );
+	add_action( 'init', 'ghatb_your_profile_personal_options', 9 );
 
-	function ghatb_settings_dev()
+	function ghatb_turn_off_your_profile_personal_options()
 
 		{
 
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-admins' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-cleanup' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-default' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-disable' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-optimize' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-remove' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-roles' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-settings' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-show' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-speedup' );
-			register_setting( 'global-admin-bar-group', 'global-admin-bar-users' );
+			echo "\n\n<!--Start Plugin Global Hide Admin Tool Bar Code-->\n\n";
+			echo '<style type="text/css">.show-admin-bar{display:none !important}</style>';
+			echo "\n\n<!--/ End Plugin Global Hide Admin Tool Bar Code-->\n\n";
 
-			$getusablecleanroles = get_usable_clean_roles_dev();
-			$pluginsettingsroles = get_option( 'global-admin-bar-roles' );
+		}
 
-			if ( $pluginsettingsroles == '' )
+	function ghatb_cleanup()
+
+		{
+
+			if ( get_option( 'global-admin-bar-cleanup' ) == '1' )
 
 				{
 
-					update_option( 'global-admin-bar-roles', $getusablecleanroles );
+					add_action( 'admin_bar_menu', 'ghatb_76491_admin_bar_menu', 200 );
 
 				}
 
 		}
+
+	add_action( 'init', 'ghatb_cleanup', 9 );
+
+function ghatb_76491_admin_bar_menu()
+
+{
+    global $wp_admin_bar;   
+    if ( !is_object( $wp_admin_bar ) )
+        return;
+
+    // Clean the AdminBar
+    $nodes = $wp_admin_bar->get_nodes();
+    foreach( $nodes as $node )
+    {
+        // 'top-secondary' is used for the User Actions right side menu
+        if( !$node->parent || 'top-secondary' == $node->parent )
+        {
+            $wp_admin_bar->remove_menu( $node->id );
+        }           
+    }
+    // end Clean
+
+}
+
+	function ghatb_optimize()
+
+		{
+
+			if ( get_option( 'global-admin-bar-optimize' ) == '1' )
+
+				{
+
+					//add_action( 'wp_before_admin_bar_render', 'wpabr_ngr_abr', 999 );
+					//add_action( 'admin_bar_menu', 'change_howdy' );
+
+				}
+
+		}
+
+	add_action( 'init', 'ghatb_optimize', 9 );
+
+	function wpabr_ngr_abr()
+
+		{
+
+			global $wp_admin_bar;
+
+			// WordPress Node Removal
+			//$wp_admin_bar->remove_menu( 'root-default' );
+			//$wp_admin_bar->remove_menu( 'network-admin' );
+			$wp_admin_bar->remove_menu( 'wp-logo' );
+			$wp_admin_bar->remove_menu( 'wp-logo-default' );
+			$wp_admin_bar->remove_menu( 'about' );
+			$wp_admin_bar->remove_menu( 'wp-logo-external' );
+			$wp_admin_bar->remove_menu( 'wporg' );
+			$wp_admin_bar->remove_menu( 'documentation' );
+			$wp_admin_bar->remove_menu( 'support-forums' );
+			$wp_admin_bar->remove_menu( 'feedback' );
+			//$wp_admin_bar->remove_menu( 'site-name' );
+			//$wp_admin_bar->remove_menu( 'site-name-default' );
+			$wp_admin_bar->remove_menu( 'view-site' );
+			//$wp_admin_bar->remove_menu( 'comments' );
+			//$wp_admin_bar->remove_menu( 'updates' );
+			//$wp_admin_bar->remove_menu( 'view' );
+			//$wp_admin_bar->remove_menu( 'edit' );
+			$wp_admin_bar->remove_menu( 'new-content' );
+			$wp_admin_bar->remove_menu( 'new-content-default' );
+			$wp_admin_bar->remove_menu( 'new-post' );
+			$wp_admin_bar->remove_menu( 'new-media' );
+			$wp_admin_bar->remove_menu( 'new-link' );
+			$wp_admin_bar->remove_menu( 'new-page' );
+			$wp_admin_bar->remove_menu( 'new-user' );
+			//$wp_admin_bar->remove_menu( 'updates' );
+			//$wp_admin_bar->remove_menu( 'top-secondary' );
+			//$wp_admin_bar->remove_menu( 'my-account' );
+			//$wp_admin_bar->remove_menu( 'user-actions' );
+
+			//$wp_admin_bar->remove_menu( 'howdy' );
+
+	$wp_admin_bar->add_menu( array(
+		'parent' => 'top-secondary',
+		'id' => 'logout',
+		'title' => __('Log Out'),
+		'href' => wp_logout_url( ),
+		'meta' => false
+	));
+
+			$wp_admin_bar->remove_menu( 'user-info' );
+			$wp_admin_bar->remove_menu( 'edit-profile' );
+			//$wp_admin_bar->remove_menu( 'logout' );
+			//$wp_admin_bar->remove_menu( 'search' );
+			//$wp_admin_bar->remove_menu( 'get-shortlink' );
+			//$wp_admin_bar->remove_menu( 'dashboard' );
+			//$wp_admin_bar->remove_menu( 'my-account-with-avatar' );
+			//$wp_admin_bar->remove_menu( 'appearance' );
+			//$wp_admin_bar->remove_menu( 'themes' );
+			//$wp_admin_bar->remove_menu( 'widgets' );
+			//$wp_admin_bar->remove_menu( 'menus' );
+			//$wp_admin_bar->remove_menu( 'background' );
+			//$wp_admin_bar->remove_menu( 'header' );
+			//$wp_admin_bar->remove_menu( 'wrap' );
+			//$wp_admin_bar->remove_menu( 'button' );
+			//$wp_admin_bar->remove_menu( 'adminbarsearch' );
+
+			// WordPress Network Multisite Node Removal
+			$wp_admin_bar->remove_menu( 'my-sites' );
+			$wp_admin_bar->remove_menu( 'my-sites-list' );
+			$wp_admin_bar->remove_menu( 'blog-1' );
+			$wp_admin_bar->remove_menu( 'blog-1-default' );
+			$wp_admin_bar->remove_menu( 'blog-1-d' );
+			$wp_admin_bar->remove_menu( 'blog-1-n' );
+			$wp_admin_bar->remove_menu( 'blog-1-c' );
+			$wp_admin_bar->remove_menu( 'blog-1-v' );
+			$wp_admin_bar->remove_menu( 'blog-2' );
+			$wp_admin_bar->remove_menu( 'blog-2-default' );
+			$wp_admin_bar->remove_menu( 'blog-2-d' );
+			$wp_admin_bar->remove_menu( 'blog-2-n' );
+			$wp_admin_bar->remove_menu( 'blog-2-c' );
+			$wp_admin_bar->remove_menu( 'blog-2-v' );
+			$wp_admin_bar->remove_menu( 'blog-3' );
+			$wp_admin_bar->remove_menu( 'blog-3-default' );
+			$wp_admin_bar->remove_menu( 'blog-3-d' );
+			$wp_admin_bar->remove_menu( 'blog-3-n' );
+			$wp_admin_bar->remove_menu( 'blog-3-c' );
+			$wp_admin_bar->remove_menu( 'blog-3-v' );
+			$wp_admin_bar->remove_menu( 'blog-4' );
+			$wp_admin_bar->remove_menu( 'blog-4-default' );
+			$wp_admin_bar->remove_menu( 'blog-4-d' );
+			$wp_admin_bar->remove_menu( 'blog-4-n' );
+			$wp_admin_bar->remove_menu( 'blog-4-c' );
+			$wp_admin_bar->remove_menu( 'blog-4-v' );
+			$wp_admin_bar->remove_menu( 'blog-5' );
+			$wp_admin_bar->remove_menu( 'blog-5-default' );
+			$wp_admin_bar->remove_menu( 'blog-5-d' );
+			$wp_admin_bar->remove_menu( 'blog-5-n' );
+			$wp_admin_bar->remove_menu( 'blog-5-c' );
+			$wp_admin_bar->remove_menu( 'blog-5-v' );
+			$wp_admin_bar->remove_menu( 'blog-6' );
+			$wp_admin_bar->remove_menu( 'blog-6-default' );
+			$wp_admin_bar->remove_menu( 'blog-6-d' );
+			$wp_admin_bar->remove_menu( 'blog-6-n' );
+			$wp_admin_bar->remove_menu( 'blog-6-c' );
+			$wp_admin_bar->remove_menu( 'blog-6-v' );
+			$wp_admin_bar->remove_menu( 'blog-7' );
+			$wp_admin_bar->remove_menu( 'blog-7-default' );
+			$wp_admin_bar->remove_menu( 'blog-7-d' );
+			$wp_admin_bar->remove_menu( 'blog-7-n' );
+			$wp_admin_bar->remove_menu( 'blog-7-c' );
+			$wp_admin_bar->remove_menu( 'blog-7-v' );
+			$wp_admin_bar->remove_menu( 'blog-8' );
+			$wp_admin_bar->remove_menu( 'blog-8-default' );
+			$wp_admin_bar->remove_menu( 'blog-8-d' );
+			$wp_admin_bar->remove_menu( 'blog-8-n' );
+			$wp_admin_bar->remove_menu( 'blog-8-c' );
+			$wp_admin_bar->remove_menu( 'blog-8-v' );
+			$wp_admin_bar->remove_menu( 'blog-9' );
+			$wp_admin_bar->remove_menu( 'blog-9-default' );
+			$wp_admin_bar->remove_menu( 'blog-9-d' );
+			$wp_admin_bar->remove_menu( 'blog-9-n' );
+			$wp_admin_bar->remove_menu( 'blog-9-c' );
+			$wp_admin_bar->remove_menu( 'blog-9-v' );
+
+		}
+
+	function change_howdy( $wp_admin_bar )
+
+	{
+
+		$greeting = get_option( 'ht_greeting', '' );
+
+		//get the node that contains "howdy"
+		$my_account = $wp_admin_bar->get_node('my-account');
+		//change the "howdy"
+		
+		$user_id = get_current_user_id();
+		$current_user = wp_get_current_user();
+		$avatar = get_avatar( $user_id, 16 );
+
+		if (strpos( $greeting, '%name%' ) !== false ) {
+			$howdy = str_replace( '%name%', $current_user->display_name, $greeting );
+		} else {
+			$howdy = $greeting . ' ' . $current_user->display_name;
+		}
+
+		$my_account->title = $howdy . $avatar;
+		//remove the original node
+		$wp_admin_bar->remove_node('my-account');
+		//add back our modified version
+		$wp_admin_bar->add_node($my_account);
+
+	}
+
+	function ghatb_speedup()
+
+		{
+
+			if ( get_option( 'global-admin-bar-speedup' ) == '1' )
+
+				{
+
+					global $wp_version;
+
+					if ( ( $wp_version >= 3.2 ) or ( $wp_version <= 3.8 ) )
+
+						{
+
+							echo "\n<!--Start Plugin Global Hide Admin Tool Bar Code-->\n\n";
+							echo '<style type="text/css">#adminmenushadow,#adminmenuback{background-image:none}</style>';
+							echo "\n\n<!--/ End Plugin Global Hide Admin Tool Bar Code-->\n\n";
+
+						}
+
+					if ( $wp_version >= 3.3 )
+
+						{
+
+							add_filter( 'show_wp_pointer_admin_bar', '__return_false' );
+
+						}
+
+				}
+
+		}
+
+	add_action( 'admin_head', 'ghatb_speedup', 9 );
+
+	/**
+	 * End Checked Options Functions Settings
+	 */
+
+	function ghatb_rbcb()
+		{
+			if ( has_filter( 'wp_head', '_admin_bar_bump_cb' ) )
+				{
+					remove_filter( 'wp_head', '_admin_bar_bump_cb' );
+				}
+		}
+	add_filter( 'wp_head', 'ghatb_rbcb', 1 );
 
 	function ghatb_admin_bar_page_dev()
 
@@ -1054,7 +1259,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 <td style="text-align:left;vertical-align:top;line-height:14px">
 <?php
 
-	_e( 'Speedup Control Panel disabling annoyances for all Admin, Anonymous and User Roles', 'global-hide-remove-toolbar-plugin' );
+	_e( 'Speedup Control Panel disabling annoyances for all Admin and User Roles', 'global-hide-remove-toolbar-plugin' );
 
 ?>
 </td>
@@ -1361,7 +1566,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			$links[] = '<a title="Visit plugin settings page" href="' . admin_url( 'options-general.php?page=global-hide-toolbar' ) . '">' . __( 'Settings', 'global-hide-remove-toolbar-plugin' ) . '</a>';
+			$links[] = '<a title="Visit plugin settings page" href="' . admin_url( 'options-general.php?page=global-hide-toolbar' ) . '">' . __( 'Set', 'global-hide-remove-toolbar-plugin' ) . '</a>';
 
 		}
 
@@ -1421,7 +1626,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6.2 Build 2014-05-28 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!--Plugin Global Hide Admin Tool Bar 1.6.2 DEV Build 2014-05-28 Active - Tag ".md5(md5("".""))."-->\n";
 			echo "\n<!-- This website is patched against a big core annoyance since WordPress 3.3+ to date -->\n\n";
 
 		}

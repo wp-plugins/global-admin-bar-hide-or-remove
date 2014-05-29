@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Global Hide Toolbar Bruteforce - DEV
+Plugin Name: Global Hide Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA (2014-05-28) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
-Version: 1.6.2
+Version: 1.6.2 DEV
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
