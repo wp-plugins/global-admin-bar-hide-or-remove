@@ -1,14 +1,16 @@
 <?php
 
 	/**
-	 * @package		WordPress Plugin
-	 * @subpackage	Global Hide Admin Tool Bar
-	 * @indentation	//www.gnu.org/prep/standards/standards.html
-	 * @license		//www.gnu.org/licenses/gpl-2.0.html
-	 * @link		//wordpress.org/plugins/global-admin-bar-hide-or-remove/
+	 * @package     WordPress Plugin
+	 * @subpackage  Global Hide Admin Tool Bar
+	 * @description Uninstall Module
+	 * @indentation //www.gnu.org/prep/standards/standards.html
+	 * @license     //www.gnu.org/licenses/gpl-2.0.html
+	 * @link        //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 	 *
-	 * @version 2014-05-28 1ST 2014-04-16
-	 * @author	sLa NGjI's @ slangji.wordpress.com
+	 * @version 1.7.0
+	 * @build   2014-05-31 1ST 2014-04-16
+	 * @author  sLa NGjI's @ slangji.wordpress.com
 	 */
 
 	if ( !function_exists( 'add_action' ) )
@@ -41,6 +43,7 @@
 
 			'global-admin-bar-admins',
 			'global-admin-bar-cleanup',
+			'global-admin-bar-default',
 			'global-admin-bar-disable',
 			'global-admin-bar-optimize',
 			'global-admin-bar-remove',
@@ -76,9 +79,17 @@
 
 		}
 
-	else
+	if ( is_multisite() )
 
 		{
+
+			foreach ( $option_names as $option_name )
+
+				{
+
+					delete_option( $option_name );
+
+				}
 
 			global $wpdb;
 
