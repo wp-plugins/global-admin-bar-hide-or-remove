@@ -2,9 +2,9 @@
 /*
 Plugin Name: Global Hide Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA (2014-05-28) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
+Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA (2014-05-31) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
 Version: 1.6.2 DEV
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.J.Fischer</a>
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
@@ -124,7 +124,7 @@ Network: true
 	 * @since		3.1+
 	 * @status		Code in Becoming!
 	 * @version		1.6.2
-	 * @build		2014-05-28 1ST 2014-04-16
+	 * @build		2014-05-31 1ST 2014-04-16
 	 * @keytag		74be16979710d4c4e7c6647856088456
 	 */
 
@@ -203,7 +203,7 @@ Network: true
 
 				{
 
-					echo '<div class="error"><h3><strong>' . __( 'Activation Warning!' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Admin Tool Bar - DEV</strong> and <strong style="color:#880000;">Global Hide Admin Tool Bar Brute Force - DEV</strong> at the Same Time.' ) . '</p></div>';
+					echo '<div class="error"><h3><strong>' . __( 'Activation Warning!' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Admin Tool Bar - DEV</strong> and <strong style="color:#880000;">Global Hide Admin Tool Bar Brute Force - DEV</strong> at Same Time.' ) . '</p></div>';
 
 				}
 
@@ -525,7 +525,7 @@ Network: true
 
 						{
 
-							$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other Plugins</a>';
+							$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other</a>'; //  Plugins
 
 						}
 
@@ -549,7 +549,7 @@ Network: true
 
 		{
 
-			echo "\n<!--Plugin Global Hide Admin Tool Bar Bruteforce 1.6.2 Build 2014-05-28 Active - Tag ".md5(md5("".""))."-->\n";
+			echo "\n<!--Plugin Global Hide Admin Tool Bar Bruteforce 1.6.2 Build 2014-05-31 Active - Tag ".md5(md5("".""))."-->\n";
 			echo "\n<!-- This website is patched against a big core annoyance since WordPress 3.3+ to date -->\n\n";
 
 		}
