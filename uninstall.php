@@ -8,7 +8,7 @@
 	 * @license     //www.gnu.org/licenses/gpl-2.0.html
 	 * @link        //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 	 *
-	 * @version 1.7.0
+	 * @version 1.7+
 	 * @build   2014-05-31 1ST 2014-04-16
 	 * @author  sLa NGjI's @ slangji.wordpress.com
 	 */
