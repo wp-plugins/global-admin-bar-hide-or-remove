@@ -191,11 +191,31 @@ Network: true
 
 		{
 
-			if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
+			if ( !is_multisite() )
 
 				{
 
-					echo '<div class="error"><h3><strong>' . __( 'Activation Warning:' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!' ) . '</p></div>';
+					if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
+
+						{
+
+							echo '<div class="error"><h3><strong>' . __( 'Activation Warning:' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!' ) . '</p></div>';
+
+						}
+
+				}
+
+			if ( is_multisite() )
+
+				{
+
+					if ( is_plugin_active_for_network( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
+
+						{
+
+							echo '<div class="error"><h3><strong>' . __( 'Activation Warning:' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!' ) . '</p></div>';
+
+						}
 
 				}
 
