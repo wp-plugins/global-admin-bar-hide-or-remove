@@ -7,17 +7,11 @@ Requires at least: 3.1
 Tested up to: 4.0
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
-wordpress plugin wp global hide admin tool bar add options to hide front and back end adminbar or toolbar according to your own user roles
+wordpress plugin wp global hide admin tool bar add options to disable front end adminbar or toolbar according to your own user roles
 == Description ==
-This Plugin add Global Options to Hide Front End Admin Bar or Toolbar According to Your Own User Roles. To Remove the Back End use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE PLUGIN was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
+This plugin add global options to hide front end admin bar or toolbar according to your own user roles. To remove the back end use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE PLUGIN was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 
-The plugin add more options to the settings menu to globally turn off the front end toolbar or adminbar and turn off the user option field in the profile to view it on dashboard.
-
-Brute Force Plugin (included), Removes ALL Toolbars (admin back and front end) as well as the profile user option field. No settings are available for this plugin.
-
-WordPress does not provide an easy method to remove the Admin Tool Bar in the back end, so this plugin takes a different approach to override it!
-
-This become obsolete if Core Team adds global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/)
+Remember that it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/)
 
 = Standard Plugin Features (FRONT END HIDER): =
 
@@ -35,7 +29,7 @@ This become obsolete if Core Team adds global options [features are being develo
 
 = TROUBLESHOOTING: =
 
-* Do not use both plugins at the same time.
+* Do not use both plugins at the same time!
 
 * [My Others WordPress Plugins](//slangji.wordpress.com/plugins/)
  * [WP Overview (lite)](//wordpress.org/plugins/wp-overview-lite/)
@@ -62,11 +56,19 @@ This become obsolete if Core Team adds global options [features are being develo
 
 == Frequently Asked Questions ==
 
-How does it work? It just simply adds an option page for you to turn the front end toolbar on or off.
+How does it work?
+
+It just simply adds an option page for you to turn the front end toolbar on or off.
+
+The plugin add more options to the settings menu to globally turn off the front end toolbar or adminbar and turn off the user option field in the profile to view it on dashboard.
 
 = Can i remove the back end admin tool bar in wordpress 3.1+ ? =
 
-On the backend, admin area, you need to use the brute force plugin.
+WordPress does not provide an easy method to remove the Admin Tool Bar in the back end, so this plugin takes a different approach to override it!
+
+On the back end, admin area, you need to use the brute force plugin.
+
+Brute Force Plugin (included), Removes ALL Toolbars (admin back and front end) as well as the profile user option field. No settings are available for this plugin.
 
 == Screenshots ==
 
