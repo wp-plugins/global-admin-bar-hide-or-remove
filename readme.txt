@@ -11,23 +11,29 @@ wordpress plugin wp global hide admin tool bar add options to disable front end 
 == Description ==
 This plugin add global options to hide front end admin bar or toolbar according to your own user roles. To remove the back end use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE PLUGIN was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 
-Remember that it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/)
+Remember that it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/).
 
-= Standard Plugin Features (FRONT END HIDER): =
+= Standard Plugin Features (FRONT END HIDER) =
 
 * Hide Frontend Toolbar for logged in users according to your own roles
-* Hide Your Profile "Show Toolbar when viewing site" on User Page (Beta)
+* Hide Your Profile "Show Toolbar when viewing site" on User Page
 * Settings Page with Plugin Options Control Panel
+* Settings Auto Clean Plugin
+* Work on all WordPress version from 3.1+ to 3.9+
+* Compatible with bbPress and BuddyPress
+* Ready to phpBB Integration
 
-= Optional Plugin Features (BRUTE FORCE PLUGIN): =
+= External Plugin Features (BRUTE FORCE BACK END DISABLER) =
 
-* Disable Admin Tool Bar
-* Disable Frontend and Back End Admin Tool Bar for all users
-* Hide Your Profile "Show Toolbar when viewing site" on User Page (Beta)
+* Disable Front and Back End Admin Tool Bar for all user roles
+* Hide Your Profile "Show Toolbar when viewing site" on User Page
 * Works with WordPress 3.8+ Mobile Responsive Interface
 * Settings Free Plugin
+* Work on all WordPress version from 3.1+ to 3.9+
+* Compatible with bbPress and BuddyPress
+* Ready to phpBB Integration
 
-= TROUBLESHOOTING: =
+= TROUBLESHOOTING =
 
 * Do not use both plugins at the same time!
 
