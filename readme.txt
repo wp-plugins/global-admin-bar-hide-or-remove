@@ -1,7 +1,7 @@
 === Global Hide Admin Toolbar ===
 Contributors: slangjis, prophecy2040
 Donate link: //slangji.wordpress.com/donate/
-Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, global-hide-admin-bar, global-hide-adminbar, global-hide-admin-toolbar, global-hide-toolbar, slangjis, toolbar
+Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, global-hide-admin-bar, global-hide-toolbar, hide-admin-bar, hide-toolbar, hide-admin-toolbar, slangjis, toolbar
 Stable tag: 1.6.1
 Requires at least: 3.1
 Tested up to: 4.0
@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 wordpress plugin wp global hide admin tool bar add options to disable front end adminbar or toolbar according to your own user roles
 == Description ==
-This plugin add global options to hide front end admin bar or toolbar according to your own user roles. To remove the back end use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE PLUGIN was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
+This plugin add global options to hide front end admin bar or toolbar according to your own user roles. To remove the back end use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE PLUGIN was derived directly from <a title="slangjis" href="//slangji.wordpress.com/">sLa NGjI's</a> <a title="WP Admin Bar Removal" href="//wordpress.org/plugins/wp-admin-bar-removal/">WP Admin Bar Removal</a> and <a title="WP Toolbar Removal" href="//wordpress.org/plugins/wp-Toolbar-removal/">WP Toolbar Removal</a> and was released under GPLv2 or later License: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 
 Remember that it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/).
 
