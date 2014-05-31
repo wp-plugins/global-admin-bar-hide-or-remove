@@ -7,11 +7,11 @@ Requires at least: 3.1
 Tested up to: 4.0
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
-wordpress plugin wp global hide admin tool bar add options to disable front end adminbar or toolbar according to your own user roles
+wordpress plugin wp global hide admin tool bar add options to disable front end adminbar or toolbar according to your own logged in user roles
 == Description ==
-This plugin add global options to hide front end admin bar or toolbar according to your own user roles. To remove the back end use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE PLUGIN was derived directly from <a title="slangjis" href="//slangji.wordpress.com/">sLa NGjI's</a> <a title="WP Admin Bar Removal" href="//wordpress.org/plugins/wp-admin-bar-removal/">WP Admin Bar Removal</a> and <a title="WP Toolbar Removal" href="//wordpress.org/plugins/wp-Toolbar-removal/">WP Toolbar Removal</a> and was released under GPLv2 or later License: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
+This plugin add global options to hide front end admin bar or toolbar according to your own logged in user roles. To remove the back end use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE PLUGIN was derived directly from <a title="slangjis" href="//slangji.wordpress.com/">sLa NGjI's</a> <a title="WP Admin Bar Removal" href="//wordpress.org/plugins/wp-admin-bar-removal/">WP Admin Bar Removal</a> and <a title="WP Toolbar Removal" href="//wordpress.org/plugins/wp-Toolbar-removal/">WP Toolbar Removal</a> and was released under GPLv2 or later License: this plugin use same License GPLv2 or later. <a title="About Global Hide Admin Tool Bar Plugin" href="//wordpress.org/support/topic/brute-force-plugin-license-infringement/">Read More Here</a>
 
-Remember that it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/).
+Remember that this plugin it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/).
 
 = Standard Plugin Features (FRONT END HIDER) =
 

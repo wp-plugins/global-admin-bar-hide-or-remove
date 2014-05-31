@@ -17,7 +17,7 @@ Text Domain: global-hide-remove-toolbar-plugin
  *
  * [Global Hide Admin Tool Bar](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
  *
- * Global Hide Front End Toolbar Manager According to Admin and User Roles
+ * Global Hide Front End Toolbar Manager According to Admin and User Roles Logged In
  *
  * Copyright (C) 2013-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlegmail [dot] com>)
  *
@@ -144,15 +144,15 @@ Text Domain: global-hide-remove-toolbar-plugin
  */
 
 	/**
-	 * @package		WordPress Plugin
-	 * @subpackage	Global Hide Admin Tool Bar
-	 * @description	Global Hide Front End Toolbar Manager According to Admin and User Roles
-	 * @author		slangjis &CO prophecy2040
-	 * @since		3.1+
-	 * @status		Code in Becoming!
-	 * @version		1.6.1
-	 * @build		2014-04-16 1ST 2014-04-14
-	 * @keytag		74be16979710d4c4e7c6647856088456
+	 * @package     WordPress Plugin
+	 * @subpackage  Global Hide Admin Tool Bar
+	 * @description Global Hide Front End Toolbar Manager According to Admin and User Roles Logged In
+	 * @author      slangjis &CO prophecy2040
+	 * @since       3.1+
+	 * @status      Code in Becoming!
+	 * @version     1.6.1
+	 * @build       2014-04-16 1ST 2014-04-14
+	 * @keytag      74be16979710d4c4e7c6647856088456
 	 */
 
 	if ( !function_exists( 'add_action' ) )

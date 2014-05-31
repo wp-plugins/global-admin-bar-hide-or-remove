@@ -4,7 +4,7 @@ Plugin Name: Global Hide Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA (2014-04-16) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
 Version: 1.6.1
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.J.Fischer</a>
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
@@ -16,7 +16,7 @@ Network: true
  *
  * [Global Hide Admin Tool Bar Bruteforce](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
  *
- * Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles
+ * Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles Logged In and Out
  *
  * Copyright (C) 2013-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlegmail [dot] com>)
  *
@@ -117,15 +117,15 @@ Network: true
  */
 
 	/**
-	 * @package		WordPress Plugin
-	 * @subpackage	Global Hide Admin Tool Bar Bruteforce
-	 * @description	Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles
-	 * @author		slangjis &CO prophecy2040
-	 * @since		3.1+
-	 * @status		Code in Becoming!
-	 * @version		1.6.1
-	 * @build		2014-04-16 1ST 2014-04-14
-	 * @keytag		74be16979710d4c4e7c6647856088456
+	 * @package     WordPress Plugin
+	 * @subpackage  Global Hide Admin Tool Bar Bruteforce
+	 * @description Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles Logged In and Out
+	 * @author      slangjis &CO prophecy2040
+	 * @since       3.1+
+	 * @status      Code in Becoming!
+	 * @version     1.6.1
+	 * @build       2014-04-16 1ST 2014-04-14
+	 * @keytag      74be16979710d4c4e7c6647856088456
 	 */
 
 	if ( !function_exists( 'add_action' ) )
@@ -179,14 +179,6 @@ Network: true
 
 		}
 
-	if ( $wp_version < 3.1 )
-
-		{
-
-			wp_die( __( 'This Plugin Requires WordPress 3.1+ or higher: Could Not Install!' ) );
-
-		}
-
 	if ( $wp_version >= 3.2 )
 
 		{
@@ -203,7 +195,7 @@ Network: true
 
 				{
 
-					echo '<div class="error"><h3><strong>' . __( 'Activation Warning!' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Admin Tool Bar</strong> and <strong style="color:#880000;">Global Hide Admin Tool Bar Brute Force</strong> at the Same Time.' ) . '</p></div>';
+					echo '<div class="error"><h3><strong>' . __( 'Activation Warning:' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!' ) . '</p></div>';
 
 				}
 
@@ -485,33 +477,11 @@ Network: true
 
 				{
 
-					global $wp_version;
-
-					if ( $wp_version < 3.8 )
-
-						{
-
-							$links[] = '<a title="Bugfix and Suggestions" href="//slangji.wordpress.com/contact/">Contact</a>';
-
-						}
+					$links[] = '<a title="Bugfix and Suggestions" href="//slangji.wordpress.com/contact/">Contact</a>';
 
 					$links[] = '<a title="Offer a Beer to sLa" href="//slangji.wordpress.com/donate/">Donate</a>';
 
-					if ( $wp_version < 3.8 )
-
-						{
-
-							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other Plugins</a>';
-
-						}
-
-					if ( $wp_version >= 3.8 )
-
-						{
-
-							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other</a>';
-
-						}
+					$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other</a>';
 
 				}
 
