@@ -7,13 +7,17 @@ Requires at least: 3.1
 Tested up to: 4.0
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
-wordpress plugin wp global hide admin tool bar add global options to hide front and back end admin bar or toolbar according to your own user roles
+wordpress plugin wp global hide admin tool bar add options to hide front and back end adminbar or toolbar according to your own user roles
 == Description ==
-This Plugin add Global Options to Hide Front End Admin Bar or Toolbar According to Your Own User Roles. To remove the back end Toolbar (Admin Bar) use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE plugin was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
+This Plugin add Global Options to Hide Front End Admin Bar or Toolbar According to Your Own User Roles. To Remove the Back End use the included BRUTE FORCE PLUGIN. Part of coding of BRUTE FORCE PLUGIN was derived directly from [sLa NGjI's](//slangji.wordpress.com/) [WP Admin Bar Removal](//wordpress.org/plugins/wp-admin-bar-removal/) / [WP Toolbar Removal](//wordpress.org/plugins/wp-Toolbar-removal/) / [Disable Admin Bar and ToolBar](//wordpress.org/plugins/toolbar-removal-completely-disable/) plugins, and was released under GPLv2 or later: this plugin use same License GPLv2 or later. [Read More Here](//wordpress.org/support/topic/brute-force-plugin-license-infringement/)
 
-Add an option to the Settings Menu to globally turn off the front end Toolbar and/or turn off the user option in the profile to show Toolbar.
+The plugin add more options to the settings menu to globally turn off the front end toolbar or adminbar and turn off the user option field in the profile to view it on dashboard.
 
-Brute Force plugin (included), removes ALL Toolbars (admin and front end) as well as the profile user option. No settings are available for this plugin. WordPress does not provide an easy method to remove the Admin Tool Bar in the back end, so this plugin takes a different approach to override it!
+Brute Force Plugin (included), Removes ALL Toolbars (admin back and front end) as well as the profile user option field. No settings are available for this plugin.
+
+WordPress does not provide an easy method to remove the Admin Tool Bar in the back end, so this plugin takes a different approach to override it!
+
+This become obsolete if Core Team adds global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/)
 
 = Standard Plugin Features (FRONT END HIDER): =
 
@@ -48,28 +52,21 @@ Brute Force plugin (included), removes ALL Toolbars (admin and front end) as wel
 
 == Installation ==
 
-= Install =
-
-* Upload and Activate the plugin through the WordPress Admin Panel
-
-= Settings =
-
+* Upload and activate the plugin through the wordpress admin panel
 * Once activated access to the options page from the settings menu
 
 = Uninstall =
 
-* Disable from Menu Plugins of Control Panel
-* Delete from Menu Plugins of Control Panel
+* Disable from menu plugins of control panel
+* Delete from menu plugins of control panel
 
 == Frequently Asked Questions ==
 
-= How Does It Work? =
+How does it work? It just simply adds an option page for you to turn the front end toolbar on or off.
 
-It just simply adds an option page for you to turn the front end Toolbar on or off.
+= Can i remove the back end admin tool bar in wordpress 3.1+ ? =
 
-= Can I Remove the Back End Admin Tool Bar in WordPress 3.1+ ? =
-
-On the Backend, Admin Area, you need to use the Brute Force Plugin.
+On the backend, admin area, you need to use the brute force plugin.
 
 == Screenshots ==
 
@@ -144,7 +141,9 @@ Version 1.8.0 is planned for December 10, 2014
 
 Version 1.7.0 is planned for August 27, 2014
 
-Version 1.6.3 is planned for end of June or July 2014
+Version 1.6.4 is planned for end of July 2014
+
+Version 1.6.3 is planned for end of June 2014
 
 Version 1.6.2 is planned for end of May 2014
 
