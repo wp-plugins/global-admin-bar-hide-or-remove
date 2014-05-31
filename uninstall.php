@@ -9,7 +9,7 @@
 	 * @link        //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 	 *
 	 * @version 1.7.0
-	 * @build   2014-05-29 1ST 2014-04-16
+	 * @build   2014-05-31 1ST 2014-04-16
 	 * @author  sLa NGjI's @ slangji.wordpress.com
 	 */
 
@@ -79,9 +79,17 @@
 
 		}
 
-	else
+	if ( is_multisite() )
 
 		{
+
+			foreach ( $option_names as $option_name )
+
+				{
+
+					delete_option( $option_name );
+
+				}
 
 			global $wpdb;
 
