@@ -184,7 +184,6 @@ Network: true
 		{
 
 			add_action( 'admin_head', 'ghatb_bfp_admin_back_menu_remove' );
-
 		}
 
 	function ghatb_bfp_warning_notice()
@@ -520,7 +519,7 @@ Network: true
 
 		}
 
-	add_action( 'wp_head', 'ghatb_bfp_shfl', 0 );
-	add_action( 'wp_footer', 'ghatb_bfp_shfl', 0 );
+	add_action( 'wp_head', 'ghatb_bfp_shfl' );
+	add_action( 'wp_footer', 'ghatb_bfp_shfl' );
 
 ?>

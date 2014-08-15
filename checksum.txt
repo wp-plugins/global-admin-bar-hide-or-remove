@@ -9,12 +9,12 @@ global-hide-remove-toolbar-plugin_en.po        DFE71B1D86340051519E072A45496AA9
 
 /
 
-.htaccess                                      9D475FB4114D121B6EC2C5B046DFD1D3
-global-hide-admin-tool-bar.php                 3D0F7284C6D36EFA2BA5413BEB0032B8
-global-hide-brute-force-admin-tool-bar.php     44DC3FB87FB57B2B5F0E4FAB146F4DB8
-humans.txt                                     7DF7AE2B35E15FBEF4524BC4C49A8475
-index.html                                     B06FA95A0271B37E75027C908245BF51
-index.php                                      0938FFCB27D77DF194B73DC2E8BAACCC
-license.txt                                    DB85EFB4F2572FD1727A97D806602630
-readme.txt                                     D68460124E2A0C6EEE804F38EC7D8320
-uninstall.php                                  80DC5E55DAF43BBE3D17DF82C3F6A994
+index.html                                     A179F0896DE6744B2F841DBF25177B91
+.htaccess                                      BAA275ECC66264345C640E5B44C4AD47
+global-hide-admin-tool-bar.php                 12152F8D29C735CF78EEA73C9EEA79CF
+global-hide-brute-force-admin-tool-bar.php     A8086CA3B1A13B08B6D5B35C9CC27810
+gpl-2.0.txt                                    B234EE4D69F5FCE4486A80FDAF4A4263
+index.php                                      B1DDE13C7371150BB5C1553A7E48E40C
+license.txt                                    B234EE4D69F5FCE4486A80FDAF4A4263
+readme.txt                                     A99322A8746D9511575FE7E6C5099447
+uninstall.php                                  86FD3D9A778FD2EE5A64060BE32A4E30
