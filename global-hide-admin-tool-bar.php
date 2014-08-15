@@ -2,9 +2,9 @@
 /*
 Plugin Name: Global Hide Toolbar
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
-Description: Hide Front End Toolbar Manager According to Admin and User Roles (2014-04-16)
+Description: Global Hide Front End Toolbar Manager According to Admin and User Roles (2014-04-16) This become obsolete if <strong>Core Team</strong> adds global options <a title="WordPress features are being developed plugins first" href="//make.wordpress.org/core/features-as-plugins/">features are being developed plugins first</a>
 Version: 1.6.1
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.J.Fischer</a>
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
@@ -95,27 +95,52 @@ Text Domain: global-hide-remove-toolbar-plugin
  *
  * To Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
  *
- * TODO
+ * TO-DO LIST
  *
- * Planned for Version 1.6.2 - Ticket [#4937543](//wordpress.org/support/topic/only-partially-works/)
- * Planned for Version 1.6.2 - New Simple but Innovative Plugin Options
+ * End of May 2014
+ *
+ * Planned for Version 1.6.2 - Fixed Ticket [#4937543](//wordpress.org/support/topic/only-partially-works/)
  * Planned for Version 1.6.2 - Code Cleanup and Optimization
- * Planned for Version 1.6.2 - New Security Rules
- * Planned for Version 1.6.2 - Making New Interface and Features Screenshots
+ * Planned for Version 1.6.2 - Class Isolation and Functions Redesigned
+ * Planned for Version 1.6.2 - Optimize Admin Menu and Tool Bar Removing Annoyances
+ * Planned for Version 1.6.2 - Speedup Admin Menu Control Panel
+ * Planned for Version 1.6.2 - Uninstall Module Update
+ * Planned for Version 1.6.2 - New Simple Options
+ * Planned for Version 1.6.2 - New Graphics CSS Interface
+ * Planned for Version 1.6.2 - New Security STRICT Rules
+ * Planned for Version 1.6.2 - New humans.txt Support
+ * Planned for Version 1.6.2 - Update Plugin Name and Description (readme.txt) with SEO
+ * Planned for Version 1.6.2 - Making New Interface and Simple Options Screenshots
  *
- * Planned for Version 1.6.3 - [Multisite Support](//wordpress.org/support/topic/not-working-with-wp-39-and-bp-2/) if is possible
- * Planned for Version 1.6.3 - Full WordPress 4.0+ Compatibility and Support
- * Planned for Version 1.6.3 - Making New Multisite Screenshots
+ * End of June 2014
  *
- * Planned for Version 1.7.0 - Planned for Version 1.7.0 - [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
- * Planned for Version 1.7.0 - Integration of Main Plugin with WP Toolbar Node Removal and WP Admin Bar Node Removal
- * Planned for Version 1.7.0 - New Advanced and Integrated Innovative Plugin Options
- * Planned for Version 1.7.0 - Full WordPress 4.1+ Compatibility and Support
- * Planned for Version 1.7.0 - Making New Options Screenshots
- * Planned for Version 1.7.0 - All changes for Pro Only Version ?
+ * Planned for Version 1.6.3 - 1ST step [Multisite Support](//wordpress.org/support/topic/not-working-with-wp-39-and-bp-2/) when is possible
+ * Planned for Version 1.6.3 - Maintenance Release
+ * Planned for Version 1.6.3 - Uninstall Module Update
+ * Planned for Version 1.6.3 - Making Multisite Screenshots
  *
- * Planned for Version 1.8.0 - Full sLa NGjI's Keytag Support ?
- * Planned for Version 1.8.0 - Themes Framework Shortcodes Integration Support ?
+ * End of July 2014
+ *
+ * Planned for Version 1.6.4 - 2ND step [Multisite Support](//wordpress.org/support/topic/not-working-with-wp-39-and-bp-2/) if is't possible
+ * Planned for Version 1.6.4 - Maintenance Update
+ * Planned for Version 1.6.4 - Uninstall Module Update
+ * Planned for Version 1.6.4 - Making Multisite Screenshots
+ *
+ * August 27, 2014
+ *
+ * Planned for Version 1.7.0 - Full WordPress 4.0+ Compatibility and Support
+ * Planned for Version 1.7.0 - Bruteforce Plugin [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
+ * Planned for Version 1.7.0 - New Advanced Options
+ * Planned for Version 1.7.0 - Uninstall Module Update
+ * Planned for Version 1.7.0 - Making New Advanced Options Screenshots
+ *
+ * December 10, 2014
+ *
+ * Planned for Version 1.8.0 - Full WordPress 4.1+ Compatibility and Support
+ * Planned for Version 1.8.0 - Integration of Main Plugin with WP Toolbar Removal and WP Admin Bar Removal
+ * Planned for Version 1.8.0 - Integration of Main Plugin with WP Toolbar Node Removal and WP Admin Bar Node Removal
+ * Planned for Version 1.8.0 - Uninstall Module Update
+ * Planned for Version 1.8.0 - Making Integration Options Screenshots
  */
 
 	/**
@@ -269,7 +294,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			$links[] = '<a title="" href="' . admin_url( 'options-general.php?page=global-hide-toolbar' ) . '">' . __( 'Settings', 'global-hide-remove-toolbar-plugin' ) . '</a>';
+			$links[] = '<a title="" href="' . admin_url( 'options-general.php?page=global-hide-toolbar' ) . '">' . __( 'Set', 'global-hide-remove-toolbar-plugin' ) . '</a>';
 
 			return $links;
 
@@ -285,35 +310,11 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 				{
 
-					global $wp_version;
-
-					if ( $wp_version < 3.8 )
-
-						{
-
-							$links[] = '<a title="Bugfix and Suggestions" href="//slangji.wordpress.com/contact/">Contact</a>';
-
-						}
+					$links[] = '<a title="Bugfix and Suggestions" href="//slangji.wordpress.com/contact/">Contact</a>';
 
 					$links[] = '<a title="Offer a Beer to sLa" href="//slangji.wordpress.com/donate/">Donate</a>';
 
-					global $wp_version;
-
-					if ( $wp_version < 3.8 )
-
-						{
-
-							$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other Plugins</a>';
-
-						}
-
-					if ( $wp_version >= 3.8 )
-
-						{
-
-							$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other</a>';
-
-						}
+					$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other</a>';
 
 				}
 
@@ -481,13 +482,11 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 						{
 
-							add_submenu_page( 'settings.php', __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), 'manage_network_options', 'global-hide-toolbar', 'ghatb_admin_bar_page' );
+							add_options_page( __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), __( 'Hide Toolbar Options', 'global-hide-remove-toolbar-plugin' ), 'manage_network_options', 'global-hide-toolbar', 'ghatb_admin_bar_page' );
 
 						}
 
 				}
-
-			return;
 
 		}
 
