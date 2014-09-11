@@ -13,13 +13,15 @@ This plugin add global options to hide front end admin bar or toolbar according 
 
 Remember that this plugin it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/).
 
+sLa NGjI's Team do not provide support on wordpress.org forum and reviews! [Full Story Here](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
+
 = Standard Plugin Features (FRONT END HIDER) =
 
 * Hide Frontend Toolbar for logged in users according to your own roles
 * Hide Your Profile "Show Toolbar when viewing site" on User Page
 * Settings Page with Plugin Options Control Panel
 * Settings Auto Clean Plugin
-* Work on all WordPress version from 3.1+ to 3.9+
+* Work on all WordPress version from 3.1+ to 4.0+
 * Compatible with bbPress and BuddyPress
 * Ready to phpBB Integration
 
@@ -29,7 +31,7 @@ Remember that this plugin it may become obsolete when the Core Team adds it thei
 * Hide Your Profile "Show Toolbar when viewing site" on User Page
 * Works with WordPress 3.8+ Mobile Responsive Interface
 * Settings Free Plugin
-* Work on all WordPress version from 3.1+ to 3.9+
+* Work on all WordPress version from 3.1+ to 4.0+
 * Compatible with bbPress and BuddyPress
 * Ready to phpBB Integration
 
@@ -111,7 +113,7 @@ According to the Terms of the GNU General Public License version 2 (or later) pa
 
 = Common Rules =
 * Compatible with: WordPress, bbPress, Buddypress.
-* Work with all WordPress Versions from 3.1+ to 3.9+
+* Work with all WordPress Versions from 3.1+ to 4.0+
 * Ready to Single and Network Multisite Environment.
 * Full Strict Security Rules Applied.
 * Dynamic Row Meta and Action Links Activation Support.
@@ -135,7 +137,9 @@ No need delete anything from wp_option when deleted
 `
 == Changelog ==
 
-latest version of this plugin work on all wordpress version from 3.1+ to 3.9+
+latest version of this plugin work on all wordpress version from 3.1+ to 4.0+
+
+sLa NGjI's Team do not provide support on wordpress.org forum and reviews! [Full Story Here](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
 
 `All releases, prior latest stable, are deprecated, 
 and no longer supported on this project: is very 
@@ -145,17 +149,15 @@ suggested upgrade to the latest build, always!`
 
 Developmental Code in Becoming!
 
-Version 1.8.0 is planned for December 10, 2014
+Version 1.7.0 is planned for end of 2014 - 2015/16
 
-Version 1.7.0 is planned for August 27, 2014
-
-Version 1.6.2 is planned for end of May 2014
+Version 1.6.2 is planned for end of May 2014 (beta)
 
 = 1.6.1 =
 * The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's
  * Please update as soon as possible!
  * Released Build 2014-04-16
- * Full Support and Compatibility for WordPress 3.1+ ~ 3.9+
+ * Full Support and Compatibility for WordPress 3.1+ ~ 4.0+
  * Compatible with WordPress, bbPress, Buddypress
  * Work under [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later License.
  * Implement [GNU style](http://www.gnu.org/prep/standards/standards.html) coding standard indentation.
@@ -163,6 +165,7 @@ Version 1.6.2 is planned for end of May 2014
  * NEW key tag plugin authenticity
  * NEW header and footer log
  * NEW class and functions constructor coding isolation
+ * NEW support and compatibility for wordpress 4.0+
  * NEW support and compatibility for wordpress 3.9+
  * SECURITY a new idea of sla: key tag plugin authenticity
  * SECURITY checksum.txt md5 checksum declaration
