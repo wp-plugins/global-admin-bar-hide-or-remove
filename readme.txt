@@ -4,7 +4,7 @@ Donate link: //slangji.wordpress.com/donate/
 Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, global-hide-admin-bar, global-hide-toolbar, hide-admin-bar, hide-toolbar, hide-admin-toolbar, slangjis, toolbar
 Stable tag: 1.6.1
 Requires at least: 3.1
-Tested up to: 4.1-alpha
+Tested up to: 4.1-beta
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 wordpress plugin wp global hide admin tool bar add options to disable front end adminbar or toolbar according to logged in user roles
