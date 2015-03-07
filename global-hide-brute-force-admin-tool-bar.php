@@ -1,22 +1,25 @@
-<?php
+<?php 
 /*
 Plugin Name: Global Hide Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA (2014-04-16) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
 Version: 1.6.1
-Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.Fischer</a>
+KeyTag: 74be16979710d4c4e7c6647856088456
+Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.J.Fischer</a>
+Requires at least: 3.1
+Network: true
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
 Indentation URI: //www.gnu.org/prep/standards/standards.html
+Humans: We are the humans behind
+Humans URI: http://humanstxt.org/Standard.html
  *
-Network: true
- *
- * LICENSING
+ * LICENSING (license.txt)
  *
  * [Global Hide Admin Tool Bar Bruteforce](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
  *
- * Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles
+ * Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles Logged In and Out
  *
  * Copyright (C) 2013-2014 [slangjis](//slangji.wordpress.com/) (email: <slangjis [at] googlegmail [dot] com>)
  *
@@ -105,30 +108,38 @@ Network: true
  * WordPress [Readme Validator](//wordpress.org/plugins/about/validator/) directives.
  * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
  *
- * HUMANS
+ * HUMANS (humans.txt)
  *
- * See included humans.txt
+ * We are the Humans behind this project [humanstxt.org](//humanstxt.org/Standard.html)
+ *
+ * This software meet detailed humans rights belongs to your own author and to their respective other authors.
+ * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
+ *
+ * THANKS
  *
  * Thanks to Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
  *
- * TODO
+ * TODOLIST
+ *
+ * [to-do list and changelog](//wordpress.org/plugins/global-admin-bar-hide-or-remove/changelog/)
  *
  * Planned for Version 1.7.0 - [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
  */
 
 	/**
-	 * @package		WordPress Plugin
-	 * @subpackage	Global Hide Admin Tool Bar Bruteforce
-	 * @description	Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles
-	 * @author		slangjis &CO prophecy2040
-	 * @since		3.1+
-	 * @status		Code in Becoming!
-	 * @version		1.6.1
-	 * @build		2014-04-16 1ST 2014-04-14
-	 * @keytag		74be16979710d4c4e7c6647856088456
+	 * @package     WordPress Plugin
+	 * @subpackage  Global Hide Admin Tool Bar Bruteforce
+	 * @description Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles Logged In and Out
+	 * @author      slangjis &CO prophecy2040
+	 * @status      Code in Becoming!
+	 * @since       3.1+
+	 * @branche     2014
+	 * @version     1.6.1
+	 * @build       2014-04-16 1ST 2014-04-14
+	 * @keytag      74be16979710d4c4e7c6647856088456
 	 */
 
-	if ( !function_exists( 'add_action' ) )
+	if ( ! function_exists( 'add_action' ) )
 
 		{
 
@@ -142,9 +153,9 @@ Network: true
 
 		}
 
-	if ( !defined( 'ABSPATH' ) ) exit;
+	defined( 'ABSPATH' ) or exit;
 
-	if ( !defined( 'WPINC' ) ) exit;
+	defined( 'WPINC' ) or exit;
 
 	function ghatb_bfp_1st()
 
@@ -179,31 +190,42 @@ Network: true
 
 		}
 
-	if ( $wp_version < 3.1 )
-
-		{
-
-			wp_die( __( 'This Plugin Requires WordPress 3.1+ or higher: Could Not Install!' ) );
-
-		}
-
 	if ( $wp_version >= 3.2 )
 
 		{
 
 			add_action( 'admin_head', 'ghatb_bfp_admin_back_menu_remove' );
-
 		}
 
 	function ghatb_bfp_warning_notice()
 
 		{
 
-			if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
+			if ( ! is_multisite() )
 
 				{
 
-					echo '<div class="error"><h3><strong>' . __( 'Activation Warning!' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Admin Tool Bar</strong> and <strong style="color:#880000;">Global Hide Admin Tool Bar Brute Force</strong> at the Same Time.' ) . '</p></div>';
+					if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
+
+						{
+
+							echo '<div id="message" class="error"><h3><strong>' . __( 'Activation Warning:' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!' ) . '</p></div>';
+
+						}
+
+				}
+
+			if ( is_multisite() )
+
+				{
+
+					if ( is_plugin_active_for_network( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
+
+						{
+
+							echo '<div id="message" class="error"><h3><strong>' . __( 'Activation Warning:' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!' ) . '</p></div>';
+
+						}
 
 				}
 
