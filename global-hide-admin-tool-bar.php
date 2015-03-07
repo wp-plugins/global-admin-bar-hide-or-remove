@@ -198,7 +198,7 @@ Text Domain: global-hide-remove-toolbar-plugin
 
 		{
 
-			wp_die( __( 'This Plugin Requires WordPress 3.1+ or Greater: Activation Stopped!' ) );
+			wp_die( __( 'This Plugin Requires WordPress 3.1+ or Greater: Activation Stopped!', 'global-hide-remove-toolbar-plugin'  ) );
 
 		}
 

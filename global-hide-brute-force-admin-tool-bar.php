@@ -1,18 +1,21 @@
-<?php
+<?php 
 /*
 Plugin Name: Global Hide Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA (2014-04-16) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
 Version: 1.6.1
+KeyTag: 74be16979710d4c4e7c6647856088456
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.J.Fischer</a>
+Requires at least: 3.1
+Network: true
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
 Indentation URI: //www.gnu.org/prep/standards/standards.html
+Humans: We are the humans behind
+Humans URI: http://humanstxt.org/Standard.html
  *
-Network: true
- *
- * LICENSING
+ * LICENSING (license.txt)
  *
  * [Global Hide Admin Tool Bar Bruteforce](//wordpress.org/plugins/global-admin-bar-hide-or-remove/)
  *
@@ -105,13 +108,20 @@ Network: true
  * WordPress [Readme Validator](//wordpress.org/plugins/about/validator/) directives.
  * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
  *
- * HUMANS
+ * HUMANS (humans.txt)
  *
- * See included humans.txt
+ * We are the Humans behind this project [humanstxt.org](//humanstxt.org/Standard.html)
+ *
+ * This software meet detailed humans rights belongs to your own author and to their respective other authors.
+ * The author of this plugin is available at any time, to make all changes, or corrections, to respect these specifications.
+ *
+ * THANKS
  *
  * Thanks to Donald J. Fischer a.k.a prophecy2040 @ www.fischercreativemedia.com for this plugin!
  *
- * TODO
+ * TODOLIST
+ *
+ * [to-do list and changelog](//wordpress.org/plugins/global-admin-bar-hide-or-remove/changelog/)
  *
  * Planned for Version 1.7.0 - [Code Merge Migration](//wordpress.org/support/topic/brute-force-plugin-code-migration/) to WP Admin Bar Removal and WP Toolbar Removal
  */
@@ -121,14 +131,15 @@ Network: true
 	 * @subpackage  Global Hide Admin Tool Bar Bruteforce
 	 * @description Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles Logged In and Out
 	 * @author      slangjis &CO prophecy2040
-	 * @since       3.1+
 	 * @status      Code in Becoming!
+	 * @since       3.1+
+	 * @branche     2014
 	 * @version     1.6.1
 	 * @build       2014-04-16 1ST 2014-04-14
 	 * @keytag      74be16979710d4c4e7c6647856088456
 	 */
 
-	if ( !function_exists( 'add_action' ) )
+	if ( ! function_exists( 'add_action' ) )
 
 		{
 
@@ -142,9 +153,9 @@ Network: true
 
 		}
 
-	if ( !defined( 'ABSPATH' ) ) exit;
+	defined( 'ABSPATH' ) or exit;
 
-	if ( !defined( 'WPINC' ) ) exit;
+	defined( 'WPINC' ) or exit;
 
 	function ghatb_bfp_1st()
 
@@ -190,7 +201,7 @@ Network: true
 
 		{
 
-			if ( !is_multisite() )
+			if ( ! is_multisite() )
 
 				{
 
@@ -496,11 +507,33 @@ Network: true
 
 				{
 
-					$links[] = '<a title="Bugfix and Suggestions" href="//slangji.wordpress.com/contact/">Contact</a>';
+					global $wp_version;
+
+					if ( $wp_version < 3.8 )
+
+						{
+
+							$links[] = '<a title="Bugfix and Suggestions" href="//slangji.wordpress.com/contact/">Contact</a>';
+
+						}
 
 					$links[] = '<a title="Offer a Beer to sLa" href="//slangji.wordpress.com/donate/">Donate</a>';
 
-					$links[] = '<a title="Visit other author plugins site" href="//slangji.wordpress.com/plugins/">Other</a>';
+					if ( $wp_version < 3.8 )
+
+						{
+
+							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other Plugins</a>';
+
+						}
+
+					if ( $wp_version >= 3.8 )
+
+						{
+
+							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other</a>';
+
+						}
 
 				}
 
@@ -519,7 +552,7 @@ Network: true
 
 		}
 
-	add_action( 'wp_head', 'ghatb_bfp_shfl' );
-	add_action( 'wp_footer', 'ghatb_bfp_shfl' );
+	add_action( 'wp_head', 'ghatb_bfp_shfl', 0 );
+	add_action( 'wp_footer', 'ghatb_bfp_shfl', 0 );
 
 ?>
