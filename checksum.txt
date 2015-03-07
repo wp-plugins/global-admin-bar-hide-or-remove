@@ -1,0 +1,7 @@
+WP Global Hide Admin Toolbar Alpha - Development Version - Checksum
+
+-------------------- Tags Branche In Becoming ---------------------
+
+dev-version-available-github-only.txt 93EA2C539B017F509C52AEA84701B5F3C5600D02
+
+readme.txt                            2804FC17E31D213E20319E43A0D27A10647A9BC7
