@@ -1,25 +1,25 @@
-<?php
+<?php 
 
 	/**
 	 * @package     WordPress Plugin
 	 * @subpackage  Global Hide Admin Tool Bar
 	 * @description Uninstall Module
 	 * @status      Code in Becoming!
-	 * @todolist    Extended Multisite Support - WordPress 4.0+ and 4.1+ Compatibility
+	 * @todolist    Extended Multisite Support - WordPress 4.0+ and 4.2+ Compatibility
 	 *
 	 * @indentation //www.gnu.org/prep/standards/standards.html
 	 * @license     //www.gnu.org/licenses/gpl-2.0.html
 	 * @link        //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 	 *
 	 * @version 1.8+
-	 * @build   2014-06-02 1ST 2014-04-16
+	 * @build   2015-03-06 1ST 2014-04-16
 	 * @author  sLa NGjI's @ slangji.wordpress.com
 	 *
 	 * @since  WordPress 3.1+
 	 * @tested WordPress 3.9+
 	 */
 
-	if ( !function_exists( 'add_action' ) )
+	if ( ! function_exists( 'add_action' ) )
 
 		{
 
@@ -33,11 +33,11 @@
 
 		}
 
-	if ( !defined( 'ABSPATH' ) ) exit;
+	defined ( 'ABSPATH' ) or exit;
 
-	if ( !defined( 'WPINC' ) ) exit;
+	defined ( 'WPINC' ) or exit;
 
-	if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) exit;
+	defined ( 'WP_UNINSTALL_PLUGIN' ) or exit;
 
 	$option_names = array( 
 
@@ -78,7 +78,7 @@
 
 	);
 
-	if ( !is_multisite() )
+	if ( ! is_multisite() )
 
 		{
 
