@@ -4,7 +4,7 @@ Donate link: //slangji.wordpress.com/donate/
 Tags: admin-bar, adminbar, disable-admin-bar, disable-toolbar, disable-wordpress-admin-bar, disable-wordpress-toolbar, global-hide-admin-bar, global-hide-toolbar, hide-admin-bar, hide-toolbar, hide-admin-toolbar, slangjis, toolbar
 Stable tag: 1.6.1
 Requires at least: 3.1
-Tested up to: 4.1-alpha
+Tested up to: 4.2
 License: GPLv2 or later
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 wordpress plugin wp global hide admin tool bar add options to disable front end adminbar or toolbar according to logged in user roles
@@ -13,7 +13,7 @@ This plugin add global options to hide front end admin bar or toolbar according 
 
 Remember that this plugin it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/).
 
-sLa NGjI's Team do not provide support on wordpress.org forum and reviews! [Full Story Here](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
+sLaNGjIs Team do not provide support on wordpress.org forum and reviews! [Full Story Here](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
 
 = Standard Plugin Features (FRONT END HIDER) =
 
@@ -21,7 +21,7 @@ sLa NGjI's Team do not provide support on wordpress.org forum and reviews! [Full
 * Hide Your Profile "Show Toolbar when viewing site" on User Page
 * Settings Page with Plugin Options Control Panel
 * Settings Auto Clean Plugin
-* Work on all WordPress version from 3.1+ to 4.0+
+* Work on all WordPress version from 3.1+ to 4.2+
 * Compatible with bbPress and BuddyPress
 * Ready to phpBB Integration
 
@@ -31,7 +31,7 @@ sLa NGjI's Team do not provide support on wordpress.org forum and reviews! [Full
 * Hide Your Profile "Show Toolbar when viewing site" on User Page
 * Works with WordPress 3.8+ Mobile Responsive Interface
 * Settings Free Plugin
-* Work on all WordPress version from 3.1+ to 4.0+
+* Work on all WordPress version from 3.1+ to 4.2+
 * Compatible with bbPress and BuddyPress
 * Ready to phpBB Integration
 
@@ -96,7 +96,7 @@ Brute Force Plugin (included), Removes ALL Toolbars (admin back and front end) a
 
 == About Global Hide Admin Tool Bar Plugin ==
 
-The New Owner of this plugin is sLa NGjI's with full rights on it!
+The New Owner of this plugin is sLaNGjIs with full rights on it!
 
 Thanks to Donald J. Fischer a.k.a prophecy2040 @ fischercreativemedia
 
@@ -113,7 +113,7 @@ According to the Terms of the GNU General Public License version 2 (or later) pa
 
 = Common Rules =
 * Compatible with: WordPress, bbPress, Buddypress.
-* Work with all WordPress Versions from 3.1+ to 4.0+
+* Work with all WordPress Versions from 3.1+ to 4.2+
 * Ready to Single and Network Multisite Environment.
 * Full Strict Security Rules Applied.
 * Dynamic Row Meta and Action Links Activation Support.
@@ -137,9 +137,9 @@ No need delete anything from wp_option when deleted
 `
 == Changelog ==
 
-latest version of this plugin work on all wordpress version from 3.1+ to 4.0+
+latest version of this plugin work on all wordpress version from 3.1+ to 4.2+
 
-sLa NGjI's Team do not provide support on wordpress.org forum and reviews! [Full Story Here](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
+sLaNGjIs Team do not provide support on wordpress.org forum and reviews! [Full Story Here](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
 
 `All releases, prior latest stable, are deprecated, 
 and no longer supported on this project: is very 
@@ -149,7 +149,11 @@ suggested upgrade to the latest build, always!`
 
 Developmental Code in Becoming!
 
-Version 1.7.0 is planned for end of 2014 - 2015/16
+Version 1.8.0 is planned for end of 2016
+
+Version 1.7.0 is planned for end of 2015
+
+Version 1.6.3 is planned for end of May 2015 (beta)
 
 Version 1.6.2 is planned for end of May 2014 (beta)
 
@@ -216,7 +220,7 @@ The New Cycle [STABLE] New Owner of this Plugin is sLa NGjI's - Build 2014-04-16
 
 == Disclaimer ==
 
-`sLa NGjI's Team do not provide support on wordpress.org forum!`
+`sLaNGjIs Team do not provide support on wordpress.org forum!`
 
 Dear user of plugins or themes:
 
@@ -239,8 +243,8 @@ Our team has tried to respond to all for seven long years, and maintained the su
 
 Failing to provide a service that gives us satisfaction, through the instruments of wordpress.org forum, as of today August 15, 2014 we abandon the active support with this type of structure, started since August 7, 2007 to try to give one type of service more personalized, and targeted, to requests of users.
 
-1. For bug's please refer to [sLa NGjI's GitHub ](//github.com/slangji/) bug's report support
-1. For tickets please refer to [sLa NGjI's Contact](//slangji.wordpress.com/contact/) tickets form support
+1. For bug's please refer to [sLaNGjIs GitHub ](//github.com/slangji/) bug's report support
+1. For tickets please refer to [sLaNGjIs Contact](//slangji.wordpress.com/contact/) tickets form support
 
 * Please note that:
  * We are not interested in reviews on our plugins and themes.
@@ -253,4 +257,3 @@ Generally we're not interested to be informed if you like our plugins and themes
 Remember to keep proper behavior on the wordpress.org forum, under the rules, respect all their moderators, and its users: this team do not supporting anymore wordpress.org forum, and the possibility that some of us then reply or write on wordpress.org forum, will be very low!
 
 ... to be continued ? ...
-
