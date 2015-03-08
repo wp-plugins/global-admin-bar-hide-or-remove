@@ -5,7 +5,7 @@
 	 * @subpackage  Global Hide Admin Tool Bar
 	 * @description Uninstall Module
 	 * @status      Code in Becoming!
-	 * @todolist    Extended Multisite Support - WordPress 4.0+ and 4.2+ Compatibility
+	 * @todolist    Extended Multisite Support
 	 *
 	 * @indentation //www.gnu.org/prep/standards/standards.html
 	 * @license     //www.gnu.org/licenses/gpl-2.0.html
@@ -16,7 +16,7 @@
 	 * @author  sLa NGjI's @ slangji.wordpress.com
 	 *
 	 * @since  WordPress 3.1+
-	 * @tested WordPress 3.9+
+	 * @tested WordPress 4.2+
 	 */
 
 	if ( ! function_exists( 'add_action' ) )
