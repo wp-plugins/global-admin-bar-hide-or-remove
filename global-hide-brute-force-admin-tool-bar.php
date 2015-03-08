@@ -4,10 +4,11 @@ Plugin Name: Global Hide Toolbar Bruteforce
 Plugin URI: //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 Description: Bruteforce Disable Front and Back End Toolbar for all Admin and User Roles - BETA (2014-04-16) - Version Discontinued Please Install <a title="Please install WP Toolbar Removal" href="//wordpress.org/plugins/wp-toolbar-removal/">WP Toolbar Removal</a>
 Version: 1.6.1
-KeyTag: 74be16979710d4c4e7c6647856088456
 Author: <a title="Visit author homepage" href="//slangji.wordpress.com/">sLa NGjI's</a> & <a title="Visit plugin-master-author homepage" href="//www.fischercreativemedia.com/">D.J.Fischer</a>
 Requires at least: 3.1
 Network: true
+Text Domain: global-hide-remove-toolbar-plugin
+Domain Path: /lang/
 License: GPLv2 or later (license.txt)
 License URI: //www.gnu.org/licenses/gpl-2.0.html
 Indentation: GNU style coding standard
@@ -136,7 +137,6 @@ Humans URI: http://humanstxt.org/Standard.html
 	 * @branche     2014
 	 * @version     1.6.1
 	 * @build       2014-04-16 1ST 2014-04-14
-	 * @keytag      74be16979710d4c4e7c6647856088456
 	 */
 
 	if ( ! function_exists( 'add_action' ) )
@@ -186,7 +186,7 @@ Humans URI: http://humanstxt.org/Standard.html
 
 		{
 
-			wp_die( __( 'This Plugin Requires WordPress 3.1+ or Greater: Activation Stopped!' ) );
+			wp_die( __( 'This Plugin Requires WordPress 3.1+ or Greater: Activation Stopped!', 'global-hide-remove-toolbar-plugin'  ) );
 
 		}
 
@@ -197,41 +197,49 @@ Humans URI: http://humanstxt.org/Standard.html
 			add_action( 'admin_head', 'ghatb_bfp_admin_back_menu_remove' );
 		}
 
+		if ( ! is_multisite() )
+
+			{
+
+				add_action( 'admin_notices', 'ghatb_bfp_warning_notice' );
+
+			}
+
+		if ( is_multisite() )
+
+			{
+
+				add_action( 'network_admin_notices', 'ghatb_bfp_warning_notice_ms' );
+
+			}
+
 	function ghatb_bfp_warning_notice()
 
 		{
 
-			if ( ! is_multisite() )
+			if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
 
 				{
 
-					if ( is_plugin_active( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
-
-						{
-
-							echo '<div id="message" class="error"><h3><strong>' . __( 'Activation Warning:' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!' ) . '</p></div>';
-
-						}
-
-				}
-
-			if ( is_multisite() )
-
-				{
-
-					if ( is_plugin_active_for_network( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
-
-						{
-
-							echo '<div id="message" class="error"><h3><strong>' . __( 'Activation Warning:' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!' ) . '</p></div>';
-
-						}
+					echo '<div id="message" class="error"><h3><strong>' . __( 'Activation Warning:', 'global-hide-remove-toolbar-plugin' ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!', 'global-hide-remove-toolbar-plugin'  ) . '</p></div>';
 
 				}
 
 		}
 
-	add_action( 'admin_notices', 'ghatb_bfp_warning_notice' );
+	function ghatb_bfp_warning_notice_ms()
+
+		{
+
+			if ( is_plugin_active_for_network( 'global-admin-bar-hide-or-remove/global-hide-admin-tool-bar.php' ) )
+
+				{
+
+					echo '<div id="message" class="error"><h3><strong>' . __( 'Multisite Activation Warning:', 'global-hide-remove-toolbar-plugin'  ) . '</strong></h3><p>' . __( 'Cannot Use Both <strong style="color:#880000;">Global Hide Toolbar</strong> and <strong style="color:#880000;">Global Hide Toolbar Bruteforce</strong> at Same Time!', 'global-hide-remove-toolbar-plugin'  ) . '</p></div>';
+
+				}
+
+		}
 
 	function ghatb_bfp_admin_back_menu_remove()
 
@@ -265,7 +273,7 @@ Humans URI: http://humanstxt.org/Standard.html
 
 			$current_user = wp_get_current_user();
 
-			if ( !( $current_user instanceof WP_User ) )
+			if ( ! ( $current_user instanceof WP_User ) )
 
 				{
 
@@ -276,8 +284,8 @@ Humans URI: http://humanstxt.org/Standard.html
 			$date_format   = get_option( 'date_format' );
 			$time_format   = get_option( 'time_format' );
 			$formatteddate = date( $date_format . ' ' . $time_format, current_time( 'timestamp' ) );
-			$logout_link   = '<a href="' . wp_logout_url( home_url() ) . '">' . __( 'Log Out' ) . '</a>';
-			$admin_link    = is_multisite() && is_super_admin() ? ( !is_network_admin() ? ' | <a href="' . network_admin_url() . '">' . __( 'Network Admin' ) . '</a>' : ' | <a href="' . get_DashBoard_url( get_current_user_id() ) . '">' . __( 'Site Admin' ) . '</a>' ) : '';
+			$logout_link   = '<a href="' . wp_logout_url( home_url() ) . '">' . __( 'Log Out', 'global-hide-remove-toolbar-plugin' ) . '</a>';
+			$admin_link    = is_multisite() && is_super_admin() ? ( ! is_network_admin() ? ' | <a href="' . network_admin_url() . '">' . __( 'Network Admin', 'global-hide-remove-toolbar-plugin' ) . '</a>' : ' | <a href="' . get_DashBoard_url( get_current_user_id() ) . '">' . __( 'Site Admin', 'global-hide-remove-toolbar-plugin' ) . '</a>' ) : '';
 			$displayname   = $current_user->display_name;
 			$toggle        = ( $wp_version >= 3.8 ) ? '<div id="wp-bftoolbar-bar-menu-toggle" class="dashicons dashicons-menu"></div>' : '';
 			$homelink      = '<a href="' . home_url() . '">' . __( get_bloginfo() ) . '</a>';
@@ -507,33 +515,11 @@ Humans URI: http://humanstxt.org/Standard.html
 
 				{
 
-					global $wp_version;
+					$links[] = '<a title="' . __( 'Bugfix and Suggestions', 'global-hide-remove-toolbar-plugin' ) . '" href="//slangji.wordpress.com/contact/">' . __( 'Contact', 'global-hide-remove-toolbar-plugin' ) . '</a>';
 
-					if ( $wp_version < 3.8 )
+					$links[] = '<a title="' . __( 'Offer a Beer to sLa', 'global-hide-remove-toolbar-plugin' ) . '" href="//slangji.wordpress.com/donate/">' . __( 'Donate', 'global-hide-remove-toolbar-plugin' ) . '</a>';
 
-						{
-
-							$links[] = '<a title="Bugfix and Suggestions" href="//slangji.wordpress.com/contact/">Contact</a>';
-
-						}
-
-					$links[] = '<a title="Offer a Beer to sLa" href="//slangji.wordpress.com/donate/">Donate</a>';
-
-					if ( $wp_version < 3.8 )
-
-						{
-
-							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other Plugins</a>';
-
-						}
-
-					if ( $wp_version >= 3.8 )
-
-						{
-
-							$links[] = '<a title="Visit other author plugins" href="//slangji.wordpress.com/plugins/">Other</a>';
-
-						}
+					$links[] = '<a title="' . __( 'Visit other author plugins', 'global-hide-remove-toolbar-plugin' ) . '" href="//slangji.wordpress.com/plugins/">' . __( 'Other', 'global-hide-remove-toolbar-plugin' ) . '</a>';
 
 				}
 
@@ -547,8 +533,7 @@ Humans URI: http://humanstxt.org/Standard.html
 
 		{
 
-			echo "\n<!--Plugin Global Hide Admin Tool Bar Bruteforce 1.6.1 Build 2014-04-16 Active - Tag ".md5(md5("".""))."-->\n";
-			echo "\n<!-- This website is patched against a big core annoyance since WordPress 3.3+ to date -->\n\n";
+			echo "\n<!--Plugin Global Hide Admin Tool Bar Bruteforce Active-->\n";
 
 		}
 
