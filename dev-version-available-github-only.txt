@@ -1,5 +1,7 @@
-The development (alpha) version of plugin WP Global Hide Admin Toolbar by sLaNGjIs is available only on GitHub @ github.com/slangji
+The development (alpha) version of plugin WP Global Hide Admin Bar and ToolBar
+by sLaNGjIs is available only on GitHub @ github.com/slangji
 
-If you were a user of the development version are invited to test the new beta available @ wordpress.org/plugins/wp-missed-schedule/developers/
+If you were a user of the development version are invited to test the new beta
+available @ wordpress.org/plugins/wp-missed-schedule/developers/
 
 For bugs and correction please visit @ slangji.wordpress.com/contact

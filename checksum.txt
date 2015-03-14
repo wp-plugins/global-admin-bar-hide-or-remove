@@ -1,7 +1,7 @@
-WP Global Hide Admin Toolbar Alpha - Development Version - Checksum
+WP Global Hide Admin Bar and ToolBar - Alpha - Development Version - Checksum:
 
--------------------- Tags Branche In Becoming ---------------------
+-------------------------- Tags Branche In Becoming --------------------------
 
-dev-version-available-github-only.txt 93EA2C539B017F509C52AEA84701B5F3C5600D02
+dev-version-available-github-only.txt 267328CF80922D09C90470770A040C33F84719B7
 
-readme.txt                            2804FC17E31D213E20319E43A0D27A10647A9BC7
+readme.txt                            78020EA5BCF733B54B545EEA36EE108C327B9C54

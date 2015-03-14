@@ -13,7 +13,7 @@ This plugin add global options to hide front end admin bar or toolbar according 
 
 Remember that this plugin it may become obsolete when the Core Team adds it their own global options [features are being developed plugins first](//make.wordpress.org/core/features-as-plugins/).
 
-sLaNGjIs Team do not provide support on wordpress.org forum and reviews! [Full Story Here](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
+sLaNGjIs Team do not provide support on wordpress.org forum and reviews! [Full Story](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
 
 = Standard Plugin Features (FRONT END HIDER) =
 
@@ -139,7 +139,7 @@ No need delete anything from wp_option when deleted
 
 latest version of this plugin work on all wordpress version from 3.1+ to 4.2+
 
-sLaNGjIs Team do not provide support on wordpress.org forum and reviews! [Full Story Here](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
+sLaNGjIs Team do not provide support on wordpress.org forum and reviews! [Full Story](//wordpress.org/plugins/wp-missed-schedule/other_notes/)
 
 `All releases, prior latest stable, are deprecated, 
 and no longer supported on this project: is very 
