@@ -4,19 +4,20 @@
 	 * @package     WordPress Plugin
 	 * @subpackage  Global Hide Admin Tool Bar
 	 * @description Uninstall Module
+	 * @author      sLa NGjI's @ slangji.wordpress.com
 	 * @status      Code in Becoming!
-	 * @todolist    Extended Multisite Support - WordPress 4.1+ and 4.2+ Compatibility
+	 * @todolist    WordPress 3.9+ and WordPress 4.0+ and WordPress 4.1+ Compatibility
 	 *
 	 * @indentation //www.gnu.org/prep/standards/standards.html
 	 * @license     //www.gnu.org/licenses/gpl-2.0.html
 	 * @link        //wordpress.org/plugins/global-admin-bar-hide-or-remove/
 	 *
-	 * @version 1.6+
-	 * @build   2015-03-06 1ST 2014-04-16
-	 * @author  sLa NGjI's @ slangji.wordpress.com
-	 *
 	 * @since  WordPress 3.1+
-	 * @tested WordPress 4.0+
+	 * @tested WordPress 3.7+
+	 *
+	 * @branche 2014
+	 * @version 1.6.1
+	 * @build   2014-04-16 1ST - 2014-04-14
 	 */
 
 	if ( ! function_exists( 'add_action' ) )
@@ -71,7 +72,7 @@
 
 	);
 
-	if ( !is_multisite() )
+	if ( ! is_multisite() )
 
 		{
 
